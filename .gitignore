@@ -1,0 +1,6 @@
+.DS_Store
+/wp.php
+/html/sitemap.xml
+/html/sitemaps
+/html/wp/*
+!/html/wp/wp-config.php

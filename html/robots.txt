@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /wp/
+Disallow: /app/plugins/
+
+# Uncomment when Sitemaps are done
+# Sitemap: https://mysite.com/sitemap.xml
