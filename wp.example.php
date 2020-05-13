@@ -19,9 +19,9 @@ const WP_MAX_MEMORY_LIMIT = '1280M';
 // Services
 const AWS_ACCESS_KEY_ID = '';
 const AWS_SECRET_ACCESS_KEY = '';
-if (!getenv('GOOGLE_APPLICATION_CREDENTIALS')) {
-    putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/path-to-gcloud.json');
-}
+// if (!getenv('GOOGLE_APPLICATION_CREDENTIALS')) {
+//     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/path-to-gcloud.json');
+// }
 
 // Database
 const DB_NAME = 'bond';
@@ -45,10 +45,10 @@ define('NONCE_SALT',       'copy & past new keys from the link above');
 
 // Optional PHP settings
 
-// Vips warnings
-if (!getenv('VIPS_WARNING')) {
-    putenv('VIPS_WARNING=0');
-}
+// LibVips warnings
+// if (!getenv('VIPS_WARNING')) {
+//     putenv('VIPS_WARNING=0');
+// }
 
 // Error reporting - development
 error_reporting(E_ALL | E_STRICT);
@@ -58,5 +58,5 @@ ini_set('display_errors', 'on');
 // error_reporting(E_ERROR);
 // ini_set('display_errors', 'off');
 
-// default charset
+// default charset, if needed
 // ini_set('default_charset', 'UTF-8');

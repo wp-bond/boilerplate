@@ -1,0 +1,4 @@
+.DS_Store
+/sitemap.xml
+/wp/*
+!/wp/wp-config.php
