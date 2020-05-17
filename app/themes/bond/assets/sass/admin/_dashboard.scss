@@ -1,0 +1,61 @@
+//
+//
+// Our custom Dashboard
+
+#dashboard {
+    padding-top: 30px;
+
+    .help {
+        padding-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .help-block {
+            @media (min-width: 600px) {
+                width: calc(50% - 20px);
+            }
+            break-inside: avoid;
+            box-sizing: border-box;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            small,
+            ol,
+            ul {
+                orphans: 2;
+                widows: 2;
+                break-inside: avoid;
+            }
+        }
+    }
+    .title {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        padding: 5px 0 2px 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 10px 0 0 0;
+    }
+    li {
+        margin: 0;
+        padding: 2px 0 0 16px;
+        text-indent: -16px;
+        text-align: left;
+    }
+    li:before {
+        content: "\2014 \0020";
+    }
+}

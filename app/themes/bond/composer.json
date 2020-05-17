@@ -1,0 +1,21 @@
+{
+  "license": "proprietary",
+  "autoload": {
+    "files": [
+      "support/helpers.php"
+    ],
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "google/cloud-translate": "^1.7",
+    "samdark/sitemap": "^2.2",
+    "aws/aws-sdk-php": "^3.133",
+    "spatie/schema-org": "^2.12",
+    "wp-bond/bond": "dev-master",
+    "symfony/var-dumper": "^5.0"
+  }
+}

@@ -1,2 +1,5 @@
-# boilerplate
-Full-featured WordPress boilerplate with good use of Bond library.
+# Bond Boilerplate
+
+Work in progress.
+
+Requires the use of Advanced Custom Fields plugin.

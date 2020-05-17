@@ -2,15 +2,15 @@
 
 // Environment
 const APP_ENV = 'development'; // production / staging / development
-const APP_URL = 'http://bond.test';
+const APP_URL = 'http://boilerplate.test';
 
 // Paths
 const ROOT_APP_PATH = __DIR__ . '/app';
 const WP_CONTENT_FOLDER = 'app';
 
 // WordPress Settings
-const WP_SITEURL = 'http://bond.test/wp'; // WP Admin URL
-const WP_DEFAULT_THEME = 'bond';
+const WP_SITEURL = 'http://boilerplate.test/wp'; // WP Admin URL
+// const WP_DEFAULT_THEME = 'bond'; // not ready yet, theme requires ACF
 const WP_DEBUG = true;
 const WP_POST_REVISIONS = 5;
 const WP_MEMORY_LIMIT = '512M';
@@ -20,7 +20,7 @@ const WP_MAX_MEMORY_LIMIT = '1280M';
 const AWS_ACCESS_KEY_ID = '';
 const AWS_SECRET_ACCESS_KEY = '';
 // if (!getenv('GOOGLE_APPLICATION_CREDENTIALS')) {
-//     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/path-to-gcloud.json');
+//     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/gcloud.json');
 // }
 
 // Database

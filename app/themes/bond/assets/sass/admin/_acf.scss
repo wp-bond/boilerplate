@@ -1,0 +1,56 @@
+//
+//
+// ACF Fields Customizations
+
+// ACF Boolean with black color
+.acf-switch {
+    background-color: #aaaaaa !important;
+    border-color: #777 !important;
+
+    .acf-switch-on,
+    .acf-switch-off {
+        color: #fff !important;
+        text-shadow: none !important;
+    }
+    .acf-switch-slider {
+        border-color: transparent !important;
+    }
+
+    &.-on {
+        background-color: #141414 !important;
+    }
+}
+
+// ACF Gallery field: hide some fields not used on our project
+.acf-gallery-side-data {
+    tr[data-name="caption"],
+    tr[data-name="alt"],
+    tr[data-name="description"] {
+        display: none !important;
+    }
+}
+// hide message about "required fields" on ACF Gallery
+.media-types-required-info {
+    display: none !important;
+}
+
+// ACF Relationship field: change height
+// we can also get the field ID from html source to change just some
+// .acf-field-relationship {
+//   .list {
+//     height: 380px;
+//   }
+// }
+
+// ACF Taxonomy: hide term parent select
+.acf-field[data-name="term_parent"] {
+    display: none;
+}
+
+// ACF Wysiwyg: change height
+.acf-field-content-en-news,
+.acf-field-content-pt-news {
+    iframe {
+        height: 600px !important;
+    }
+}
