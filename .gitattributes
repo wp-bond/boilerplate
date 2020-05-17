@@ -2,5 +2,5 @@
 *.css linguist-vendored
 *.scss linguist-vendored
 *.js linguist-vendored
-LICENSE.md export-ignore
+LICENSE export-ignore
 README.md export-ignore
