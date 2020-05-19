@@ -1,3 +1,6 @@
 .DS_Store
 /wp.php
 /gcloud.json
+/html/sitemap.xml
+/html/wp/*
+!/html/wp/wp-config.php
