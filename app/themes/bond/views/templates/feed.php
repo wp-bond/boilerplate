@@ -59,9 +59,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
 
     <channel>
-        <title><?= config('app.name') ?></title>
+        <title><?= app()->name() ?></title>
         <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
-        <link><?= config()->url() ?></link>
+        <link><?= app()->url() ?></link>
         <description><?= get_field('description' . Languages::fieldsSuffix(), 'options') ?></description>
         <lastBuildDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_lastpostmodified('GMT'), false); ?></lastBuildDate>
         <language><?= Languages::htmlAttribute() ?></language>
@@ -69,14 +69,14 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         <sy:updateFrequency>4</sy:updateFrequency>
 
         <image>
-            <url><?= config()->themeUrl() . '/images/rss.png' ?></url>
-            <title><?= config('app.name') ?></title>
-            <link><?= config()->url() ?></link>
+            <url><?= app()->themeUrl() . '/images/rss.png' ?></url>
+            <title><?= app()->name() ?></title>
+            <link><?= app()->url() ?></link>
             <width>144</width>
             <height>144</height>
             <description><?= '' ?></description>
         </image>
-        <copyright>© <?= date('Y') . ' ' . config('app.name') ?>. <?= t('All rights reserved') ?>.</copyright>
+        <copyright>© <?= date('Y') . ' ' . app()->name() ?>. <?= t('All rights reserved') ?>.</copyright>
 
         <?php
         global $post;

@@ -55,7 +55,7 @@ class Modules
             ->multilanguage()
             ->mediaUpload(false)
             ->wrapWidth(50)
-            ->toolbar(config()->id());
+            ->toolbar(app()->id());
 
 
 

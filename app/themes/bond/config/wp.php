@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'force_https' => config()->isProduction() || config()->isStaging(),
+    'force_https' => app()->isProduction() || app()->isStaging(),
 ];

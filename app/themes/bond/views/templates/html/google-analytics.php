@@ -1,7 +1,7 @@
 <?php
 
 if (
-    !config()->isProduction()
+    !app()->isProduction()
     || !config('services.google_analytics.id')
 ) {
     return;

@@ -5,7 +5,6 @@ const APP_ENV = 'development'; // production / staging / development
 const APP_URL = 'http://boilerplate.test';
 
 // Paths
-const ROOT_APP_PATH = __DIR__ . '/app';
 const WP_CONTENT_FOLDER = 'app';
 
 // WordPress Settings

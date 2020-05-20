@@ -89,7 +89,7 @@ class Seo
     public static function organizationId()
     {
         return (new Organization())
-            ->identifier(config()->url() . '#organization');
+            ->identifier(app()->url() . '#organization');
     }
 
     public static function organization()
@@ -99,11 +99,11 @@ class Seo
             -1,
             function () {
                 return (new Organization())
-                    ->identifier(config()->url() . '#organization')
-                    ->url(config()->url())
-                    ->name(config('app.name'))
+                    ->identifier(app()->url() . '#organization')
+                    ->url(app()->url())
+                    ->name(app()->name())
                     ->description(get_field('description_en', 'options'))
-                    ->logo(config()->url() . '/apple-touch-icon.png')
+                    ->logo(app()->url() . '/apple-touch-icon.png')
                     ->sameAs([
                         get_field('facebook_url', 'options'),
                         get_field('instagram_url', 'options'),
@@ -126,12 +126,12 @@ class Seo
     public static function website()
     {
         return (new WebSite())
-            ->identifier(config()->url() . '#website')
-            ->url(config()->url() . Link::path())
-            ->name(config('app.name'))
+            ->identifier(app()->url() . '#website')
+            ->url(app()->url() . Link::path())
+            ->name(app()->name())
             ->potentialAction(
                 (new SearchAction())
-                    ->target(config()->url() . Link::search() . '?q={search_term_string}')
+                    ->target(app()->url() . Link::search() . '?q={search_term_string}')
                     ->setProperty('query-input', 'required name=search_term_string')
             );
     }

@@ -81,7 +81,7 @@ class Mail
 
             // In our case, credentials are not needed in production
             // it is hosted on AWS EC2 with a EC2 role already permitting SES
-            if (!config()->isProduction()) {
+            if (!app()->isProduction()) {
                 $options['credentials'] = [
                     'key' => config('services.ses.key'),
                     'secret' => config('services.ses.secret'),

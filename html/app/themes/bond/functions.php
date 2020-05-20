@@ -1,6 +1,10 @@
 <?php
 
 // Forward to our root theme
-// IMPORTANT: Must have the same folder name
+// IMPORTANT: get_stylesheet below implies the theme has the same folder name
 
-require_once ROOT_APP_PATH . '/themes/' . get_stylesheet() . '/functions.php';
+$root_app = defined('ROOT_APP_PATH')
+    ? ROOT_APP_PATH
+    : dirname($_SERVER['DOCUMENT_ROOT']) . '/app';
+
+require_once $root_app . '/themes/' . get_stylesheet() . '/functions.php';

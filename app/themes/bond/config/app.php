@@ -14,6 +14,7 @@ return [
     'timezone' => 'America/Sao_Paulo',
 
     'map_links' => true,
+    'search_path' => 'search',
 
     // TODO find better name!!!!!!!
     'set_multilanguage_titles_and_slugs' => [

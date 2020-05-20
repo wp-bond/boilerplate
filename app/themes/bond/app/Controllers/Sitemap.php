@@ -33,7 +33,7 @@ class Sitemap
             self::refreshWhenReady();
         }
 
-        if (config()->isProduction()) {
+        if (app()->isProduction()) {
 
             // action hook
             add_action('sitemap_hook', [self::class, 'refreshWhenReady']);
@@ -90,7 +90,7 @@ class Sitemap
     {
         return Cache::json(
             'sitemaps/posts',
-            config()->isDevelopment() ? 0 : 60 * 60 * 2,
+            app()->isDevelopment() ? 0 : 60 * 60 * 2,
             function () {
 
                 $sitemaps_urls = [];
@@ -115,7 +115,7 @@ class Sitemap
 
                         $urls = [];
                         foreach (Languages::codes() as $code) {
-                            $urls[$code] = config()->url()
+                            $urls[$code] = app()->url()
                                 . $post->link($code);
                         }
                         if (empty($urls)) {
@@ -132,7 +132,7 @@ class Sitemap
                     $sitemap->write();
 
                     // retrieve links
-                    foreach ($sitemap->getSitemapUrls(config()->url() . '/sitemaps/') as $url) {
+                    foreach ($sitemap->getSitemapUrls(app()->url() . '/sitemaps/') as $url) {
                         $sitemaps_urls[] = $url;
                     }
                 }
@@ -148,7 +148,7 @@ class Sitemap
     {
         return Cache::json(
             'sitemaps/pages',
-            config()->isDevelopment() ? 0 : 60 * 60 * 2,
+            app()->isDevelopment() ? 0 : 60 * 60 * 2,
 
             function () {
                 $sitemap = new SitemapXml(
@@ -171,7 +171,7 @@ class Sitemap
 
                         $url = Link::postType($post_type, $code);
                         if ($url) {
-                            $urls[$code] = config()->url() . $url;
+                            $urls[$code] = app()->url() . $url;
                         }
                     }
                     if (empty($urls)) {
@@ -196,7 +196,7 @@ class Sitemap
 
                     $urls = [];
                     foreach (Languages::codes() as $code) {
-                        $urls[$code] = config()->url()
+                        $urls[$code] = app()->url()
                             . $post->link($code);
                     }
                     if (empty($urls)) {
@@ -212,7 +212,7 @@ class Sitemap
                 // store page sitemap
                 $sitemap->write();
 
-                return $sitemap->getSitemapUrls(config()->url() . '/sitemaps/');
+                return $sitemap->getSitemapUrls(app()->url() . '/sitemaps/');
             }
 
         );

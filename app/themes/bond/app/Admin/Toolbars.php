@@ -72,8 +72,8 @@ class Toolbars
         // die;
 
         // Add a new toolbar for ACF editors
-        $toolbars[config()->id()] = [];
-        $toolbars[config()->id()][1] = [
+        $toolbars[app()->id()] = [];
+        $toolbars[app()->id()][1] = [
             'formatselect',
             'removeformat',
             // 'bold',

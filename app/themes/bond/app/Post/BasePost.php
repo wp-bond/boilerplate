@@ -128,14 +128,14 @@ class BasePost extends Post
     // Schema Org
     public function schemaId($hash = '')
     {
-        return config()->url()
+        return app()->url()
             . $this->link(Languages::getDefault())
             . ($hash ? '#' . $hash : '');
     }
 
     public function schemaUrl()
     {
-        return config()->url()
+        return app()->url()
             . $this->link();
     }
 
