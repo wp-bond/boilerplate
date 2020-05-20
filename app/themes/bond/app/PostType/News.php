@@ -4,7 +4,7 @@ namespace App\PostType;
 
 use Bond\FieldGroup;
 use Bond\PostType;
-use Bond\Settings\Register;
+use Bond\Utils\Register;
 
 class News extends PostType
 {
