@@ -2,7 +2,9 @@
 
 namespace App\Taxonomy;
 
-class Categories
+use Bond\Taxonomy;
+
+class Categories extends Taxonomy
 {
     public static string $taxonomy = CATEGORY;
 
