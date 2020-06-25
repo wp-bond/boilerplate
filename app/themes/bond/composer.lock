@@ -706,6 +706,78 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
+            "name": "league/container",
+            "version": "3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/container.git",
+                "reference": "93238f74ff5964aee27a78508cdfbdba1cd338f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/container/zipball/93238f74ff5964aee27a78508cdfbdba1cd338f6",
+                "reference": "93238f74ff5964aee27a78508cdfbdba1cd338f6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "psr/container": "^1.0"
+            },
+            "provide": {
+                "psr/container-implementation": "^1.0"
+            },
+            "replace": {
+                "orno/di": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev",
+                    "dev-2.x": "2.x-dev",
+                    "dev-1.x": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Container\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Bennett",
+                    "email": "philipobenito@gmail.com",
+                    "homepage": "http://www.philipobenito.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fast and intuitive dependency injection container.",
+            "homepage": "https://github.com/thephpleague/container",
+            "keywords": [
+                "container",
+                "dependency",
+                "di",
+                "injection",
+                "league",
+                "provider",
+                "service"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/philipobenito",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-05-18T08:20:23+00:00"
+        },
+        {
             "name": "mobiledetect/mobiledetectlib",
             "version": "2.8.34",
             "source": {
@@ -1035,6 +1107,55 @@
             "time": "2016-08-06T20:24:11+00:00"
         },
         {
+            "name": "psr/container",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "time": "2017-02-14T16:28:37+00:00"
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -1262,16 +1383,16 @@
         },
         {
             "name": "spatie/schema-org",
-            "version": "2.13.0",
+            "version": "2.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/schema-org.git",
-                "reference": "1000009d7d25666b4c6a81312e6ebff24b46c644"
+                "reference": "a17c65150f97caf81cea490294b376fd37bee660"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/schema-org/zipball/1000009d7d25666b4c6a81312e6ebff24b46c644",
-                "reference": "1000009d7d25666b4c6a81312e6ebff24b46c644",
+                "url": "https://api.github.com/repos/spatie/schema-org/zipball/a17c65150f97caf81cea490294b376fd37bee660",
+                "reference": "a17c65150f97caf81cea490294b376fd37bee660",
                 "shasum": ""
             },
             "require": {
@@ -1279,7 +1400,7 @@
                 "php": "^7.3"
             },
             "require-dev": {
-                "graham-campbell/analyzer": "^2.1.1",
+                "graham-campbell/analyzer": "^2.3",
                 "league/flysystem": "^1.0",
                 "phpunit/phpunit": "^8.0",
                 "symfony/console": "^3.2",
@@ -1327,7 +1448,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2020-04-17T11:50:06+00:00"
+            "time": "2020-06-10T17:06:18+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -1890,16 +2011,16 @@
         },
         {
             "name": "voku/portable-ascii",
-            "version": "1.4.10",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "240e93829a5f985fab0984a6e55ae5e26b78a334"
+                "reference": "618631dc601d8eb6ea0a9fbf654ec82f066c4e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/240e93829a5f985fab0984a6e55ae5e26b78a334",
-                "reference": "240e93829a5f985fab0984a6e55ae5e26b78a334",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/618631dc601d8eb6ea0a9fbf654ec82f066c4e97",
+                "reference": "618631dc601d8eb6ea0a9fbf654ec82f066c4e97",
                 "shasum": ""
             },
             "require": {
@@ -1914,8 +2035,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "voku\\": "src/voku/",
-                    "voku\\tests\\": "tests/"
+                    "voku\\": "src/voku/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1953,7 +2073,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-03-13T01:23:26+00:00"
+            "time": "2020-06-15T23:49:30+00:00"
         },
         {
             "name": "wp-bond/bond",
@@ -1961,15 +2081,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "82630d6b6264b954e1f46a7b32e3fde033dbc1da"
+                "reference": "73455714fa7a7348ec795dc9a0d9a35c0ef98099"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/82630d6b6264b954e1f46a7b32e3fde033dbc1da",
-                "reference": "82630d6b6264b954e1f46a7b32e3fde033dbc1da",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/73455714fa7a7348ec795dc9a0d9a35c0ef98099",
+                "reference": "73455714fa7a7348ec795dc9a0d9a35c0ef98099",
                 "shasum": ""
             },
             "require": {
+                "league/container": "^3.3",
                 "mobiledetect/mobiledetectlib": "^2.8",
                 "nesbot/carbon": "^2.32",
                 "php": ">=7.4",
@@ -1980,7 +2101,7 @@
             "suggest": {
                 "aws/aws-sdk-php": "Translate strings with AWS Translate.",
                 "google/cloud-translate": "Translate strings with Google Translate.",
-                "symfony/var-dumper": "To use dd function."
+                "symfony/var-dumper": "To use dd() function during development."
             },
             "type": "library",
             "autoload": {
@@ -2008,7 +2129,7 @@
                 "utility",
                 "wordpress"
             ],
-            "time": "2020-06-25T21:59:58+00:00"
+            "time": "2020-06-25T22:18:00+00:00"
         }
     ],
     "packages-dev": [],
