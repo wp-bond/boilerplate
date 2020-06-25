@@ -8,6 +8,7 @@
 // chmod 400 wp.php (allowing read for user only)
 
 return [
+    'id' => 'bond',
     'name' => 'Bond',
 
     // https://www.php.net/manual/en/timezones.php

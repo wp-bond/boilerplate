@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'rss' => true,
+    'rss' => false,
 
     'emojis' => false,
     'shortlink' => false,

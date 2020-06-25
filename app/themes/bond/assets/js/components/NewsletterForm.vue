@@ -45,7 +45,7 @@ export default {
       email: '',
 
       form: new Form({
-        baseUrl: '/wp-json/bond/',
+        baseUrl: '/api/bond/',
         default: {
           lang: window.LANGUAGE_CODE
         }
