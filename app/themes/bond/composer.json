@@ -8,14 +8,16 @@
       "App\\": "app/"
     }
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
   "require": {
+    "aws/aws-sdk-php": "^3.133",
     "google/cloud-translate": "^1.7",
     "samdark/sitemap": "^2.2",
-    "aws/aws-sdk-php": "^3.133",
     "spatie/schema-org": "^2.12",
-    "wp-bond/bond": "dev-master",
-    "symfony/var-dumper": "^5.0"
+    "symfony/var-dumper": "^5.0",
+    "wp-bond/bond": "^0.0.2"
   }
 }
