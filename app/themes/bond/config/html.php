@@ -1,13 +1,14 @@
 <?php
 
 return [
-    'rss' => false,
+    'disable_rss' => true,
 
-    'emojis' => false,
-    'shortlink' => false,
-    'wp_embed' => false,
-    'block_library' => false,
-    'body_classes' => false,
-    'jetpack_includes' => false,
-    'admin_bar' => false,
+    'reset_body_classes' => true,
+
+    'disable_emojis' => true,
+    'disable_shortlink' => true,
+    'disable_wp_embed' => true,
+    'disable_block_library' => true,
+    'disable_jetpack_includes' => true,
+    'disable_admin_bar' => true,
 ];

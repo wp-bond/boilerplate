@@ -3,7 +3,7 @@
 return [
     'force_https' => app()->isProduction() || app()->isStaging(),
 
-    'front_page_redirect' => false,
+    'disable_front_page_redirect' => true,
 
     'disable_user_registration' => true,
 ];

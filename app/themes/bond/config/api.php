@@ -2,12 +2,11 @@
 
 return [
     'prefix' => 'api',
+    'only_logged_in' => true,
 
     // disable some defaults
-    'header' => false,
-    'default_routes' => false,
-    'root_route' => false,
-    'oembed' => false,
-
-    'only_logged_in' => true,
+    'disable_header' => false,
+    'disable_default_routes' => false,
+    'disable_root_route' => false,
+    'disable_oembed' => false,
 ];
