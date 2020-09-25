@@ -9,19 +9,19 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "lodash": "^4.17.15",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "lodash": "^4.17.20",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.0.1",
+    "browser-sync": "^2.26.12",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "core-js": "^3.6.5",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
-    "laravel-mix": "^5.0.4",
-    "sass": "^1.26.5",
+    "laravel-mix": "^5.0.5",
+    "sass": "^1.26.11",
     "sass-loader": "^8.0.2"
   }
 }
