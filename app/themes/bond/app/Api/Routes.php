@@ -20,6 +20,7 @@ class Routes
                 [
                     'methods' => 'POST',
                     'callback' => [NewsletterApi::class, 'subscribe'],
+                    'permission_callback' => '__return_true',
                 ]
             );
         });
