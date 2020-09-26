@@ -12,7 +12,7 @@ class Control
     public static function boot()
     {
         // SEO
-        acf_add_options_page([
+        \acf_add_options_page([
             'page_title' => t('SEO'),
             'menu_title' => t('SEO'),
             'menu_slug' => 'acf-options-seo-' . self::$key,
