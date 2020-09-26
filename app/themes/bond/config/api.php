@@ -5,8 +5,8 @@ return [
     'only_logged_in' => true,
 
     // disable some defaults
-    'disable_header' => false,
-    'disable_default_routes' => false,
-    'disable_root_route' => false,
-    'disable_oembed' => false,
+    'disable_header' => true,
+    'disable_default_routes' => true,
+    'disable_root_route' => true,
+    'disable_oembed' => true,
 ];
