@@ -16,11 +16,11 @@ class ArchiveColumns
 
         // Common column handlers
 
-        Admin::addArchiveColumn('subtitle', function (Post $post) {
+        Admin::addColumnHandler('subtitle', function (Post $post) {
             return $post->subtitle ?: EMPTY_CHAR;
         });
 
-        Admin::addArchiveColumn('content', function (Post $post) {
+        Admin::addColumnHandler('content', function (Post $post) {
 
             $value = $post->content ?: $post->post_content;
 
@@ -29,7 +29,7 @@ class ArchiveColumns
             echo '</a>';
         });
 
-        Admin::addArchiveColumn('image', function (Post $post) {
+        Admin::addColumnHandler('image', function (Post $post) {
             $image_id = $post->image();
             if (!$image_id) {
                 return;
@@ -45,7 +45,7 @@ class ArchiveColumns
                 . '</a>';
         });
 
-        Admin::addArchiveColumn('multilanguage_links', function (Post $post) {
+        Admin::addColumnHandler('multilanguage_links', function (Post $post) {
             $res = '<div class="multilanguage-circles">';
 
             foreach (Languages::codes() as $code) {

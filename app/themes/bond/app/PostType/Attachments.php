@@ -30,20 +30,15 @@ class Attachments extends PostType
     public static function bootAdmin()
     {
         // columns
-        \add_filter('manage_media_columns', function ($defaults) {
-            // dd($defaults);
+        Admin::setColumns(self::$post_type, [
+            'title' => t('File'),
+            'i18n-image-caption' => t('Caption'),
+            // 'author' => t('Author'),
+            'parent' => t('Attached to'),
+            'date' => t('Date'),
+        ]);
 
-            return [
-                'cb' => '<input type="checkbox" />',
-                'title' => t('File'),
-                'i18n-image-caption' => t('Caption'),
-                // 'author' => t('Author'),
-                'parent' => t('Attached to'),
-                'date' => t('Date'),
-            ];
-        });
-
-        Admin::addArchiveColumn('i18n-image-caption', function ($post) {
+        Admin::addColumnHandler('i18n-image-caption', function ($post) {
             return $post->caption ?: '—';
         });
     }

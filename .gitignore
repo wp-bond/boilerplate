@@ -2,5 +2,3 @@
 /wp.php
 /gcloud.json
 /html/sitemap.xml
-/html/wp/*
-!/html/wp/wp-config.php

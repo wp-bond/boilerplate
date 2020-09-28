@@ -4,3 +4,5 @@
 *.js linguist-vendored
 LICENSE export-ignore
 README.md export-ignore
+/html/app/plugins/.gitignore export-ignore
+/html/wp/.gitignore export-ignore

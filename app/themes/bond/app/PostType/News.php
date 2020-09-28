@@ -4,6 +4,7 @@ namespace App\PostType;
 
 use Bond\FieldGroup;
 use Bond\PostType;
+use Bond\Settings\Admin;
 use Bond\Utils\Register;
 
 class News extends PostType
@@ -15,8 +16,6 @@ class News extends PostType
 
     public static function boot()
     {
-        // View hooks
-        static::addToView();
 
         // Register
         Register::postType(self::$post_type, [
@@ -62,20 +61,13 @@ class News extends PostType
     {
 
         // Archive Columns
-        \add_filter(
-            'manage_' . self::$post_type . '_posts_columns',
-            function ($defaults) {
-                // dd($defaults);
-                return [
-                    'cb' => '<input type="checkbox" />',
-                    'image' => '',
-                    'title' => t('Title'),
-                    'taxonomy-category'  => t('Category'),
-                    'date' => t('Date'),
-                    'multilanguage_links' => t('Links'),
-                ];
-            }
-        );
+        Admin::setColumns(self::$post_type, [
+            'image' => '',
+            'title' => t('Title'),
+            'taxonomy-category'  => t('Category'),
+            'date' => t('Date'),
+            'multilanguage_links' => t('Links'),
+        ]);
     }
 
 

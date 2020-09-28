@@ -3,7 +3,7 @@
 namespace App\PostType;
 
 use Bond\PostType;
-
+use Bond\Settings\Admin;
 
 class Pages extends PostType
 {
@@ -12,21 +12,14 @@ class Pages extends PostType
 
     public static function boot()
     {
-        // View hooks
-        static::addToView();
     }
 
 
     public static function bootAdmin()
     {
-        // columns
-        \add_filter('manage_' . self::$post_type . '_posts_columns', function ($defaults) {
-            // dd($defaults);
-            return [
-                'cb' => '<input type="checkbox" />',
-                'title' => t('Title'),
-                'multilanguage_links' => t('Links'),
-            ];
-        });
+        Admin::setColumns(self::$post_type, [
+            'title' => t('Title'),
+            'multilanguage_links' => t('Links'),
+        ]);
     }
 }
