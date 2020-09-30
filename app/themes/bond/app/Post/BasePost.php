@@ -105,19 +105,31 @@ class BasePost extends Post
     }
 
     // common fields that should hold an image in ACF Flex modules
-    protected function modulesImages(): array
+    protected function modulesImages(?array $modules): array
     {
-        if (!$this->modules) {
+        if (empty($modules)) {
             return [];
         }
         $images = [];
 
-        foreach ($this->modules as $module) {
-            if (!empty($module['image'])) {
-                $images[] =  $module['image'];
+        foreach ($modules as $module) {
+
+            if (is_int($module['image'])) {
+                $images[] = $module['image'];
             }
-            if (!empty($module['images'])) {
-                $images = array_merge($images, (array) $module['images']);
+
+            if (is_iterable($module['images'])) {
+                foreach ($module['images'] as $image) {
+
+                    if (is_int($image)) {
+                        $images[] = $image;
+                    } elseif (
+                        !empty($images['image'])
+                        && is_int($images['image'])
+                    ) {
+                        $images[] = $image;
+                    }
+                }
             }
         }
         return array_map('intval', $images);
