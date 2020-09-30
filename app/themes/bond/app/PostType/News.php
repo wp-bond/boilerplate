@@ -59,6 +59,8 @@ class News extends PostType
 
     public static function bootAdmin()
     {
+        Admin::hideTitle(self::$post_type);
+        Languages::ensureTitlesAndSlugs(self::$post_type);
 
         // Archive Columns
         Admin::setColumns(self::$post_type, [

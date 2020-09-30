@@ -17,11 +17,5 @@ return [
     'map_links' => true,
     'search_path' => 'search',
 
-    // TODO find better name!!!!!!!
-    'set_multilanguage_titles_and_slugs' => [
-        PAGE,
-        NEWS,
-    ],
-
     'developer_email' => 'my@email.com',
 ];

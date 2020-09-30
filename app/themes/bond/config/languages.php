@@ -12,6 +12,8 @@
 return [
 
     'codes' => [
+        // TODO, maybe move these keys into a language_code or code param, reads better
+        // 'codes' would go into 'languages' ?
         'en' => [
             'short_code' => 'en',
             'locale' => 'en_US',
