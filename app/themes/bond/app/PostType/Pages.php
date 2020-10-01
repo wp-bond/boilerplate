@@ -19,7 +19,6 @@ class Pages extends PostType
     public static function bootAdmin()
     {
         Admin::hideTitle(self::$post_type);
-        Languages::ensureTitlesAndSlugs(self::$post_type);
 
         Admin::setColumns(self::$post_type, [
             'title' => t('Title'),

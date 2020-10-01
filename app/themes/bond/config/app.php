@@ -14,7 +14,6 @@ return [
     // https://www.php.net/manual/en/timezones.php
     'timezone' => 'America/Sao_Paulo',
 
-    'map_links' => true,
     'search_path' => 'search',
 
     'developer_email' => 'my@email.com',

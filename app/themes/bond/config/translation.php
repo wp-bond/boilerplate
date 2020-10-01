@@ -1,9 +1,6 @@
 <?php
 
 return [
-    // boolean (all posts) or array of post types
-    'translate_on_save' => true,
-
     'service' => 'google', // google / aws / null
 
     'credentials' => [
