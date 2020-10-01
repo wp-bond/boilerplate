@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "312ecab02a042e45db3fc76715eb69ed",
+    "content-hash": "2c7f1ef32850a4993c05d43c29add730",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -2069,16 +2069,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.0.6",
+            "version": "v0.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "83dc3ee87d6a3dc1c8284d98ffc67625c1656eb0"
+                "reference": "bda83a320b4f70e8eb82da13ab15f9ff67f94763"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/83dc3ee87d6a3dc1c8284d98ffc67625c1656eb0",
-                "reference": "83dc3ee87d6a3dc1c8284d98ffc67625c1656eb0",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/bda83a320b4f70e8eb82da13ab15f9ff67f94763",
+                "reference": "bda83a320b4f70e8eb82da13ab15f9ff67f94763",
                 "shasum": ""
             },
             "require": {
@@ -2123,7 +2123,7 @@
                 "utility",
                 "wordpress"
             ],
-            "time": "2020-09-30T18:50:46+00:00"
+            "time": "2020-10-01T12:06:16+00:00"
         }
     ],
     "packages-dev": [],
