@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c7f1ef32850a4993c05d43c29add730",
+    "content-hash": "2ca2c13bf007d50b7286a6a72e4ff1f4",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.157.0",
+            "version": "3.158.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ad2c0183d7ebc695acb1ba39d528f2328f2c0de3"
+                "reference": "59345aa45161a8f83c3a0027a7df9567ae72cc85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ad2c0183d7ebc695acb1ba39d528f2328f2c0de3",
-                "reference": "ad2c0183d7ebc695acb1ba39d528f2328f2c0de3",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/59345aa45161a8f83c3a0027a7df9567ae72cc85",
+                "reference": "59345aa45161a8f83c3a0027a7df9567ae72cc85",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-09-30T18:58:20+00:00"
+            "time": "2020-10-01T18:41:53+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -2069,16 +2069,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.0.7",
+            "version": "v0.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "bda83a320b4f70e8eb82da13ab15f9ff67f94763"
+                "reference": "6d30bdb2badc2040e38100ced454f26a277cee8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/bda83a320b4f70e8eb82da13ab15f9ff67f94763",
-                "reference": "bda83a320b4f70e8eb82da13ab15f9ff67f94763",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/6d30bdb2badc2040e38100ced454f26a277cee8e",
+                "reference": "6d30bdb2badc2040e38100ced454f26a277cee8e",
                 "shasum": ""
             },
             "require": {
@@ -2123,7 +2123,7 @@
                 "utility",
                 "wordpress"
             ],
-            "time": "2020-10-01T12:06:16+00:00"
+            "time": "2020-10-01T19:17:26+00:00"
         }
     ],
     "packages-dev": [],

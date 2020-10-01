@@ -5,7 +5,6 @@ namespace App\PostType;
 use Bond\FieldGroup;
 use Bond\PostType;
 use Bond\Settings\Admin;
-use Bond\Utils\Register;
 
 class News extends PostType
 {
@@ -13,30 +12,17 @@ class News extends PostType
     public static array $taxonomies = [
         CATEGORY,
     ];
+    public static string $name = 'News';
+    public static string $singular_name = 'Article';
+
+    public static array $register_options = [
+        'menu_icon' => 'dashicons-format-aside',
+        'menu_position' => 28,
+    ];
+
 
     public static function boot()
     {
-
-        // Register
-        Register::postType(self::$post_type, [
-            'labels' => [
-                'name' => t('News'),
-                'singular_name' => t('Article'),
-                'add_new' => t('Add') . ' ' . t('article'),
-                'add_new_item' => t('Add new') . ' ' . t('article'),
-                'edit_item' => t('Edit') . ' ' . t('article'),
-                'new_item' => t('New') . ' ' . t('article'),
-                'view_item' => t('View') . ' ' . t('article'),
-                'search_items' => t('Search') . ' ' . t('article'),
-                'not_found' => t('No article') . ' ' . t('found'),
-                'not_found_in_trash' => t('No article') . ' ' . t('found in trash'),
-            ],
-            'menu_icon' => 'dashicons-format-aside',
-            'menu_position' => 28,
-            'taxonomies' => static::$taxonomies,
-        ]);
-
-
         // Taxonomy field
         $group = (new FieldGroup('tax_' . self::$post_type))
             ->location(self::$post_type)
