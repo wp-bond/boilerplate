@@ -65,6 +65,19 @@
         "url": {
             "search": "chercher",
             "news": "nouvelles"
+        },
+        "register": {
+            "News": "Nouvelles",
+            "Article": "Article",
+            "Add": "Ajouter",
+            "article": "article",
+            "Add new": "Ajouter nouveau",
+            "Edit": "\u00c9diter",
+            "New": "Nouveau",
+            "View": "Vue",
+            "Search": "Chercher",
+            "No article": "Aucun article",
+            "found": "a trouv\u00e9"
         }
     },
     "article": "article",

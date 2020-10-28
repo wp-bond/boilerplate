@@ -2,6 +2,7 @@
 
 namespace App\Admin;
 
+use App\Post\BasePost;
 use Bond\Post;
 use Bond\Settings\Languages;
 use Bond\Settings\Admin;
@@ -29,7 +30,7 @@ class ArchiveColumns
             echo '</a>';
         });
 
-        Admin::addColumnHandler('image', function (Post $post) {
+        Admin::addColumnHandler('image', function (BasePost $post) {
             $image_id = $post->image();
             if (!$image_id) {
                 return;

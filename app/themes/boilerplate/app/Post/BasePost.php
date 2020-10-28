@@ -105,7 +105,7 @@ class BasePost extends Post
     }
 
     // common fields that should hold an image in ACF Flex modules
-    protected function modulesImages(?array $modules): array
+    protected function modulesImages($modules): array
     {
         if (empty($modules)) {
             return [];

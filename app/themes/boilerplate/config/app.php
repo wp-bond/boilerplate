@@ -8,8 +8,8 @@
 // chmod 400 wp.php (allowing read for user only)
 
 return [
-    'id' => 'bond',
-    'name' => 'Bond',
+    'id' => 'boilerplate',
+    'name' => 'My App',
 
     // https://www.php.net/manual/en/timezones.php
     'timezone' => 'America/Sao_Paulo',
