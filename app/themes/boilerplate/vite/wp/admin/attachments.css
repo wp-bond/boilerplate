@@ -1,0 +1,19 @@
+/* Attachments: hide some fields */
+/* attachments popup inside the post edit */
+.attachment-details {
+  & .setting[data-setting="title"],
+  & .setting[data-setting="caption"],
+  & .setting[data-setting="alt"],
+  & .setting[data-setting="description"] {
+    display: none !important;
+  }
+}
+.compat-item {
+  & .compat-field-credit {
+    display: none !important;
+  }
+}
+/* attachments edit page */
+.wp_attachment_details.edit-form-section {
+  display: none !important;
+}

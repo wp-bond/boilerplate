@@ -7,9 +7,11 @@
 
     <?php
 
-    // Preload and Styles
+    // Preload fonts
     $this->template('html/preload');
-    $this->template('html/css');
+
+    // Styles and Scripts
+    $this->template('html/vite');
 
     // WP Head
     wp_head();
@@ -43,11 +45,6 @@
 
     // WP footer
     wp_footer();
-
-    // Scripts, etc
-    $this->template('html/js');
-
-    $this->template('html/outdated-browser');
 
     ?>
 </body>

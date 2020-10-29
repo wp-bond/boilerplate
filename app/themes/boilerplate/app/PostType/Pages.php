@@ -4,7 +4,6 @@ namespace App\PostType;
 
 use Bond\PostType;
 use Bond\Settings\Admin;
-use Bond\Settings\Languages;
 
 class Pages extends PostType
 {
