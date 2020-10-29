@@ -2,7 +2,7 @@
 
 namespace App\Fields;
 
-use Bond\FieldGroup;
+use Bond\Fields\Acf\FieldGroup;
 use Bond\Settings\Languages;
 use Bond\Utils\Cast;
 use Bond\Utils\Str;

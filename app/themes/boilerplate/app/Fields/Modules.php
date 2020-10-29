@@ -2,7 +2,7 @@
 
 namespace App\Fields;
 
-use Bond\FieldGroup;
+use Bond\Fields\Acf\FieldGroup;
 
 class Modules
 {
