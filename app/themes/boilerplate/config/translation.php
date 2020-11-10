@@ -3,6 +3,8 @@
 return [
     'service' => 'google', // google / aws / null
 
+    'update_wp_titles' => true,
+
     'credentials' => [
         // for Google Translate use ENV
         // putenv('GOOGLE_APPLICATION_CREDENTIALS=your_json_path')
