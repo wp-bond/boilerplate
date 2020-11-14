@@ -15,6 +15,6 @@
     "@vue/compiler-sfc": "^3.0.2",
     "postcss-preset-env": "^6.7.0",
     "sass": "^1.27.1",
-    "vite": "^1.0.0-rc.8"
+    "vite": "^1.0.0-rc.9"
   }
 }

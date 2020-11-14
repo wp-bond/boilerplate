@@ -4,6 +4,7 @@ return [
     'disable_rss' => true,
 
     'reset_body_classes' => true,
+    'cleanup_head' => true,
 
     'disable_emojis' => true,
     'disable_shortlink' => true,
