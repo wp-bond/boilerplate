@@ -3,15 +3,15 @@
   --serif: "Serif", serif;
 }
 
-@custom-media --w320 (width >= 320px); // iphone se
-@custom-media --w375 (width >= 375px); // iphone mini
-@custom-media --w390 (width >= 390px); // iphone pro
-@custom-media --w414 (width >= 414px); // iphone plus
-@custom-media --w428 (width >= 428px); // iphone pro max
+@custom-media --w320 (width >= 320px); /* iphone se */
+@custom-media --w375 (width >= 375px); /* iphone mini */
+@custom-media --w390 (width >= 390px); /* iphone pro */
+@custom-media --w414 (width >= 414px); /* iphone plus */
+@custom-media --w428 (width >= 428px); /* iphone pro max */
 
-@custom-media --sm (width >= 576px); // landscape phones
-@custom-media --md (width >= 768px); // tablets
-@custom-media --lg (width >= 992px); // desktops
+@custom-media --sm (width >= 576px); /* landscape phones */
+@custom-media --md (width >= 768px); /* tablets */
+@custom-media --lg (width >= 992px); /* desktops */
 @custom-media --xl (width >= 1200px);
 @custom-media --xxl (width >= 1400px);
 
