@@ -3,16 +3,22 @@
   --serif: "Serif", serif;
 }
 
-@custom-media --sm (width >= 375px);
-@custom-media --md (width >= 672px);
-@custom-media --lg (width >= 1056px);
-@custom-media --xl (width >= 1312px);
-@custom-media --xxl (width >= 1584px);
+@custom-media --w320 (width >= 320px); // iphone se
+@custom-media --w375 (width >= 375px); // iphone mini
+@custom-media --w390 (width >= 390px); // iphone pro
+@custom-media --w414 (width >= 414px); // iphone plus
+@custom-media --w428 (width >= 428px); // iphone pro max
 
-@custom-media --max-sm (width < 374.98px);
-@custom-media --max-md (width < 671.98px);
-@custom-media --max-lg (width < 1055.98px);
-@custom-media --max-xl (width < 1311.98px);
+@custom-media --sm (width >= 576px); // landscape phones
+@custom-media --md (width >= 768px); // tablets
+@custom-media --lg (width >= 992px); // desktops
+@custom-media --xl (width >= 1200px);
+@custom-media --xxl (width >= 1400px);
+
+@custom-media --max-sm (width < 575.98px);
+@custom-media --max-md (width < 767.98px);
+@custom-media --max-lg (width < 991.98px);
+@custom-media --max-xl (width < 1199.98px);
 
 /* .example-nesting-and-media {
   background-color: red;
