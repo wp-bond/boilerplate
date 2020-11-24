@@ -1,3 +1,10 @@
+<?php
+
+$props = [
+    'msg' => 'Header'
+];
+
+?>
 <header class="vue-app">
-    <hello-world msg="Header"></hello-world>
+    <hello-world v-bind="<?= esc_json($props) ?>"></hello-world>
 </header>
