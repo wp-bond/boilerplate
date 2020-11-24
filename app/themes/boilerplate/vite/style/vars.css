@@ -1,0 +1,25 @@
+:root {
+  --sans: "Sans", sans-serif;
+  --serif: "Serif", serif;
+}
+
+@custom-media --sm (width >= 375px);
+@custom-media --md (width >= 672px);
+@custom-media --lg (width >= 1056px);
+@custom-media --xl (width >= 1312px);
+@custom-media --xxl (width >= 1584px);
+
+@custom-media --max-sm (width < 374.98px);
+@custom-media --max-md (width < 671.98px);
+@custom-media --max-lg (width < 1055.98px);
+@custom-media --max-xl (width < 1311.98px);
+
+/* .example-nesting-and-media {
+  background-color: red;
+  & p {
+    color: yellow;
+  }
+  @media (--md) {
+    background-color: blue;
+  }
+} */

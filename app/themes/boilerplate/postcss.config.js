@@ -1,7 +1,13 @@
+
+const postcssPresetEnv = require('postcss-preset-env')
+
 module.exports = {
-  plugins: {
-    'postcss-preset-env': {
-      stage: 1
-    }
-  }
+
+  plugins: [
+    postcssPresetEnv({
+      stage: 1,
+      importFrom: 'vite/style/vars.css'
+    })
+  ]
+
 }

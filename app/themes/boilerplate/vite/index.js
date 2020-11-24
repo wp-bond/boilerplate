@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
-import './style.css'
 
-// The example here is to have multiple Vue apps sprinkled throughout your page
-// So we would instantiate any known components by their own
+// Styles
+import './style'
+
+// in-DOM HTML Components
 import HelloWorld from './components/HelloWorld.vue'
 
 for (const el of document.getElementsByClassName('vue-app')) {
@@ -10,7 +11,7 @@ for (const el of document.getElementsByClassName('vue-app')) {
     template: el.innerHTML,
     components: {
       HelloWorld
-      // add here all components that should be available to in-browser template compilation
+      // add more if needed
     }
   }).mount(el)
 }
