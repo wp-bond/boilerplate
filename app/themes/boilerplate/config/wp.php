@@ -6,4 +6,6 @@ return [
     'disable_front_page_redirect' => true,
 
     'disable_user_registration' => true,
+
+    // 'disable_sitemaps' => true,
 ];

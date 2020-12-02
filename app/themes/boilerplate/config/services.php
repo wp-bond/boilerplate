@@ -12,6 +12,10 @@ return [
         'url' => 'https://www.facebook.com/pagename',
     ],
 
+    'instagram' => [
+        'url' => 'https://www.instagram.com/pagename',
+    ],
+
     'twitter' => [
         'user' => 'username',
         'url' => 'https://www.twitter.com/username',

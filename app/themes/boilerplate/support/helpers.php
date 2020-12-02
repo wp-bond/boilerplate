@@ -51,12 +51,12 @@ function responsive_picture($image_id, $size, $with_caption = false)
     $responsive_sizes = [];
 
     $responsive_sizes[] = [
-        'rule' => 'min-width: 1280px',
+        'rule' => 'min-width: 1200px',
         'size' => [$size_xl . '_xl', $size_xl . '_xl_retina'],
         'image' => $image_xl,
     ];
     $responsive_sizes[] = [
-        'rule' => 'min-width: 1000px',
+        'rule' => 'min-width: 992px',
         'size' => [$size_lg . '_lg', $size_lg . '_lg_retina'],
         'image' => $image_lg,
     ];
