@@ -26,12 +26,12 @@ class News extends PostType
         // Taxonomy field
         $group = (new FieldGroup('tax_' . self::$post_type))
             ->location(self::$post_type)
-            ->title(t('Category'))
+            ->title('Category')
             ->positionSide()
             ->screenHideAll();
 
         $group->taxonomyField(CATEGORY)
-            // ->label(t('Categories'))
+            // ->label('Categories')
             ->field_type('checkbox')
             ->allow_null(1)
             ->add_term(1)

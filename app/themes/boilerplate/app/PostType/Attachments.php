@@ -16,12 +16,12 @@ class Attachments extends PostType
         // fields
         $group = (new FieldGroup(static::$post_type))
             ->location([static::$post_type])
-            ->title(t('General Control'))
+            ->title('General Control')
             ->screenHideAll();
 
         $group->textAreaField('caption')
             ->multilanguage()
-            ->label(t('Caption'))
+            ->label('Caption')
             ->rows(4)
             ->newLines('br');
     }

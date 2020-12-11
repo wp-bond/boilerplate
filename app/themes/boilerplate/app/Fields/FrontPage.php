@@ -26,21 +26,21 @@ class FrontPage
     {
         // Fields
         $group = (new FieldGroup(self::$key))
-            ->title(t('Content'))
+            ->title('Content')
             ->screenHideAll()
             ->menuOrder(10)
             ->location(self::$location);
 
         $flex = $group->flexibleContentField('modules')
-            ->buttonLabel(t('+ Add Module'));
+            ->buttonLabel('+ Add Module');
 
 
         // Feature
         $layout = $flex->layout('features')
-            ->label(t('Feature'));
+            ->label('Feature');
 
         $layout->relationshipField('related_posts')
-            ->instructions(t('Select from the website\'s content.'))
+            ->instructions('Select from the website\'s content.')
             ->postType([
                 NEWS,
             ])

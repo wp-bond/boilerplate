@@ -27,31 +27,31 @@ class Modules
     {
         // Fields
         $group = (new FieldGroup(self::$key))
-            ->title(t('Content'))
+            ->title('Content')
             ->screenHideAll()
             ->menuOrder(10)
             ->location(self::$location);
 
         $flex = $group->flexibleContentField('modules')
-            ->buttonLabel(t('+ Add Module'));
+            ->buttonLabel('+ Add Module');
 
 
         // Content
         $layout = $flex->layout('content')
-            ->label(t('Content'));
+            ->label('Content');
 
         $layout->textField('title')
-            ->label(t('Title'))
+            ->label('Title')
             ->multilanguage()
             ->wrapWidth(50);
 
         $layout->textField('subtitle')
-            ->label(t('Subtitle'))
+            ->label('Subtitle')
             ->multilanguage()
             ->wrapWidth(50);
 
         $layout->wysiwygField('content')
-            ->label(t('Text'))
+            ->label('Text')
             ->multilanguage()
             ->mediaUpload(false)
             ->wrapWidth(50)
@@ -61,19 +61,19 @@ class Modules
 
         // Image Gallery
         $layout = $flex->layout('gallery')
-            ->label(t('Image Gallery'));
+            ->label('Image Gallery');
 
         $layout->textField('title')
-            ->label(t('Title'))
+            ->label('Title')
             ->multilanguage()
             ->wrapWidth(50);
 
         $layout->textField('subtitle')
-            ->label(t('Subtitle'))
+            ->label('Subtitle')
             ->multilanguage()
             ->wrapWidth(50);
 
         $layout->galleryField('gallery')
-            ->label(t('Image Gallery'));
+            ->label('Image Gallery');
     }
 }

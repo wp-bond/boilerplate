@@ -12,8 +12,8 @@ class Control
     {
         // SEO
         \acf_add_options_page([
-            'page_title' => t('SEO'),
-            'menu_title' => t('SEO'),
+            'page_title' => 'SEO',
+            'menu_title' => 'SEO',
             'menu_slug' => 'acf-options-seo-' . self::$key,
             // 'capability'    => 'edit_posts',
             // 'parent_slug' => 'acf-options-' . self::$key,
@@ -27,17 +27,17 @@ class Control
             ->location([
                 'options' => 'seo-' . self::$key,
             ])
-            ->title(t('Search Engine Optimization'));
+            ->title('Search Engine Optimization');
 
         $group->textAreaField('description')
             ->multilanguage()
-            ->label(t('Google Search Description'))
+            ->label('Google Search Description')
             ->wrapWidth(50)
             ->maxlength(170)
             ->rows(3)
-            ->instructions(t('Maximum of 170 characters, relative to 2 lines of text on the Google search results page.'));
+            ->instructions('Maximum of 170 characters, relative to 2 lines of text on the Google search results page.');
 
         $group->messageField('seo_message')
-            ->message(t('Other SEO optimizations are done automatically by the website.'));
+            ->message('Other SEO optimizations are done automatically by the website.');
     }
 }

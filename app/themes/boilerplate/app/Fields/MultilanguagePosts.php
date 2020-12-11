@@ -33,7 +33,7 @@ class MultilanguagePosts
     {
         // Fields
         $group = (new FieldGroup(self::$key))
-            ->title(t('Title / Link'))
+            ->title('Title / Link')
             ->screenHideAll()
             ->menuOrder(9)
             ->positionAfterTitle()
@@ -43,27 +43,27 @@ class MultilanguagePosts
         $group->textField('title')
             ->multilanguage()
             ->wrapWidth(50)
-            ->label(t('Title'));
+            ->label('Title');
 
         $group->textField('slug')
             ->multilanguage()
-            ->label(t('Page Slug'))
+            ->label('Page Slug')
             ->wrapWidth(25);
 
         $group->booleanField('is_disabled')
             ->multilanguage()
-            ->label(t('Disable'))
+            ->label('Disable')
             ->wrapWidth(15);
 
         $group->messageField('i18n_link_message_icon')
             ->multilanguage()
-            ->label(t('Link'))
+            ->label('Link')
             ->wrapWidth(10);
 
         $group->urlField('external_link')
             ->multilanguage()
-            ->label(t('Redirect Link'))
-            ->instructions(t('Optional. If not filled this page will be automatically redirected to the most fitting page.'))
+            ->label('Redirect Link')
+            ->instructions('Optional. If not filled this page will be automatically redirected to the most fitting page.')
             ->i18n_conditional(true)
             ->conditionalLogic([
                 [
@@ -79,7 +79,7 @@ class MultilanguagePosts
 
         // Fields
         $group = (new FieldGroup('full_' . self::$key))
-            ->title(t('Title / Link'))
+            ->title('Title / Link')
             ->screenHideAll()
             ->menuOrder(9)
             ->positionAfterTitle()
@@ -89,32 +89,32 @@ class MultilanguagePosts
         $group->textField('title')
             ->multilanguage()
             // ->wrapWidth(50)
-            ->label(t('Title'));
+            ->label('Title');
 
         $group->textField('subtitle')
             ->multilanguage()
             ->wrapWidth(50)
-            ->label(t('Subtitle'));
+            ->label('Subtitle');
 
         $group->textField('slug')
             ->multilanguage()
-            ->label(t('Page Slug'))
+            ->label('Page Slug')
             ->wrapWidth(25);
 
         $group->booleanField('is_disabled')
             ->multilanguage()
-            ->label(t('Disable'))
+            ->label('Disable')
             ->wrapWidth(15);
 
         $group->messageField('i18n_link_message_icon')
             ->multilanguage()
-            ->label(t('Link'))
+            ->label('Link')
             ->wrapWidth(10);
 
         $group->urlField('external_link')
             ->multilanguage()
-            ->label(t('Redirect Link'))
-            ->instructions(t('Optional. If not filled this page will be automatically redirected to the most fitting page.'))
+            ->label('Redirect Link')
+            ->instructions('Optional. If not filled this page will be automatically redirected to the most fitting page.')
             ->i18n_conditional(true)
             ->conditionalLogic([
                 [

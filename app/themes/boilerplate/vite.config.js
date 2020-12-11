@@ -27,6 +27,9 @@ export default {
   // test and choose with you prefer
   minify: 'esbuild', // terser (default) | esbuild
 
+  // es target
+  esbuildTarget: 'es2018',
+
   // required for in-browser template compilation
   // https://v3.vuejs.org/guide/installation.html#with-a-bundler
   alias: {
