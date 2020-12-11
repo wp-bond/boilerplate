@@ -2,4 +2,10 @@
 /wp.php
 /gcloud.json
 /html/sitemap.xml
+
+# Our assets symlink
 html/vite/assets
+
+# WP
+/html/wp/*
+!/html/wp/wp-config.php
