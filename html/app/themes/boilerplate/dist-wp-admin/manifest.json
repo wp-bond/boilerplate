@@ -1,0 +1,15 @@
+{
+  "wp/admin-legacy.js": {
+    "file": "assets/admin-legacy.8e5f0657.js",
+    "src": "wp/admin-legacy.js",
+    "isEntry": true
+  },
+  "wp/admin.js": {
+    "file": "assets/admin.5f460780.js",
+    "src": "wp/admin.js",
+    "isEntry": true,
+    "css": [
+      "assets/admin.657a152b.css"
+    ]
+  }
+}

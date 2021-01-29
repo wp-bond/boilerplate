@@ -1,9 +1,10 @@
 import { default as config, themeDir, themeUrl } from './vite.config.js'
 
-export default {
-  ...config,
-  port: 3001,
-  entry: 'vite/wp/admin.js',
-  outDir: themeDir + 'dist-wp-admin',
-  base: themeUrl + 'dist-wp-admin'
-}
+config.server.port = 3001
+config.build.rollupOptions.input = '/wp/admin.js'
+config.build.outDir = themeDir + '/dist-wp-admin'
+config.base = process.env.APP_ENV === 'development'
+  ? '/'
+  : themeUrl + '/dist-wp-admin/'
+
+export default config

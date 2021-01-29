@@ -31,11 +31,11 @@ class Attachments extends PostType
     {
         // columns
         Admin::setColumns(self::$post_type, [
-            'title' => t('File'),
-            'i18n-image-caption' => t('Caption'),
-            // 'author' => t('Author'),
-            'parent' => t('Attached to'),
-            'date' => t('Date'),
+            'title' => 'File',
+            'i18n-image-caption' => 'Caption',
+            // 'author' => 'Author',
+            'parent' => 'Attached to',
+            'date' => 'Date',
         ]);
 
         Admin::addColumnHandler('i18n-image-caption', function ($post) {

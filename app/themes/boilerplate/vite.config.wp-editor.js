@@ -1,8 +1,10 @@
 import { default as config, themeDir, themeUrl } from './vite.config.js'
 
-export default {
-  ...config,
-  entry: 'vite/wp/editor.js',
-  outDir: themeDir + 'dist-wp-editor',
-  base: themeUrl + 'dist-wp-editor'
-}
+config.server.port = 3001
+config.build.rollupOptions.input = '/wp/editor.js'
+config.build.outDir = themeDir + '/dist-wp-editor'
+config.base = process.env.APP_ENV === 'development'
+  ? '/'
+  : themeUrl + '/dist-wp-editor/'
+
+export default config

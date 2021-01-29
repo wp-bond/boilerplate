@@ -1,20 +1,24 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "dev-admin": "vite --config vite.config.wp-admin.js",
-    "build-admin": "vite build --config vite.config.wp-admin.js",
-    "build-editor": "vite build --config vite.config.wp-editor.js",
-    "build-all": "npm run build && npm run build-admin && npm run build-editor"
+    "dev": "APP_ENV=development vite",
+    "build": "APP_ENV=production vite build",
+    "dev-admin": "APP_ENV=development vite --config vite.config.wp-admin.js",
+    "build-admin": "APP_ENV=production vite build --config vite.config.wp-admin.js",
+    "build-editor": "APP_ENV=production vite build --config vite.config.wp-editor.js",
+    "build-all": "APP_ENV=production npm run build && npm run build-admin && npm run build-editor"
   },
   "dependencies": {
-    "vue": "^3.0.3"
+    "vue": "^3.0.5"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.3",
+    "@vitejs/plugin-legacy": "^1.2.2",
+    "@vitejs/plugin-vue": "^1.1.2",
+    "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.18.0",
+    "eslint-plugin-vue": "^7.5.0",
     "postcss-preset-env": "^6.7.0",
-    "sass": "^1.27.1",
-    "vite": "^1.0.0-rc.13"
+    "sass": "^1.32.5",
+    "vite": "^2.0.0-beta.56"
   }
 }

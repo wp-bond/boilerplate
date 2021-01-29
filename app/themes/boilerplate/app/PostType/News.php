@@ -50,10 +50,10 @@ class News extends PostType
         // Archive Columns
         Admin::setColumns(self::$post_type, [
             'image' => '',
-            'title' => t('Title'),
-            'taxonomy-category'  => t('Category'),
-            'date' => t('Date'),
-            'multilanguage_links' => t('Links'),
+            'title' => 'Title',
+            'taxonomy-category'  => 'Category',
+            'date' => 'Date',
+            'multilanguage_links' => 'Links',
         ]);
     }
 

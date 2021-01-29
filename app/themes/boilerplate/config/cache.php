@@ -2,5 +2,5 @@
 
 return [
     'enabled' => true,
-    'ttl' => -1,
+    'ttl' => app()->isDevelopment() ? 0 : -1,
 ];

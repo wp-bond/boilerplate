@@ -1,0 +1,15 @@
+{
+  "wp/editor-legacy.js": {
+    "file": "assets/editor-legacy.cab7ebf4.js",
+    "src": "wp/editor-legacy.js",
+    "isEntry": true
+  },
+  "wp/editor.js": {
+    "file": "assets/editor.b94b39d1.js",
+    "src": "wp/editor.js",
+    "isEntry": true,
+    "css": [
+      "assets/editor.f69d05dd.css"
+    ]
+  }
+}

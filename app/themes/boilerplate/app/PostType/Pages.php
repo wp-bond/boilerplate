@@ -20,8 +20,8 @@ class Pages extends PostType
         Admin::hideTitle(self::$post_type);
 
         Admin::setColumns(self::$post_type, [
-            'title' => t('Title'),
-            'multilanguage_links' => t('Links'),
+            'title' => 'Title',
+            'multilanguage_links' => 'Links',
         ]);
     }
 }
