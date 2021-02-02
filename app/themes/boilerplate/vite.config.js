@@ -11,6 +11,7 @@
 
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
+import liveReload from 'vite-plugin-live-reload'
 const { resolve } = require('path')
 
 export const themeDir = resolve(__dirname, '../../../html/app/themes/boilerplate')
@@ -22,7 +23,8 @@ export default {
     vue(),
     legacy({
       targets: ['defaults', 'not IE 11']
-    })
+    }),
+    liveReload(themeDir+'/(app|config|support|views)/**/*.php')
   ],
 
   // required for in-browser template compilation
