@@ -7,4 +7,7 @@ config.base = process.env.APP_ENV === 'development'
   ? '/'
   : themeUrl + '/dist-wp-editor/'
 
+// not needed, we just want the css
+delete config.plugins
+
 export default config
