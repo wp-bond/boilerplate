@@ -90,6 +90,12 @@
             "Parent": "Parent",
             "Add or remove": "Ajouter ou retirer",
             "Choose from the most used": "Choisissez parmi les plus utilis\u00e9s"
+        },
+        "admin-columns": {
+            "Title": "Titre",
+            "Category": "Cat\u00e9gorie",
+            "Date": "Date",
+            "Links": "Liens"
         }
     },
     "developed by": "d\u00e9velopp\u00e9 par",
