@@ -13,11 +13,10 @@
     "sort-packages": true
   },
   "require": {
-    "aws/aws-sdk-php": "^3.172",
-    "google/cloud-translate": "^1.9",
+    "google/cloud-translate": "^1.10",
     "samdark/sitemap": "^2.2",
     "spatie/schema-org": "^3.3",
     "symfony/var-dumper": "^5.2",
-    "wp-bond/bond": "^0.1.17"
+    "wp-bond/bond": "^0.1.21"
   }
 }
