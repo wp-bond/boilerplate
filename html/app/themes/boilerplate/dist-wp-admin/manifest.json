@@ -1,15 +1,21 @@
 {
   "wp/admin-legacy.js": {
-    "file": "assets/admin-legacy.8e5f0657.js",
+    "file": "assets/admin-legacy.023ad10d.js",
     "src": "wp/admin-legacy.js",
-    "isEntry": true
+    "isEntry": true,
+    "assets": [
+      "assets/login-logo.438a4c6c.png"
+    ]
   },
   "wp/admin.js": {
-    "file": "assets/admin.5f460780.js",
+    "file": "assets/admin.72bc6b1d.js",
     "src": "wp/admin.js",
     "isEntry": true,
     "css": [
-      "assets/admin.657a152b.css"
+      "assets/admin.bbd54850.css"
+    ],
+    "assets": [
+      "assets/login-logo.438a4c6c.png"
     ]
   }
 }

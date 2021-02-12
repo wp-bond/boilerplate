@@ -1,1 +1,0 @@
-var __vite_style__=document.createElement("style");__vite_style__.innerHTML=':root{--sans:"Sans",sans-serif;--serif:"Serif",serif}',document.head.appendChild(__vite_style__),System.register([],(function(){"use strict";return{execute:function(){}}}));
