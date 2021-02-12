@@ -9,16 +9,23 @@
 @custom-media --w414 (width >= 414px); /* iphone plus */
 @custom-media --w428 (width >= 428px); /* iphone pro max */
 
+@custom-media --max-w320 (width < 319.98px); /* iphone se */
+@custom-media --max-w375 (width < 374.98px); /* iphone mini */
+@custom-media --max-w390 (width < 389.98px); /* iphone pro */
+@custom-media --max-w414 (width < 413.98px); /* iphone plus */
+@custom-media --max-w428 (width < 427.98px); /* iphone pro max */
+
 @custom-media --sm (width >= 576px); /* landscape phones */
 @custom-media --md (width >= 768px); /* tablets */
 @custom-media --lg (width >= 992px); /* desktops */
 @custom-media --xl (width >= 1200px);
-@custom-media --xxl (width >= 1400px);
+@custom-media --xxl (width >= 1480px);
 
 @custom-media --max-sm (width < 575.98px);
 @custom-media --max-md (width < 767.98px);
 @custom-media --max-lg (width < 991.98px);
 @custom-media --max-xl (width < 1199.98px);
+@custom-media --max-xxl (width < 1479.98px);
 
 /* .example-nesting-and-media {
   background-color: red;

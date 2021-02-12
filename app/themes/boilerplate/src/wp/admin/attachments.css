@@ -1,6 +1,6 @@
 /* Attachments: hide some fields */
 /* attachments popup inside the post edit */
-.attachment-details {
+/* .attachment-details {
   & .setting[data-setting="title"],
   & .setting[data-setting="caption"],
   & .setting[data-setting="alt"],
@@ -12,8 +12,8 @@
   & .compat-field-credit {
     display: none !important;
   }
-}
+} */
 /* attachments edit page */
-.wp_attachment_details.edit-form-section {
+/* .wp_attachment_details.edit-form-section {
   display: none !important;
-}
+} */

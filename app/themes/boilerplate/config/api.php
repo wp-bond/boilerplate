@@ -2,7 +2,7 @@
 
 return [
     'prefix' => 'api',
-    'only_logged_in' => true,
+    // 'only_logged_in' => true,
 
     // disable some defaults
     'disable_header' => true,

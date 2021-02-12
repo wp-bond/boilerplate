@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "noLib": true,
+    "target": "es2020"
+  },
+  "include": ["src/**/*.js", "src/**/*.vue"],
+  "exclude": ["**/*"]
+}

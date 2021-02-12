@@ -9,7 +9,7 @@
 
 return [
     'id' => 'boilerplate',
-    'name' => 'My App',
+    'name' => t('My App'),
 
     // https://www.php.net/manual/en/timezones.php
     'timezone' => 'America/Sao_Paulo',

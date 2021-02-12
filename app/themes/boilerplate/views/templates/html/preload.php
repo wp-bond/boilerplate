@@ -5,8 +5,10 @@ if (app()->isDevelopment()) {
 }
 
 return;
-// example below on how to preload your fonts
+// Vite already preload your webfonts
+// use here in case you need something else to preload
+// or just delete this file
 
 ?>
 
-<link rel="preload" href="<?= app()->themeDir() ?>/fonts/yourfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preconnect" href="https://some-image-server-example.com">

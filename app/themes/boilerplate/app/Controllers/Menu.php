@@ -12,17 +12,12 @@ class Menu
     {
         // View hook
         add_action('Bond/ready', [static::class, 'ready']);
-
-        // Clear cache on every post save
-        add_action('Bond/save_post', function ($post) {
-            Cache::forget('menu');
-        });
     }
 
     public static function ready()
     {
         $menu = Cache::json(
-            'menu/' . Languages::shortCode(),
+            'global/menu-' . Languages::shortCode(),
             -1,
             function () {
 
