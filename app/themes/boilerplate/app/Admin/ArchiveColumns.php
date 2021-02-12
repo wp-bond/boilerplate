@@ -18,7 +18,7 @@ class ArchiveColumns
         // Common column handlers
 
         Admin::addColumnHandler('subtitle', function (Post $post) {
-            return $post->subtitle ?: EMPTY_CHAR;
+            return $post->subtitle ?: '—';
         });
 
         Admin::addColumnHandler('content', function (Post $post) {
@@ -26,7 +26,7 @@ class ArchiveColumns
             $value = $post->content ?: $post->post_content;
 
             echo '<a href="' . get_edit_post_link($post->ID) . '">';
-            echo $value ? Str::clean($value, 20) : EMPTY_CHAR;
+            echo $value ? Str::clean($value, 20) : '—';
             echo '</a>';
         });
 

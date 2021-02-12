@@ -27,12 +27,6 @@ export default {
     liveReload(themeDir+'/(app|config|support|views)/**/*.php')
   ],
 
-  // required for in-browser template compilation
-  // https://v3.vuejs.org/guide/installation.html#with-a-bundler
-  alias: {
-    vue: 'vue/dist/vue.esm-bundler.js'
-  },
-
   // config
   root: 'src',
   base: process.env.APP_ENV === 'development'
@@ -61,7 +55,18 @@ export default {
     cors: true,
 
     // we need a strict port to match on PHP side
+    //
     strictPort: true,
     port: 3000
+    // if changed match here /templates/html/vite.php
+  },
+
+
+  // required for in-browser template compilation
+  // https://v3.vuejs.org/guide/installation.html#with-a-bundler
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.esm-bundler.js'
+    }
   }
 }

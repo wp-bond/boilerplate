@@ -10,6 +10,10 @@ class Control
 
     public static function boot()
     {
+        if (!app()->hasAcf()) {
+            return;
+        }
+
         // SEO
         \acf_add_options_page([
             'page_title' => 'SEO',

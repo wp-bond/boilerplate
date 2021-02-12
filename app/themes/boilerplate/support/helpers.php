@@ -15,10 +15,6 @@ const PAGE = 'page';
 // taxonomies
 const CATEGORY = 'category';
 
-// others
-const EMPTY_CHAR = '—';
-
-
 
 function responsive_picture($image_id, $size, $with_caption = false)
 {
