@@ -2,7 +2,7 @@
 
 return [
     'google_analytics' => [
-        'id' => 'UA-xxxx',
+        'id' => 'G-xxxx',
     ],
 
     'facebook' => [
