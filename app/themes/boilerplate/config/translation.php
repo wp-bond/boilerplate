@@ -5,6 +5,10 @@ return [
 
     'update_wp_titles' => true,
 
+    // set the language which the source code texts are written in
+    // you can change freely, but best just once, when you start the project
+    'written_language' => 'en',
+
     'credentials' => [
         // for Google Translate use ENV
         // putenv('GOOGLE_APPLICATION_CREDENTIALS=your_json_path')
