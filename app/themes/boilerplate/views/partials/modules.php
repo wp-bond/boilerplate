@@ -2,7 +2,7 @@
 
 use Bond\Utils\Str;
 
-if (empty($modules)) {
+if ($this->isEmpty()) {
     return;
 }
 
@@ -13,11 +13,11 @@ $i = 0;
 $previous_layout = '';
 $previous_color_theme = '';
 
-foreach ($modules as $module) {
+foreach ($this as $module) {
 
     // vars
-    $next_module = $i >= count($modules) - 1 ? null : $modules[$i + 1];
-    $previous_module = $i >= 1 ? $modules[$i - 1] : null;
+    $next_module = $i >= count($this) - 1 ? null : $this[$i + 1];
+    $previous_module = $i >= 1 ? $this[$i - 1] : null;
     $layout = $module['acf_fc_layout'];
 
 

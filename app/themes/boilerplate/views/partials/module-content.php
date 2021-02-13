@@ -1,15 +1,14 @@
 <?php
 
-if (!empty($title)) {
-    echo '<h1>' . $title . '</h1>';
+if ($this->title) {
+    echo '<h1>' . $this->title . '</h1>';
 }
 
-if (!empty($subtitle)) {
-    echo '<h2>' . $subtitle . '</h2>';
+if ($this->subtitle) {
+    echo '<h2>' . $this->subtitle . '</h2>';
 }
-
-if (!empty($content)) {
+if ($this->content) {
     echo '<div class="the-content">';
-    echo $content;
+    echo $this->content;
     echo '</div>';
 }

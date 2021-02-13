@@ -1,7 +1,7 @@
 <?php
 
-if (!empty($modules)) {
-    $this->partial('modules', compact('modules'));
+if ($this->modules) {
+    $this->partial('modules', $this->modules);
 } else {
     $this->partial('under-construction');
 }
