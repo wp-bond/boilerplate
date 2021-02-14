@@ -64,7 +64,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         <link><?= app()->url() ?></link>
         <description><?= get_field('description' . Language::fieldsSuffix(), 'options') ?></description>
         <lastBuildDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_lastpostmodified('GMT'), false); ?></lastBuildDate>
-        <language><?= Language::htmlAttribute() ?></language>
+        <language><?= Language::tag() ?></language>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>4</sy:updateFrequency>
 

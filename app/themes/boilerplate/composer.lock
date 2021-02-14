@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37927bb662e2915524c4a310dd123778",
+    "content-hash": "b5f8057860cc500f2eed467be2fa1c11",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -2036,16 +2036,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.1.25",
+            "version": "v0.1.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "a99485097ca13b6fb5289483a1b11d408648d36e"
+                "reference": "7f9ebf55b3ca0394b347502683bb9e79400cc275"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/a99485097ca13b6fb5289483a1b11d408648d36e",
-                "reference": "a99485097ca13b6fb5289483a1b11d408648d36e",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/7f9ebf55b3ca0394b347502683bb9e79400cc275",
+                "reference": "7f9ebf55b3ca0394b347502683bb9e79400cc275",
                 "shasum": ""
             },
             "require": {
@@ -2092,9 +2092,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-bond/bond/issues",
-                "source": "https://github.com/wp-bond/bond/tree/v0.1.25"
+                "source": "https://github.com/wp-bond/bond/tree/v0.1.26"
             },
-            "time": "2021-02-14T12:48:39+00:00"
+            "time": "2021-02-14T14:30:45+00:00"
         }
     ],
     "packages-dev": [],
