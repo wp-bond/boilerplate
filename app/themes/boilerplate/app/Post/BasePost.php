@@ -2,7 +2,7 @@
 
 namespace App\Post;
 
-use Bond\Settings\Languages;
+use Bond\Settings\Language;
 use Bond\Post;
 use Bond\Support\Fluent;
 use Bond\Utils\Date;
@@ -141,7 +141,7 @@ class BasePost extends Post
     public function schemaId($hash = '')
     {
         return app()->url()
-            . $this->link(Languages::getDefault())
+            . $this->link(Language::getDefault())
             . ($hash ? '#' . $hash : '');
     }
 

@@ -3,7 +3,7 @@
 namespace App\Fields;
 
 use Bond\Fields\Acf\FieldGroup;
-use Bond\Settings\Languages;
+use Bond\Settings\Language;
 use Bond\Utils\Cast;
 use Bond\Utils\Str;
 
@@ -128,8 +128,8 @@ class MultilanguagePosts
 
 
         // link message
-        foreach (Languages::codes() as $code) {
-            $suffix = Languages::fieldsSuffix($code);
+        foreach (Language::codes() as $code) {
+            $suffix = Language::fieldsSuffix($code);
 
             \add_filter(
                 'acf/render_field/name=i18n_link_message_icon' . $suffix,
@@ -166,7 +166,7 @@ class MultilanguagePosts
         \add_filter('acf/fields/taxonomy/result', function ($title, $term, $field, $post_id) {
 
             $term = Cast::term($term);
-            $title = $term->get('name', Languages::code());
+            $title = $term->get('name', Language::code());
 
             return Str::limit($title, 28);
         }, 10, 4);

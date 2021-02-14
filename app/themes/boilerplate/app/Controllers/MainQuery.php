@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Bond\Settings\Languages;
+use Bond\Settings\Language;
 use Bond\Utils\Query;
 use WP_Tax_Query;
 
@@ -62,12 +62,12 @@ class MainQuery
             'relation' => 'AND',
             [
                 [
-                    'key' => 'is_disabled' . Languages::fieldsSuffix(),
+                    'key' => 'is_disabled' . Language::fieldsSuffix(),
                     'value' => '1',
                     'compare' => '!=',
                 ],
                 [
-                    'key' => 'is_disabled' . Languages::fieldsSuffix(),
+                    'key' => 'is_disabled' . Language::fieldsSuffix(),
                     'compare' => 'NOT EXISTS',
                 ],
                 'relation' => 'OR',
@@ -120,7 +120,7 @@ class MainQuery
         // use only for posts that have i18n slugs
         if ($query->is_single) {
 
-            if (!Languages::isDefault()) {
+            if (!Language::isDefault()) {
                 // get post by meta, to find its slug
 
                 $found = Query::wpPostBySlug(
@@ -148,7 +148,7 @@ class MainQuery
         // use only for posts that has i18n slugs
         if ($query->is_page) {
 
-            if (!Languages::isDefault()) {
+            if (!Language::isDefault()) {
 
                 $full_path = $query->get('page');
                 // print_r($full_path);

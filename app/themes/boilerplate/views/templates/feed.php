@@ -3,7 +3,7 @@
 use Bond\Utils\Cast;
 use Bond\Utils\Image;
 use Bond\Utils\Str;
-use Bond\Settings\Languages;
+use Bond\Settings\Language;
 
 /**
  * RSS2 Feed Template for displaying RSS2 Posts feed.
@@ -62,9 +62,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         <title><?= app()->name() ?></title>
         <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
         <link><?= app()->url() ?></link>
-        <description><?= get_field('description' . Languages::fieldsSuffix(), 'options') ?></description>
+        <description><?= get_field('description' . Language::fieldsSuffix(), 'options') ?></description>
         <lastBuildDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_lastpostmodified('GMT'), false); ?></lastBuildDate>
-        <language><?= Languages::htmlAttribute() ?></language>
+        <language><?= Language::htmlAttribute() ?></language>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>4</sy:updateFrequency>
 

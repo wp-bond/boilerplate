@@ -4,7 +4,7 @@ namespace App\Admin;
 
 use App\Post\BasePost;
 use Bond\Post;
-use Bond\Settings\Languages;
+use Bond\Settings\Language;
 use Bond\Settings\Admin;
 use Bond\Utils\Image;
 use Bond\Utils\Str;
@@ -49,7 +49,7 @@ class ArchiveColumns
         Admin::addColumnHandler('multilanguage_links', function (Post $post) {
             $res = '<div class="multilanguage-circles">';
 
-            foreach (Languages::codes() as $code) {
+            foreach (Language::codes() as $code) {
 
                 if ($link = $post->link($code)) {
                     $res .= '<a href="' . $link . '" target="_blank">';
@@ -57,7 +57,7 @@ class ArchiveColumns
                     $res .= '<div>';
                 }
 
-                $res .= '<div class="multilanguage-circle ' . ($post->isDisabled($code) ? 'no' : '') . '">' . Languages::shortCode($code) . '</div>';
+                $res .= '<div class="multilanguage-circle ' . ($post->isDisabled($code) ? 'no' : '') . '">' . Language::shortCode($code) . '</div>';
 
                 if ($link) {
                     $res .= '</a>';

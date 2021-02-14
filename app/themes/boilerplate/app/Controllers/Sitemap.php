@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Bond\Settings\Languages;
+use Bond\Settings\Language;
 use Bond\Utils\Cache;
 use Bond\Utils\Cast;
 use Bond\Utils\Date;
@@ -107,14 +107,14 @@ class Sitemap
                         self::$root_path . '/sitemaps/sitemap-' . $post_type . '.xml',
                         true
                     );
-                    $sitemap->setMaxUrls(floor(50000 / count(Languages::codes())));
+                    $sitemap->setMaxUrls(floor(50000 / count(Language::codes())));
 
 
                     // add all links
                     foreach ($posts as $post) {
 
                         $urls = [];
-                        foreach (Languages::codes() as $code) {
+                        foreach (Language::codes() as $code) {
                             $urls[$code] = app()->url()
                                 . $post->link($code);
                         }
@@ -167,7 +167,7 @@ class Sitemap
 
                     // ensure i18n archives exists
                     $urls = [];
-                    foreach (Languages::codes() as $code) {
+                    foreach (Language::codes() as $code) {
 
                         $url = Link::postType($post_type, $code);
                         if ($url) {
@@ -195,7 +195,7 @@ class Sitemap
                     }
 
                     $urls = [];
-                    foreach (Languages::codes() as $code) {
+                    foreach (Language::codes() as $code) {
                         $urls[$code] = app()->url()
                             . $post->link($code);
                     }
@@ -233,12 +233,12 @@ class Sitemap
             'meta_query' => [
                 [
                     [
-                        'key' => 'is_disabled' . Languages::fieldsSuffix(),
+                        'key' => 'is_disabled' . Language::fieldsSuffix(),
                         'value' => '1',
                         'compare' => '!=',
                     ],
                     [
-                        'key' => 'is_disabled' . Languages::fieldsSuffix(),
+                        'key' => 'is_disabled' . Language::fieldsSuffix(),
                         'compare' => 'NOT EXISTS',
                     ],
                     'relation' => 'OR',

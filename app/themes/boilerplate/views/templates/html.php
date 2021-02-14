@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= Bond\Settings\Languages::htmlAttribute() ?>">
+<html lang="<?= Bond\Settings\Language::htmlAttribute() ?>">
 
 <head>
     <meta charset="utf-8">

@@ -56,7 +56,7 @@ class Seo
     //         $key = $type[0] ?? null;
     //     }
 
-    //     meta()->description = get_field($key . '_description' . Languages::fieldsSuffix(), 'options');
+    //     meta()->description = get_field($key . '_description' . Language::fieldsSuffix(), 'options');
 
     //     // Images too if possible
     // }

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Bond\Settings\Languages;
+use Bond\Settings\Language;
 use Bond\Utils\Link;
 use Bond\Utils\Cache;
 
@@ -17,13 +17,13 @@ class Menu
     public static function ready()
     {
         $menu = Cache::json(
-            'global/menu-' . Languages::shortCode(),
+            'global/menu-' . Language::shortCode(),
             -1,
             function () {
 
                 // language switcher
                 $languageSwitcher = [
-                    'lang' => Languages::shortCode(),
+                    'lang' => Language::shortCode(),
                     'languages' => [],
                 ];
 
@@ -51,10 +51,10 @@ class Menu
         );
 
         // update langauge menu
-        foreach (Languages::codes() as $code) {
+        foreach (Language::codes() as $code) {
             $menu['languageSwitcher']['languages'][] = [
-                'lang' => Languages::shortCode($code),
-                'name' => Languages::shortName($code),
+                'lang' => Language::shortCode($code),
+                'name' => Language::shortName($code),
                 'url' => Link::current($code),
             ];
         }
