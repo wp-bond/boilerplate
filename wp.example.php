@@ -9,8 +9,8 @@ const ROOT_APP_PATH = __DIR__ . '/app';
 const WP_CONTENT_FOLDER = 'app';
 
 // WordPress Settings
+const WP_DEFAULT_THEME = 'boilerplate';
 const WP_SITEURL = 'http://boilerplate.test/wp'; // WP Admin URL
-// const WP_DEFAULT_THEME = 'boilerplate'; // Advanced Custom Fields plugin must be activated first
 const WP_DEBUG = true;
 const WP_POST_REVISIONS = 5;
 const WP_MEMORY_LIMIT = '512M';
