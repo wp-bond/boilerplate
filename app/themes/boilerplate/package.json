@@ -6,20 +6,20 @@
     "dev-admin": "APP_ENV=development vite --config vite.config.wp-admin.js",
     "build-admin": "APP_ENV=production vite build --config vite.config.wp-admin.js",
     "build-editor": "APP_ENV=production vite build --config vite.config.wp-editor.js",
-    "build-all": "APP_ENV=production npm run build && npm run build-admin && npm run build-editor"
+    "build-all": "npm run build && npm run build-admin && npm run build-editor"
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.0.6"
   },
   "devDependencies": {
     "@vitejs/plugin-legacy": "^1.3.1",
     "@vitejs/plugin-vue": "^1.1.4",
-    "@vue/compiler-sfc": "^3.0.5",
-    "eslint": "^7.19.0",
-    "eslint-plugin-vue": "^7.5.0",
+    "@vue/compiler-sfc": "^3.0.6",
+    "eslint": "^7.20.0",
+    "eslint-plugin-vue": "^7.6.0",
     "postcss-preset-env": "^6.7.0",
-    "sass": "^1.32.7",
-    "vite": "^2.0.1",
-    "vite-plugin-live-reload": "^2.0.0-beta.0"
+    "sass": "^1.32.8",
+    "vite": "^2.0.3",
+    "vite-plugin-live-reload": "^2.0.0"
   }
 }
