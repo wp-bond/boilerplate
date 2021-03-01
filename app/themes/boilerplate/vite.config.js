@@ -24,7 +24,7 @@ export default {
     legacy({
       targets: ['defaults', 'not IE 11']
     }),
-    liveReload(themeDir+'/(app|config|support|views)/**/*.php')
+    liveReload(__dirname+'/(app|config|support|views)/**/*.php')
   ],
 
   // config
