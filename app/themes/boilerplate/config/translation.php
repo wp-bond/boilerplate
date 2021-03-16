@@ -10,10 +10,9 @@ return [
     'written_language' => 'en',
 
     'credentials' => [
-        // for Google Translate use ENV
-        // putenv('GOOGLE_APPLICATION_CREDENTIALS=your_json_path')
-        // https://googleapis.github.io/google-cloud-php/#/docs/google-cloud/v0.131.0/guides/authentication
-
+        'google' => [
+            'key' => c('GOOGLE_TRANSLATE_KEY'),
+        ],
         // 'aws' => [
         //     'key' => c('AWS_ACCESS_KEY_ID'),
         //     'secret' => c('AWS_SECRET_ACCESS_KEY'),
