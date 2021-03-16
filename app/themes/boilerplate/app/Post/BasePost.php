@@ -38,7 +38,7 @@ class BasePost extends Post
                 $values->type = $this->post_type;
                 $values->typeName = Query::postTypeName($this->post_type);
 
-                $values->imageTag = responsive_picture(
+                $values->imageTag = Image::pictureTag(
                     $this->image(),
                     THUMBNAIL
                 );

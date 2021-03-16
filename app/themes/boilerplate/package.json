@@ -6,7 +6,8 @@
     "dev-admin": "APP_ENV=development vite --config vite.config.wp-admin.js",
     "build-admin": "APP_ENV=production vite build --config vite.config.wp-admin.js",
     "build-editor": "APP_ENV=production vite build --config vite.config.wp-editor.js",
-    "build-all": "npm run build && npm run build-admin && npm run build-editor"
+    "build-all": "npm run build && npm run build-admin && npm run build-editor",
+    "upgrade": "npx npm-check-updates -u && npm install"
   },
   "dependencies": {
     "vue": "^3.0.6"

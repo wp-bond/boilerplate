@@ -90,7 +90,7 @@ foreach (array_slice($sizes, 0) as $name => $values) {
     // }
 
     // retina 2x others
-    $name = $name . '_retina';
+    $name = $name . '_2x';
 
     $values[0] = $values[0] * 2;
     $values[1] = $values[1] * 2;
