@@ -46,9 +46,9 @@ class Redirects
             return;
         }
 
-        $post = Cast::post($post);
+        $p = Cast::post($post);
 
-        $redirect = $post->redirectLink();
+        $redirect = $p->redirectLink();
         if ($redirect) {
             wp_redirect($redirect);
             exit;
