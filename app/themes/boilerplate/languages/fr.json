@@ -75,7 +75,13 @@
             "Archive Image": "Image d&#39;archive",
             "Category": "Cat\u00e9gorie",
             "General Control": "Contr\u00f4le g\u00e9n\u00e9ral",
-            "Caption": "L\u00e9gende"
+            "Caption": "L\u00e9gende",
+            "Maximum of 170 characters, relative to 2 lines of text on the Google search results page.": "Maximum de 170 caract\u00e8res, par rapport \u00e0 2 lignes de texte sur la page de r\u00e9sultats de recherche Google.",
+            "Other SEO optimizations are done automatically by the website.": "D&#39;autres optimisations SEO sont effectu\u00e9es automatiquement par le site Web.",
+            "Optional. If not filled this page will be automatically redirected to the most fitting page.": "Optionnel. Si elle n&#39;est pas remplie, cette page sera automatiquement redirig\u00e9e vers la page la plus appropri\u00e9e.",
+            "+ Add Module": "+ Ajouter un module",
+            "Select from the website's content.": "S\u00e9lectionnez dans le contenu du site Web.",
+            "If not selected, the first avaiable image on this page will be used.": "Si elle n&#39;est pas s\u00e9lectionn\u00e9e, la premi\u00e8re image disponible sur cette page sera utilis\u00e9e."
         },
         "url": {
             "news": "nouvelles",

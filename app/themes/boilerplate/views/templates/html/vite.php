@@ -1,3 +1,4 @@
 <?php
 
-echo vite()->port(3000);
+echo vite()
+    ->port(3000);

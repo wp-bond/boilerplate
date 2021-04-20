@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use Bond\Settings\Language;
 use Bond\Utils\Query;
-use WP_Tax_Query;
 
 class MainQuery
 {
@@ -188,7 +187,7 @@ class MainQuery
     //         unset($query->query[$tax]);
     //         unset($query->query_vars[$tax]);
     //     }
-    //     $query->tax_query = new WP_Tax_Query([]);
+    //     $query->tax_query = new \WP_Tax_Query([]);
     //     $query->is_tax = false;
     // }
 
