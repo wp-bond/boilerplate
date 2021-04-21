@@ -1,10 +1,9 @@
 .DS_Store
 /wp.php
-/gcloud.json
 /html/sitemap.xml
 
 # Our assets symlink
-html/vite/assets
+html/assets
 
 # WP
 /html/wp/*

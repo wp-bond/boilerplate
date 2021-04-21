@@ -19,9 +19,7 @@ const WP_MAX_MEMORY_LIMIT = '1280M';
 // Services
 const AWS_ACCESS_KEY_ID = '';
 const AWS_SECRET_ACCESS_KEY = '';
-// if (!getenv('GOOGLE_APPLICATION_CREDENTIALS')) {
-//     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . __DIR__ . '/gcloud.json');
-// }
+const GOOGLE_TRANSLATE_KEY = '';
 
 // Database
 const DB_NAME = 'bond';
