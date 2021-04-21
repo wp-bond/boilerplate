@@ -1,3 +1,7 @@
+
+// Vars
+import '../style/vars.css'
+
 // Color Scheme (SCSS)
 import './admin/admin-color-scheme.scss'
 
