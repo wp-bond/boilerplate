@@ -8,3 +8,7 @@ html/assets
 # WP
 /html/wp/*
 !/html/wp/wp-config.php
+
+# Plugins
+/html/app/plugins/*
+!/html/app/plugins/.gitkeep
