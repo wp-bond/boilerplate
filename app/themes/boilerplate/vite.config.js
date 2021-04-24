@@ -9,6 +9,7 @@
 // ln -s {path_to_project}/app/themes/boilerplate/src/assets {path_to_project}/html/assets
 // on production everything will work just fine
 
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
 import liveReload from 'vite-plugin-live-reload'
@@ -17,8 +18,8 @@ const { resolve } = require('path')
 export const themeDir = resolve(__dirname, '../../../html/app/themes/boilerplate')
 export const themeUrl = '/app/themes/boilerplate'
 
-// https://vitejs.dev/config
-export default {
+// https://vitejs.dev/config/
+export default defineConfig({
   plugins: [
     vue(),
     legacy({
@@ -69,4 +70,4 @@ export default {
       vue: 'vue/dist/vue.esm-bundler.js'
     }
   }
-}
+})
