@@ -1,6 +1,6 @@
 :root {
-  --sans: "Sans", sans-serif;
-  --serif: "Serif", serif;
+  --sans: 'Sans', sans-serif;
+  --serif: 'Serif', serif;
 }
 
 @custom-media --w320 (width >= 320px); /* iphone se */
@@ -20,6 +20,7 @@
 @custom-media --lg (width >= 992px); /* desktops */
 @custom-media --xl (width >= 1200px);
 @custom-media --xxl (width >= 1480px);
+@custom-media --xxxl (width >= 1720px);
 
 @custom-media --max-sm (width < 575.98px);
 @custom-media --max-md (width < 767.98px);

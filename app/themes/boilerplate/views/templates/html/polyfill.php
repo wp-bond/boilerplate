@@ -1,7 +1,7 @@
 <?php
 
-// no polyfill on dev
-if (app()->isDevelopment()) {
+// no polyfill on dev, nor mobile
+if (app()->isDevelopment() || app()->isMobile()) {
     return;
 }
 

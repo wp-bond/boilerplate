@@ -13,10 +13,12 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
 import liveReload from 'vite-plugin-live-reload'
-const { resolve } = require('path')
+const { resolve, basename } = require('path')
 
-export const themeDir = resolve(__dirname, '../../../html/app/themes/boilerplate')
-export const themeUrl = '/app/themes/boilerplate'
+export const themeId = basename(__dirname)
+export const themePath = resolve(__dirname, '../../../html/app/themes', themeId)
+export const themeDir = '/app/themes/' + themeId
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -32,11 +34,11 @@ export default defineConfig({
   root: 'src',
   base: process.env.APP_ENV === 'development'
     ? '/'
-    : themeUrl + '/dist/',
+    : themeDir + '/dist/',
 
   build: {
     // output dir for production build
-    outDir: themeDir + '/dist',
+    outDir: themePath + '/dist',
     emptyOutDir: true,
 
     // emit manifest so PHP can find the hashed files
@@ -56,7 +58,6 @@ export default defineConfig({
     cors: true,
 
     // we need a strict port to match on PHP side
-    //
     strictPort: true,
     port: 3000
     // if changed match here /templates/html/vite.php

@@ -37,6 +37,7 @@ class Attachment extends BasePost
                     $this->ID,
                     THUMBNAIL
                 );
+                $values->caption = $this->caption();
                 break;
 
             default:

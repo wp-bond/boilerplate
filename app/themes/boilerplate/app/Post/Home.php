@@ -1,35 +1,33 @@
 <?php
 
-namespace App\Fields;
+namespace App\Post;
 
 use Bond\Fields\Acf\FieldGroup;
+use Bond\Utils\Query;
 
-class FrontPage
+class Home extends Page
 {
-    private static $key = 'home';
-    private static $location = [
-        [
-            [
-                'param' => 'post_type',
-                'operator' => '==',
-                'value' => PAGE,
-            ],
-            [
-                'param' => 'page_type',
-                'operator' => '==',
-                'value' => 'front_page',
-            ],
-        ],
-    ];
+    public string $post_name = 'home';
+
 
     public static function boot()
     {
         // Fields
-        $group = (new FieldGroup(self::$key))
+        $location = [
+            [
+                [
+                    'param' => 'page',
+                    'operator' => '==',
+                    'value' => Query::id('home', 'page'),
+                ],
+            ],
+        ];
+
+        $group = (new FieldGroup('home'))
             ->title('Content')
             ->screenHideAll()
             ->menuOrder(10)
-            ->location(self::$location);
+            ->location($location);
 
         $flex = $group->flexibleContentField('modules')
             ->buttonLabel('+ Add Module');

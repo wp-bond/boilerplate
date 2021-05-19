@@ -2,8 +2,6 @@
 
 namespace App\Controllers;
 
-use App\PostType\Galleries;
-
 use Bond\Utils\Cache;
 use Bond\Utils\Link;
 
@@ -26,8 +24,8 @@ class Seo
         //     99
         // );
         add_action(
-            'Bond/template_redirect/single',
-            [static::class, 'single'],
+            'Bond/template_redirect/singular',
+            [static::class, 'singular'],
             99
         );
         add_action(
@@ -62,7 +60,7 @@ class Seo
     // }
 
 
-    public static function single()
+    public static function singular()
     {
         // Description
         meta()->description = view()->get('content') ?? self::findModulesFirstContent(view()->get('modules'));
@@ -103,23 +101,14 @@ class Seo
                     ->url(app()->url())
                     ->name(app()->name())
                     ->description(get_field('description_en', 'options'))
-                    ->logo(app()->url() . '/apple-touch-icon.png')
-                    ->sameAs([
-                        config('services.facebook.url'),
-                        config('services.instagram.url')
-                    ])
-                    ->location(self::locations());
+                    ->logo(app()->url() . '/apple-touch-icon.png');
+                // ->sameAs([
+                //     config('services.facebook.url'),
+                //     config('services.instagram.url')
+                // ])
+                // ->location(self::locations());
             }
         );
-    }
-
-    public static function locations(): array
-    {
-        $locations = [];
-        // foreach ($galleries as $gallery) {
-        //     $locations[] = $gallery->schemaPlace();
-        // }
-        return $locations;
     }
 
 
@@ -128,12 +117,12 @@ class Seo
         return (new WebSite())
             ->identifier(app()->url() . '#website')
             ->url(app()->url() . Link::path())
-            ->name(app()->name())
-            ->potentialAction(
-                (new SearchAction())
-                    ->target(app()->url() . Link::search() . '?q={search_term_string}')
-                    ->setProperty('query-input', 'required name=search_term_string')
-            );
+            ->name(app()->name());
+        // ->potentialAction(
+        //     (new SearchAction())
+        //         ->target(app()->url() . Link::search() . '?q={search_term_string}')
+        //         ->setProperty('query-input', 'required name=search_term_string')
+        // );
     }
 
 

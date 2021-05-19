@@ -14,7 +14,6 @@ class ArchiveColumns
 
     public static function bootAdmin()
     {
-
         // Common column handlers
 
         Admin::addColumnHandler('subtitle', function (Post $post) {

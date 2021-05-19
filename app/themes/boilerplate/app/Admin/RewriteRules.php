@@ -18,7 +18,7 @@ class RewriteRules
         Rewrite::rss();
         Rewrite::search();
 
-        Rewrite::postType(NEWS, [NEWS]);
+        Rewrite::postType(NEWS);
 
         Rewrite::pages();
     }

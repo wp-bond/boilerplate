@@ -16,15 +16,14 @@ $previous_color_theme = '';
 foreach ($this as $module) {
 
     // vars
-    $next_module = $i >= count($this) - 1 ? null : $this[$i + 1];
-    $previous_module = $i >= 1 ? $this[$i - 1] : null;
+    // $next_module = $i >= count($this) - 1 ? null : $this[$i + 1];
+    // $previous_module = $i >= 1 ? $this[$i - 1] : null;
+
+    if (empty($module['color_theme'])) {
+        $module['color_theme'] = 'default';
+    }
     $layout = $module['acf_fc_layout'];
-
-
-    // control
-    $auto_container = true;
-    $color_theme = '';
-
+    $color_theme = $module['color_theme'];
 
 
     // get the HMTL
@@ -44,7 +43,7 @@ foreach ($this as $module) {
 
 
 
-    // output
+    // params
     $classes = [
         'section',
         'module-' . $layout,
@@ -58,20 +57,14 @@ foreach ($this as $module) {
         $anchor = ' id="' . Str::slug('section-' . $anchor) . '"';
     }
 
+
+    // output
     echo '<section class="' . implode(' ', $classes) . '"'
         . $anchor
         . '>';
 
-    if ($auto_container) {
-        echo '<div class="container">';
-    }
-
-    // output content
     echo $html;
 
-    if ($auto_container) {
-        echo '</div>';
-    }
     echo '</section>';
     $i++;
 }

@@ -16,4 +16,10 @@
 /* attachments edit page */
 /* .wp_attachment_details.edit-form-section {
   display: none !important;
+  & .attachment-alt-text,
+  & .attachment-alt-text-description,
+  & .attachment-content-description,
+  & #wp-attachment_content-wrap {
+    display: none !important;
+  }
 } */

@@ -47,6 +47,9 @@ class Redirects
         }
 
         $p = Cast::post($post);
+        if (!$p) {
+            return;
+        }
 
         $redirect = $p->redirectLink();
         if ($redirect) {

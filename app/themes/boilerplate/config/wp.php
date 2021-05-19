@@ -7,5 +7,5 @@ return [
 
     'disable_user_registration' => true,
 
-    // 'disable_sitemaps' => true,
+    'disable_sitemaps' => true,
 ];

@@ -4,53 +4,15 @@ namespace App\Post;
 
 use Bond\Settings\Language;
 use Bond\Post;
-use Bond\Support\Fluent;
 use Bond\Utils\Date;
 use Bond\Utils\Image;
-use Bond\Utils\Query;
 
 class BasePost extends Post
 {
-    // TODO test the addition of some fields var here
-    // great for IDE autofill, just test the cases for unset and multilanguage
-
-    // public string $title_en;
-    // public array $related_posts = [];
-
-    // declare(strict_types=0);
-    // if needed
-
-
-    public function values(string $for = ''): Fluent
+    public function content(): string
     {
-        $values = parent::values($for);
-
-        // default values for every case
-        $values->id = $this->ID;
-        $values->title = $this->title ?: $this->post_title;
-        $values->link = $this->link();
-        $values->modules = $this->modules;
-
-        // default values specific for the request
-        switch ($for) {
-
-            case 'api':
-                $values->type = $this->post_type;
-                $values->typeName = Query::postTypeName($this->post_type);
-
-                $values->imageTag = Image::pictureTag(
-                    $this->image(),
-                    THUMBNAIL
-                );
-                break;
-
-            default:
-                break;
-        }
-
-        return $values;
+        return Str::filterContent($this->post_content);
     }
-
 
     public function date()
     {
@@ -60,6 +22,14 @@ class BasePost extends Post
     public function dateLong()
     {
         return Date::iso($this->post_date, 'D MMMM Y');
+    }
+
+    public function archiveImage(): int
+    {
+        if ($this->archive_image) {
+            return (int) $this->archive_image;
+        }
+        return $this->image();
     }
 
     public function image(): int

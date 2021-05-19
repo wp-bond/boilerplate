@@ -2,7 +2,6 @@
 
 namespace App\Api;
 
-// TODO, maybe pass to Bond later if gets usefull
 class Routes
 {
 

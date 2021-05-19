@@ -10,6 +10,22 @@ class MainQuery
     public static function boot()
     {
         add_filter('pre_get_posts', [static::class, 'mainQuery']);
+
+        // Temp hack till I undestand the changes on WP 5.5
+        add_filter('pre_handle_404', [static::class, 'unset404']);
+    }
+
+    public static function unset404()
+    {
+        global $wp_query, $bond_unset_404;
+
+        if ($bond_unset_404) {
+            $wp_query->is_404 = false;
+            $wp_query->is_page = true;
+            $wp_query->is_singular = true;
+            return true;
+        }
+        // dd($wp_query);
     }
 
     public static function mainQuery($query)
@@ -42,7 +58,7 @@ class MainQuery
         }
 
         // Password protection filter everywhere except the post itself
-        // excludes password protected posts from queries
+        // i.e. excludes password protected posts from archive queries
         if (!is_singular()) {
             \add_filter('posts_where', [static::class, 'excludeProtected']);
         }
@@ -166,6 +182,9 @@ class MainQuery
                     );
 
                     if ($found) {
+                        global $bond_unset_404;
+                        $bond_unset_404 = true;
+
                         // reparse query
                         $query->parse_query([
                             'page_id' => $found->ID,
