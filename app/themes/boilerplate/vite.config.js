@@ -6,7 +6,7 @@
 
 // IMPORTANT image urls in CSS works fine
 // BUT you need to create a symlink on dev server to map this folder during dev
-// ln -s {path_to_project}/app/themes/boilerplate/src/assets {path_to_project}/html/assets
+// ln -s {path_to_project}/app/themes/{your_theme}/src/assets {path_to_project}/html/assets
 // on production everything will work just fine
 
 import { defineConfig } from 'vite'
