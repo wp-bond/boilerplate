@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Bond\Utils\Cache;
 use Bond\Utils\Link;
-
+use Bond\Settings\Language;
 use Spatie\SchemaOrg\Organization;
 use Spatie\SchemaOrg\SearchAction;
 use Spatie\SchemaOrg\WebSite;
@@ -36,6 +36,9 @@ class Seo
 
         // Clear cache on every post save
         add_action('Bond/save_post', function ($post) {
+            Cache::forget('seo');
+        });
+        add_action('Bond/save_options', function ($post) {
             Cache::forget('seo');
         });
     }
@@ -100,7 +103,7 @@ class Seo
                     ->identifier(app()->url() . '#organization')
                     ->url(app()->url())
                     ->name(app()->name())
-                    ->description(get_field('description_en', 'options'))
+                    ->description(get_field('description' . Language::defaultFieldsSuffix(), 'options'))
                     ->logo(app()->url() . '/apple-touch-icon.png');
                 // ->sameAs([
                 //     config('services.facebook.url'),

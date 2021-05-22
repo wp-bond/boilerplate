@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\PostType\News;
 use Bond\Settings\Language;
 use Bond\Utils\Link;
 use Bond\Utils\Cache;
@@ -32,7 +33,7 @@ class Menu
 
                 $items[] = [
                     'title' => t('News'),
-                    'link' => Link::path(NEWS),
+                    'link' => News::link(),
                 ];
 
                 // links

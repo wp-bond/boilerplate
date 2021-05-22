@@ -6,6 +6,7 @@ use Bond\Settings\Language;
 use Bond\Post;
 use Bond\Utils\Date;
 use Bond\Utils\Image;
+use Bond\Utils\Str;
 
 class BasePost extends Post
 {

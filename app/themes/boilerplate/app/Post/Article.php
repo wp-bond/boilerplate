@@ -11,7 +11,7 @@ class Article extends BasePost
 
     public function values(string $for = ''): Fluent
     {
-        $values = parent::values($for);
+        $values = new Fluent();
 
         switch ($for) {
 

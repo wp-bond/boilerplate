@@ -1,6 +1,6 @@
 :root {
-  --sans: 'Sans', sans-serif;
-  --serif: 'Serif', serif;
+  --sans: 'MySans', sans-serif;
+  --serif: 'MySerif', serif;
 }
 
 @custom-media --w320 (width >= 320px); /* iphone se */

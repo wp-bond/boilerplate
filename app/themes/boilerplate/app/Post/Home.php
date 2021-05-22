@@ -16,9 +16,9 @@ class Home extends Page
         $location = [
             [
                 [
-                    'param' => 'page',
+                    'param' => 'page_type',
                     'operator' => '==',
-                    'value' => Query::id('home', 'page'),
+                    'value' => 'front_page',
                 ],
             ],
         ];
