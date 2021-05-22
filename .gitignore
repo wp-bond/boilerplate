@@ -12,3 +12,6 @@ html/assets
 # Plugins
 /html/app/plugins/*
 !/html/app/plugins/.gitkeep
+
+# Vendor
+/app/themes/boilerplate/vendor/*
