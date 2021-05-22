@@ -3,8 +3,6 @@
 return [
     'service' => 'google', // google / aws / null
 
-    'update_wp_titles' => true,
-
     // set the language which the source code texts are written in
     // you can change freely, but best just once, when you start the project
     'written_language' => 'en',
