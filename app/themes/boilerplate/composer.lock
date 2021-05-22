@@ -1708,16 +1708,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v5.2.8",
+            "version": "v5.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "445caa74a5986f1cc9dd91a2975ef68fa7cb2068"
+                "reference": "61af68dba333e2d376a325a29c2a3f2a605b4876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/445caa74a5986f1cc9dd91a2975ef68fa7cb2068",
-                "reference": "445caa74a5986f1cc9dd91a2975ef68fa7cb2068",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/61af68dba333e2d376a325a29c2a3f2a605b4876",
+                "reference": "61af68dba333e2d376a325a29c2a3f2a605b4876",
                 "shasum": ""
             },
             "require": {
@@ -1781,7 +1781,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v5.2.8"
+                "source": "https://github.com/symfony/translation/tree/v5.2.9"
             },
             "funding": [
                 {
@@ -1797,7 +1797,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-07T13:41:16+00:00"
+            "time": "2021-05-16T13:07:46+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -2041,16 +2041,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.1.44",
+            "version": "v0.1.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "5e7dd76c287da06b0bf9d55ed4fe5c6d7ab63025"
+                "reference": "57185579f0f8319093f979b228ac1cb34b9fb183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/5e7dd76c287da06b0bf9d55ed4fe5c6d7ab63025",
-                "reference": "5e7dd76c287da06b0bf9d55ed4fe5c6d7ab63025",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/57185579f0f8319093f979b228ac1cb34b9fb183",
+                "reference": "57185579f0f8319093f979b228ac1cb34b9fb183",
                 "shasum": ""
             },
             "require": {
@@ -2097,9 +2097,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-bond/bond/issues",
-                "source": "https://github.com/wp-bond/bond/tree/v0.1.44"
+                "source": "https://github.com/wp-bond/bond/tree/v0.1.48"
             },
-            "time": "2021-05-19T08:21:25+00:00"
+            "time": "2021-05-22T15:22:18+00:00"
         }
     ],
     "packages-dev": [],

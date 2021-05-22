@@ -112,7 +112,7 @@ class BasePost extends Post
     public function schemaId($hash = '')
     {
         return app()->url()
-            . $this->link(Language::getDefault())
+            . $this->link(Language::defaultCode())
             . ($hash ? '#' . $hash : '');
     }
 
