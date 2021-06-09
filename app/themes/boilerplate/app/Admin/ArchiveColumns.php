@@ -16,10 +16,6 @@ class ArchiveColumns
     {
         // Common column handlers
 
-        Admin::addColumnHandler('subtitle', function (Post $post) {
-            return $post->subtitle ?: '—';
-        });
-
         Admin::addColumnHandler('content', function (Post $post) {
 
             $value = $post->content ?: $post->post_content;

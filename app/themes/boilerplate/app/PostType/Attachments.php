@@ -15,7 +15,7 @@ class Attachments extends PostType
     {
         // fields
         $group = (new FieldGroup(static::$post_type))
-            ->location([static::$post_type])
+            ->location(static::$post_type)
             ->title('General Control')
             ->screenHideAll();
 

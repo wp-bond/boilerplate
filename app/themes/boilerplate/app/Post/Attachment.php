@@ -26,7 +26,7 @@ class Attachment extends BasePost
 
     public function values(string $for = ''): Fluent
     {
-        $values = parent::values($for);
+        $values = new Fluent();
 
         // extra content
         switch ($for) {
