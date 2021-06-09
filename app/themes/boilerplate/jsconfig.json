@@ -1,8 +1,18 @@
 {
   "compilerOptions": {
-    "noLib": true,
-    "target": "es2020"
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*.js", "src/**/*.vue"],
-  "exclude": ["**/*"]
+  "include": ["./src/**/*"],
+  "exclude": [
+    "./node_modules/**/*",
+    "./vendor/**/*",
+    "./app/**/*",
+    "./config/**/*",
+    "./support/**/*",
+    "./languages/**/*",
+    "./views/**/*"
+  ]
 }
