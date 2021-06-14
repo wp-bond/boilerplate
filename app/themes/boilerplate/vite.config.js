@@ -17,28 +17,27 @@ const { resolve, basename } = require('path')
 
 export const themeId = basename(__dirname)
 export const themePath = resolve(__dirname, '../../../html/app/themes', themeId)
-export const themeDir = '/app/themes/' + themeId
-
+export const themeDir = `/app/themes/${themeId}`
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     legacy({
-      targets: ['defaults', 'not IE 11']
+      targets: ['defaults', 'not IE 11'],
     }),
-    liveReload(__dirname+'/(app|config|support|views)/**/*.php')
+    liveReload(`${__dirname}/(app|config|support|views)/**/*.php`),
   ],
 
   // config
   root: 'src',
-  base: process.env.APP_ENV === 'development'
-    ? '/'
-    : themeDir + '/dist/',
+  base: process.env.APP_ENV === 'production'
+    ? `${themeDir}/dist/`
+    : '/',
 
   build: {
     // output dir for production build
-    outDir: themePath + '/dist',
+    outDir: `${themePath}/dist`,
     emptyOutDir: true,
 
     // emit manifest so PHP can find the hashed files
@@ -49,8 +48,8 @@ export default defineConfig({
 
     rollupOptions: {
       // our entry
-      input: '/main.js'
-    }
+      input: '/main.js',
+    },
   },
 
   server: {
@@ -59,16 +58,23 @@ export default defineConfig({
 
     // we need a strict port to match on PHP side
     strictPort: true,
-    port: 3000
+    port: 3303,
     // if changed match here /templates/html/vite.php
   },
-
 
   // required for in-browser template compilation
   // https://v3.vuejs.org/guide/installation.html#with-a-bundler
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.esm-bundler.js'
-    }
-  }
+      vue: 'vue/dist/vue.esm-bundler.js',
+    },
+  },
+
+  optimizeDeps: {
+    include: [
+      'vue',
+      'gsap',
+      'lodash',
+    ],
+  },
 })

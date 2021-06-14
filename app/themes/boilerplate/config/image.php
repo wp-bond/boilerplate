@@ -64,6 +64,7 @@ foreach (array_slice($sizes, 0) as $name => $values) {
 return [
     'quality' => 90, // default is 82
     'sizes' => $sizes,
+    'disable_limit' => true,
 
     'editor_sizes' => [
         'thumbnail' => t('Thumbnail'), // required for media upload ui

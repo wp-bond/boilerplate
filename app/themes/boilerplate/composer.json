@@ -17,6 +17,6 @@
     "samdark/sitemap": "^2.2",
     "spatie/schema-org": "^3.3",
     "symfony/var-dumper": "^5.2",
-    "wp-bond/bond": "^0.1.48"
+    "wp-bond/bond": "^0.1.50"
   }
 }

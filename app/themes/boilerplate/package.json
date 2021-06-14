@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "APP_ENV=development vite",
+    "dev": "vite",
     "build": "APP_ENV=production vite build",
-    "dev-admin": "APP_ENV=development vite --config vite.config.wp-admin.js",
+    "dev-admin": "vite --config vite.config.wp-admin.js",
     "build-admin": "APP_ENV=production vite build --config vite.config.wp-admin.js",
     "build-editor": "vite build --config vite.config.wp-editor.js",
     "build-watch-editor": "vite build --config vite.config.wp-editor.js --watch",
@@ -11,10 +11,12 @@
     "upgrade": "npx npm-check-updates -u && npm install"
   },
   "dependencies": {
+    "gsap": "^3.6.1",
+    "lodash": "^4.17.21",
     "vue": "^3.1.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.6.5",
+    "@antfu/eslint-config": "^0.6.6",
     "@vitejs/plugin-legacy": "^1.4.1",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.1.1",
