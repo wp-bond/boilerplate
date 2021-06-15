@@ -13,5 +13,9 @@ html/assets
 /html/app/plugins/*
 !/html/app/plugins/.gitkeep
 
+# Uploads
+/html/app/uploads/*
+!/html/app/uploads/.gitkeep
+
 # Vendor
 /app/themes/boilerplate/vendor/*

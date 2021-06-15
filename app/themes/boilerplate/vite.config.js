@@ -9,14 +9,14 @@
 // ln -s {path_to_project}/app/themes/{your_theme}/src/assets {path_to_project}/html/assets
 // on production everything will work just fine
 
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import legacy from '@vitejs/plugin-legacy'
 import liveReload from 'vite-plugin-live-reload'
-const { resolve, basename } = require('path')
 
-export const themeId = basename(__dirname)
-export const themePath = resolve(__dirname, '../../../html/app/themes', themeId)
+export const themeId = path.basename(__dirname)
+export const themePath = path.resolve(__dirname, '../../../html/app/themes', themeId)
 export const themeDir = `/app/themes/${themeId}`
 
 // https://vitejs.dev/config/
@@ -68,13 +68,5 @@ export default defineConfig({
     alias: {
       vue: 'vue/dist/vue.esm-bundler.js',
     },
-  },
-
-  optimizeDeps: {
-    include: [
-      'vue',
-      'gsap',
-      'lodash',
-    ],
   },
 })
