@@ -34,7 +34,13 @@
             "Other SEO optimizations are done automatically by the website.": "Outras otimiza\u00e7\u00f5es de SEO s\u00e3o feitas automaticamente pelo site.",
             "Category": "Categoria",
             "General Control": "Controle Geral",
-            "Caption": "Rubrica"
+            "Caption": "Rubrica",
+            "Title (EN)": "T\u00edtulo (EN)",
+            "Slug (EN)": "Slug (PT)",
+            "Link (EN)": "Link (PT)",
+            "Title (PT)": "T\u00edtulo (PT)",
+            "Slug (PT)": "Lesma (PT)",
+            "Link (PT)": "Link (PT)"
         },
         "register": {
             "Category": "Categoria",
@@ -67,7 +73,9 @@
         },
         "admin-columns": {
             "Title": "T\u00edtulo",
-            "Links": "Links"
+            "Links": "Links",
+            "Category": "Categoria",
+            "Date": "Data"
         }
     },
     "developed by": "Desenvolvido por",

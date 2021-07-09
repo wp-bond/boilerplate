@@ -54,7 +54,7 @@ foreach ($this as $module) {
 
     $anchor = $module['anchor'] ?? $module['title'] ?? null;
     if ($anchor) {
-        $anchor = ' id="' . Str::slug('section-' . $anchor) . '"';
+        $anchor = ' id="' . Str::kebab('section-' . $anchor) . '"';
     }
 
 

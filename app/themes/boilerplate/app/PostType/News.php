@@ -24,9 +24,7 @@ class News extends PostType
     public static function boot()
     {
         // Taxonomy field
-        $group = (new FieldGroup('tax_' . self::$post_type))
-            ->location(self::$post_type)
-            ->title('Category')
+        $group = self::fieldGroup('Category')
             ->positionSide()
             ->screenHideAll();
 

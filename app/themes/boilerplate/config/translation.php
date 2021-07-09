@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'service' => 'google', // google / aws / null
+    'service' => 'aws', // google / aws / null
 
     // set the language which the source code texts are written in
     // you can change freely, but best just once, when you start the project
@@ -11,10 +11,10 @@ return [
         'google' => [
             'key' => c('GOOGLE_TRANSLATE_KEY'),
         ],
-        // 'aws' => [
-        //     'key' => c('AWS_ACCESS_KEY_ID'),
-        //     'secret' => c('AWS_SECRET_ACCESS_KEY'),
-        //     'region' => 'us-east-1',
-        // ],
+        'aws' => [
+            'key' => c('AWS_TRANSLATE_KEY'),
+            'secret' => c('AWS_TRANSLATE_SECRET'),
+            'region' => 'us-east-1',
+        ],
     ],
 ];

@@ -2,6 +2,7 @@
 
 return [
     'disable_rss' => true,
+    'enable_rss' => true,
 
     'reset_body_classes' => true,
     'cleanup_head' => true,

@@ -14,9 +14,7 @@ class Attachments extends PostType
     public static function boot()
     {
         // fields
-        $group = (new FieldGroup(static::$post_type))
-            ->location(static::$post_type)
-            ->title('General Control')
+        $group = self::fieldGroup('General Control')
             ->screenHideAll();
 
         $group->textAreaField('caption')

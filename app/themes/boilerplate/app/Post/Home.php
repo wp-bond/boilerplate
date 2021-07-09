@@ -26,7 +26,7 @@ class Home extends Page
         $group = (new FieldGroup('home'))
             ->title('Content')
             ->screenHideAll()
-            ->menuOrder(10)
+            ->order(10)
             ->location($location);
 
         $flex = $group->flexibleContentField('modules')
