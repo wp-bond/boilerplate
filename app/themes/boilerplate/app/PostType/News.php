@@ -2,7 +2,6 @@
 
 namespace App\PostType;
 
-use Bond\Fields\Acf\FieldGroup;
 use Bond\PostType;
 use Bond\Settings\Admin;
 

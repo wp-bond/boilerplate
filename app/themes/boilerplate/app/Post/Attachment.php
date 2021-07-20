@@ -24,23 +24,33 @@ class Attachment extends BasePost
         return Image::alt($this->ID);
     }
 
+    public function pictureTag(
+        $size = 'thumbnail',
+        bool $with_caption = false
+    ): string {
+        return Image::pictureTag(
+            $this->ID,
+            $size,
+            $with_caption
+        );
+    }
+
     public function values(string $for = ''): Fluent
     {
         $values = new Fluent();
 
-        // extra content
         switch ($for) {
 
-            case 'api':
+            case 'archive':
+            case 'search':
                 $values->id = $this->ID;
-                $values->imageTag = Image::pictureTag(
-                    $this->ID,
-                    THUMBNAIL
-                );
-                $values->caption = $this->caption();
+                $values->imageTag = $this->pictureTag();
                 break;
 
             default:
+                $values->id = $this->ID;
+                $values->imageTag = $this->pictureTag($for);
+                $values->caption = $this->caption();
                 break;
         }
 

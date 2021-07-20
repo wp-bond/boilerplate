@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.185.9",
+            "version": "3.185.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "b92714fbe995195e9ba970cf52a2fa601b334725"
+                "reference": "5119dd32edda30c191ed1f6bcd3b48d717200de6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b92714fbe995195e9ba970cf52a2fa601b334725",
-                "reference": "b92714fbe995195e9ba970cf52a2fa601b334725",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5119dd32edda30c191ed1f6bcd3b48d717200de6",
+                "reference": "5119dd32edda30c191ed1f6bcd3b48d717200de6",
                 "shasum": ""
             },
             "require": {
@@ -92,9 +92,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.185.9"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.185.16"
             },
-            "time": "2021-07-08T18:21:21+00:00"
+            "time": "2021-07-19T18:14:16+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1647,26 +1647,25 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.2.0",
+            "version": "v0.2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "8cf4fa0889b264da269544e32031562e40bb7af4"
+                "reference": "512804014c7a868902c47e9b395737fdd3b64401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/8cf4fa0889b264da269544e32031562e40bb7af4",
-                "reference": "8cf4fa0889b264da269544e32031562e40bb7af4",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/512804014c7a868902c47e9b395737fdd3b64401",
+                "reference": "512804014c7a868902c47e9b395737fdd3b64401",
                 "shasum": ""
             },
             "require": {
                 "league/container": "^4.1",
                 "mobiledetect/mobiledetectlib": "^2.8",
                 "nesbot/carbon": "^2.50",
-                "php": ">=7.4",
+                "php": ">=8.0",
                 "psr/simple-cache": "^1.0",
                 "symfony/polyfill-mbstring": "^1.23",
-                "symfony/polyfill-php80": "^1.23",
                 "symfony/polyfill-php81": "^1.23",
                 "voku/portable-ascii": "^1.5"
             },
@@ -1703,9 +1702,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-bond/bond/issues",
-                "source": "https://github.com/wp-bond/bond/tree/v0.2.0"
+                "source": "https://github.com/wp-bond/bond/tree/v0.2.1.2"
             },
-            "time": "2021-07-09T12:59:22+00:00"
+            "time": "2021-07-19T17:42:15+00:00"
         }
     ],
     "packages-dev": [],

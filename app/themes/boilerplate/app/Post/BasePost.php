@@ -4,17 +4,13 @@ namespace App\Post;
 
 use Bond\Settings\Language;
 use Bond\Post;
+use Bond\Utils\Cast;
 use Bond\Utils\Date;
 use Bond\Utils\Image;
 use Bond\Utils\Str;
 
 class BasePost extends Post
 {
-    public function content(): string
-    {
-        return Str::filterContent($this->post_content);
-    }
-
     public function date()
     {
         return Date::iso($this->post_date, 'DD.MM.Y');
@@ -25,16 +21,30 @@ class BasePost extends Post
         return Date::iso($this->post_date, 'D MMMM Y');
     }
 
-    public function archiveImage(): int
+    // these could go into core
+    public function archiveImage(string $values = null): ?Attachment
+    {
+        return Cast::post($this->archiveImageId());
+    }
+    public function archiveImageId(bool $no_fallback = false): int
     {
         if ($this->archive_image) {
             return (int) $this->archive_image;
         }
-        return $this->image();
+        if ($no_fallback) {
+            return 0;
+        }
+        return $this->imageId();
     }
 
-    public function image(): int
+    public function image(): ?Attachment
     {
+        return Cast::post($this->imageId());
+    }
+    public function imageId(bool $no_fallback = false): int
+    {
+        // could be removed, now that we have attachment
+        // we would never reach here, unless attachment extend from this class
         // is attachment already
         if ($this->post_type === 'attachment') {
             return (int) $this->ID;
@@ -44,6 +54,9 @@ class BasePost extends Post
         // IMPORTANT relies that the return_type is id
         if ($this->image) {
             return (int) $this->image;
+        }
+        if ($no_fallback) {
+            return 0;
         }
         if ($this->archive_image) {
             return (int) $this->archive_image;
@@ -58,19 +71,17 @@ class BasePost extends Post
         }
 
         // modules
-        $images = $this->modulesImages($this->modules);
+        $images = $this->modulesImages();
         if (count($images)) {
             return (int) $images[0];
         }
 
         // raw body content
-        // could be used if the default editor is used
-
-        // $content = $this->content ?: $this->post_content;
-        // $images = Image::findWpImages($content);
-        // if (count($images)) {
-        //     return (int) $images[0];
-        // }
+        $content = $this->content();
+        $images = Image::findWpImages($content);
+        if (count($images)) {
+            return (int) $images[0];
+        }
 
         return 0;
     }
@@ -125,7 +136,7 @@ class BasePost extends Post
     public function schemaImage()
     {
         return Image::url(
-            $this->image(),
+            $this->imageId(),
             'large'
         );
     }

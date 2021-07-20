@@ -17,8 +17,8 @@ function the_feed_content($post)
     $result = '';
 
     // vars
-    $image_id = $post->image();
-    $content = $post->content ?: $post->post_content;
+    $image_id = $post->imageId();
+    $content = $post->content();
 
     // format html
     $result .= '<a href="' . get_permalink($post->ID) . '">';

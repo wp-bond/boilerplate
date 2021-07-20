@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use Bond\Utils\Cache;
 use Bond\Utils\Link;
 use Bond\Settings\Language;
 use Spatie\SchemaOrg\Organization;
@@ -17,12 +16,11 @@ class Seo
 
     public static function boot()
     {
-        // TODO
-        // add_action(
-        //     'Bond/template_redirect/archive',
-        //     [static::class, 'archive'],
-        //     99
-        // );
+        add_action(
+            'Bond/template_redirect/archive',
+            [static::class, 'archive'],
+            99
+        );
         add_action(
             'Bond/template_redirect/singular',
             [static::class, 'singular'],
@@ -36,31 +34,30 @@ class Seo
 
         // Clear cache on every post save
         add_action('Bond/save_post', function ($post) {
-            Cache::forget('seo');
+            cache()->delete('seo');
         });
-        add_action('Bond/save_options', function ($post) {
-            Cache::forget('seo');
+        add_action('Bond/save_options', function () {
+            cache()->delete('seo');
         });
     }
 
+    public static function archive()
+    {
+        global $wp_query;
 
-    // public static function archive()
-    // {
-    //     global $wp_query;
-    //     // dd($wp_query);
+        // Description SEO
+        if ($wp_query->is_search) {
+            $key = 'search';
+        } else {
+            $type = (array) $wp_query->get('post_type');
+            $key = $type[0] ?? null;
+        }
 
-    //     // Description SEO
-    //     if ($wp_query->is_search) {
-    //         $key = 'search';
-    //     } else {
-    //         $type = (array) $wp_query->get('post_type');
-    //         $key = $type[0] ?? null;
-    //     }
-
-    //     meta()->description = get_field($key . '_description' . Language::fieldsSuffix(), 'options');
-
-    //     // Images too if possible
-    // }
+        $desc = \get_field($key . '_description' . Language::fieldsSuffix(), 'options');
+        if ($desc) {
+            meta()->description = $desc;
+        }
+    }
 
 
     public static function singular()
@@ -95,9 +92,8 @@ class Seo
 
     public static function organization()
     {
-        return Cache::php(
+        return cache()->remember(
             'seo/schema-organization',
-            -1,
             function () {
                 return (new Organization())
                     ->identifier(app()->url() . '#organization')

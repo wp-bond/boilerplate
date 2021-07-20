@@ -3,7 +3,6 @@
 namespace App\Post;
 
 use Bond\Fields\Acf\FieldGroup;
-use Bond\Utils\Query;
 
 class Home extends Page
 {

@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use Bond\Settings\Language;
-use Bond\Utils\Cache;
 use Bond\Utils\Cast;
 use Bond\Utils\Date;
 use Bond\Utils\Link;
@@ -20,6 +19,7 @@ class Sitemap
         NEWS,
     ];
     public static array $skip_archives = [];
+    public static array $skip_singles = [];
     public static array $skip_pages = [
         'home',
     ];
@@ -88,14 +88,18 @@ class Sitemap
 
     public static function postsSitemap()
     {
-        return Cache::json(
+        return cache()->remember(
             'sitemaps/posts',
-            app()->isDevelopment() ? 0 : 60 * 60 * 2,
             function () {
 
                 $sitemaps_urls = [];
 
                 foreach (self::$post_types as $post_type) {
+
+                    // has no archive
+                    if (in_array($post_type, self::$skip_singles)) {
+                        continue;
+                    }
 
                     $posts = self::allPostsOf($post_type);
                     if (empty($posts)) {
@@ -138,7 +142,8 @@ class Sitemap
                 }
 
                 return $sitemaps_urls;
-            }
+            },
+            app()->isDevelopment() ? 0 : 60 * 60 * 2
         );
     }
 
@@ -146,10 +151,8 @@ class Sitemap
 
     public static function pagesSitemap()
     {
-        return Cache::json(
+        return cache()->remember(
             'sitemaps/pages',
-            app()->isDevelopment() ? 0 : 60 * 60 * 2,
-
             function () {
                 $sitemap = new SitemapXml(
                     self::$root_path . '/sitemaps/sitemap-pages.xml',
@@ -213,8 +216,8 @@ class Sitemap
                 $sitemap->write();
 
                 return $sitemap->getSitemapUrls(app()->url() . '/sitemaps/');
-            }
-
+            },
+            app()->isDevelopment() ? 0 : 60 * 60 * 2
         );
     }
 

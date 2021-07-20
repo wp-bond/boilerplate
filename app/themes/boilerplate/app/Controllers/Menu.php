@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\PostType\News;
 use Bond\Settings\Language;
 use Bond\Utils\Link;
-use Bond\Utils\Cache;
 
 class Menu
 {
@@ -17,9 +16,8 @@ class Menu
 
     public static function ready()
     {
-        $menu = Cache::json(
+        $menu = cache()->remember(
             'global/menu-' . Language::shortCode(),
-            -1,
             function () {
 
                 // language switcher

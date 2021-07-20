@@ -18,7 +18,7 @@ class ArchiveColumns
 
         Admin::addColumnHandler('content', function (Post $post) {
 
-            $value = $post->content ?: $post->post_content;
+            $value = $post->content();
 
             echo '<a href="' . get_edit_post_link($post->ID) . '">';
             echo $value ? Str::clean($value, 20) : '—';
@@ -26,7 +26,7 @@ class ArchiveColumns
         });
 
         Admin::addColumnHandler('image', function (BasePost $post) {
-            $image_id = $post->image();
+            $image_id = $post->imageId();
             if (!$image_id) {
                 return;
             }

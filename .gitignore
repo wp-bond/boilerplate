@@ -4,6 +4,7 @@
 
 # Our assets symlink
 html/assets
+html/@fs
 
 # WP
 /html/wp/*
