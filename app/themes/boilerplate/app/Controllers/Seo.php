@@ -102,8 +102,8 @@ class Seo
                     ->description(get_field('description' . Language::defaultFieldsSuffix(), 'options'))
                     ->logo(app()->url() . '/apple-touch-icon.png');
                 // ->sameAs([
-                //     config('services.facebook.url'),
-                //     config('services.instagram.url')
+                //     config('meta.facebook.url'),
+                //     config('meta.instagram.url')
                 // ])
                 // ->location(self::locations());
             }

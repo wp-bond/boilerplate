@@ -2,12 +2,9 @@
 
 namespace App\Admin;
 
-use App\Post\BasePost;
 use Bond\Post;
 use Bond\Settings\Language;
 use Bond\Settings\Admin;
-use Bond\Utils\Image;
-use Bond\Utils\Str;
 
 class ArchiveColumns
 {
@@ -15,31 +12,6 @@ class ArchiveColumns
     public static function bootAdmin()
     {
         // Common column handlers
-
-        Admin::addColumnHandler('content', function (Post $post) {
-
-            $value = $post->content();
-
-            echo '<a href="' . get_edit_post_link($post->ID) . '">';
-            echo $value ? Str::clean($value, 20) : '—';
-            echo '</a>';
-        });
-
-        Admin::addColumnHandler('image', function (BasePost $post) {
-            $image_id = $post->imageId();
-            if (!$image_id) {
-                return;
-            }
-            return '<a href="' . get_edit_post_link($post->ID) . '">'
-                . Image::imageTag(
-                    $image_id,
-                    'thumbnail',
-                    [
-                        'class' => 'archive-img',
-                    ]
-                )
-                . '</a>';
-        });
 
         Admin::addColumnHandler('multilanguage_links', function (Post $post) {
             $res = '<div class="multilanguage-circles">';

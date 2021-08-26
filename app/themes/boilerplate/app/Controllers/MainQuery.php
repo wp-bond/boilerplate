@@ -34,22 +34,8 @@ class MainQuery
             return;
         }
 
-        // common vars, force set globals to avoid inconsistencies
-        global $s,
-            $post_type,
-            $paged,
-            $pagename;
-
-        $vars = [
-            's',
-            'post_type',
-            'paged',
-            'pagename',
-        ];
-
-
-        // sanitize paged
-        $paged = (int) $paged;
+        // vars
+        $post_type = $query->query['post_type'] ?? '';
 
         // sanitize
         if ($query->get('page')) {

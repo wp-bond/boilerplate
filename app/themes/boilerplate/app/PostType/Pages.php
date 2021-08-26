@@ -3,7 +3,6 @@
 namespace App\PostType;
 
 use Bond\PostType;
-use Bond\Settings\Admin;
 
 class Pages extends PostType
 {
@@ -17,9 +16,7 @@ class Pages extends PostType
 
     public static function bootAdmin()
     {
-        Admin::hideTitle(self::$post_type);
-
-        Admin::setColumns(self::$post_type, [
+        self::setColumns([
             'title' => 'Title',
             'multilanguage_links' => 'Links',
         ]);

@@ -3,7 +3,6 @@
 namespace App\PostType;
 
 use Bond\PostType;
-use Bond\Settings\Admin;
 
 class News extends PostType
 {
@@ -29,23 +28,15 @@ class News extends PostType
 
         $group->taxonomyField(CATEGORY)
             // ->label('Categories')
-            ->field_type('checkbox')
-            ->allow_null(1)
-            ->add_term(1)
-            ->save_terms(1)
-            ->load_terms(1)
-            ->multiple(1)
-            ->return_format('id')
-            ->taxonomy(CATEGORY);
+            ->taxonomy(CATEGORY)
+            ->typeCheckbox()
+            ->allowNewTerms();
     }
 
 
     public static function bootAdmin()
     {
-        Admin::hideTitle(self::$post_type);
-
-        // Archive Columns
-        Admin::setColumns(self::$post_type, [
+        self::setColumns([
             'image' => '',
             'title' => 'Title',
             'taxonomy-category'  => 'Category',

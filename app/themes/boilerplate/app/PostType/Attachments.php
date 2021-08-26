@@ -3,7 +3,6 @@
 namespace App\PostType;
 
 use Bond\PostType;
-use Bond\Settings\Admin;
 
 class Attachments extends PostType
 {
@@ -27,7 +26,7 @@ class Attachments extends PostType
     public static function bootAdmin()
     {
         // columns
-        Admin::setColumns(self::$post_type, [
+        self::setColumns([
             'title' => 'File',
             'i18n-image-caption' => 'Caption',
             // 'author' => 'Author',
@@ -35,7 +34,7 @@ class Attachments extends PostType
             'date' => 'Date',
         ]);
 
-        Admin::addColumnHandler('i18n-image-caption', function ($post) {
+        self::addColumnHandler('i18n-image-caption', function ($post) {
             return $post->caption ?: '—';
         });
     }
