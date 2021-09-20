@@ -16,7 +16,7 @@ class Article extends BasePost
         switch ($for) {
 
             case 'api':
-                $values->title = $this->title ?: $this->post_title;
+                $values->title = $this->title();
                 $values->date = $this->dateLong();
                 break;
 
