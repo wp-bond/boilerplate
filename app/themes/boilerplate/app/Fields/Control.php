@@ -32,14 +32,14 @@ class Control
             ])
             ->title('Search Engine Optimization');
 
-        $group->messageField('seo_helper')
+        $group->messageField('seo_helper', '')
             ->message('In the fields below fill a maximum of 170 characters, relative to 2 lines of text on the Google search results page.');
 
 
         // Home page
         $group->textAreaField('description')
+            ->label('Description for the Home page')
             ->multilanguage()
-            ->label('Home page description')
             ->wrapWidth(50)
             ->maxlength(170)
             ->rows(3);

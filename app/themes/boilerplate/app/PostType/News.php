@@ -26,8 +26,7 @@ class News extends PostType
             ->positionSide()
             ->screenHideAll();
 
-        $group->taxonomyField(CATEGORY)
-            // ->label('Categories')
+        $group->taxonomyField(CATEGORY, '')
             ->taxonomy(CATEGORY)
             ->typeCheckbox()
             ->allowNewTerms();

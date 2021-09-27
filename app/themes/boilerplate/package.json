@@ -14,16 +14,16 @@
     "gsap": "^3.7.1",
     "lodash-es": "^4.17.21",
     "ohmyfetch": "^0.3.1",
-    "vue": "^3.2.12"
+    "vue": "^3.2.19"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.9.0",
     "@vitejs/plugin-legacy": "^1.5.3",
-    "@vitejs/plugin-vue": "^1.8.1",
-    "@vue/compiler-sfc": "^3.2.12",
+    "@vitejs/plugin-vue": "^1.9.2",
+    "@vue/compiler-sfc": "^3.2.19",
     "eslint": "^7.32.0",
     "postcss-preset-env": "^6.7.0",
-    "sass": "^1.41.1",
+    "sass": "^1.42.1",
     "vite": "^2.5.10",
     "vite-plugin-live-reload": "^2.1.0"
   }

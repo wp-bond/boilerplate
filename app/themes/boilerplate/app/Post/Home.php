@@ -36,7 +36,7 @@ class Home extends Page
         $layout = $flex->layout('features')
             ->label('Feature');
 
-        $layout->relationshipField('related_posts')
+        $layout->relationshipField('related_posts', '')
             ->instructions('Select from the website\'s content.')
             ->postType([
                 NEWS,

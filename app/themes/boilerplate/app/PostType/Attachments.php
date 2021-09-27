@@ -17,7 +17,6 @@ class Attachments extends PostType
 
         $group->textAreaField('caption')
             ->multilanguage()
-            ->label('Caption')
             ->rows(4)
             ->newLines('br');
     }
@@ -28,14 +27,10 @@ class Attachments extends PostType
         // columns
         self::setColumns([
             'title' => 'File',
-            'i18n-image-caption' => 'Caption',
+            'caption' => 'Caption',
             // 'author' => 'Author',
             'parent' => 'Attached to',
             'date' => 'Date',
         ]);
-
-        self::addColumnHandler('i18n-image-caption', function ($post) {
-            return $post->caption ?: '—';
-        });
     }
 }
