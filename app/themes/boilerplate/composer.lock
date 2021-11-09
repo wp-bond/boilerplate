@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.194.5",
+            "version": "3.200.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "33f755378debdbc7e010157811fc47aebf090c53"
+                "reference": "e4f500693a3c91b7dc5d9703a8b9c1641c6208bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/33f755378debdbc7e010157811fc47aebf090c53",
-                "reference": "33f755378debdbc7e010157811fc47aebf090c53",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e4f500693a3c91b7dc5d9703a8b9c1641c6208bd",
+                "reference": "e4f500693a3c91b7dc5d9703a8b9c1641c6208bd",
                 "shasum": ""
             },
             "require": {
@@ -77,7 +77,7 @@
                 "ext-simplexml": "*",
                 "guzzlehttp/guzzle": "^5.3.3|^6.2.1|^7.0",
                 "guzzlehttp/promises": "^1.4.0",
-                "guzzlehttp/psr7": "^1.7.0",
+                "guzzlehttp/psr7": "^1.7.0|^2.0",
                 "mtdowling/jmespath.php": "^2.6",
                 "php": ">=5.5"
             },
@@ -143,30 +143,31 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.194.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.200.2"
             },
-            "time": "2021-09-24T18:25:24+00:00"
+            "time": "2021-11-08T19:13:50+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.3.0",
+            "version": "7.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "7008573787b430c1c1f650e3722d9bba59967628"
+                "reference": "868b3571a039f0ebc11ac8f344f4080babe2cb94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/7008573787b430c1c1f650e3722d9bba59967628",
-                "reference": "7008573787b430c1c1f650e3722d9bba59967628",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/868b3571a039f0ebc11ac8f344f4080babe2cb94",
+                "reference": "868b3571a039f0ebc11ac8f344f4080babe2cb94",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^1.4",
-                "guzzlehttp/psr7": "^1.7 || ^2.0",
+                "guzzlehttp/promises": "^1.5",
+                "guzzlehttp/psr7": "^1.8.3 || ^2.1",
                 "php": "^7.2.5 || ^8.0",
-                "psr/http-client": "^1.0"
+                "psr/http-client": "^1.0",
+                "symfony/deprecation-contracts": "^2.2"
             },
             "provide": {
                 "psr/http-client-implementation": "1.0"
@@ -176,7 +177,7 @@
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "^3.0",
                 "phpunit/phpunit": "^8.5.5 || ^9.3.5",
-                "psr/log": "^1.1"
+                "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
                 "ext-curl": "Required for CURL handler support",
@@ -186,7 +187,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.3-dev"
+                    "dev-master": "7.4-dev"
                 }
             },
             "autoload": {
@@ -203,18 +204,42 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "Jeremy Lindblom",
+                    "email": "jeremeamia@gmail.com",
+                    "homepage": "https://github.com/jeremeamia"
+                },
+                {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
                     "name": "Márk Sági-Kazár",
                     "email": "mark.sagikazar@gmail.com",
-                    "homepage": "https://sagikazarmark.hu"
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
             "description": "Guzzle is a PHP HTTP client library",
-            "homepage": "http://guzzlephp.org/",
             "keywords": [
                 "client",
                 "curl",
@@ -228,7 +253,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.3.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.4.0"
             },
             "funding": [
                 {
@@ -240,28 +265,24 @@
                     "type": "github"
                 },
                 {
-                    "url": "https://github.com/alexeyshockov",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/gmponos",
-                    "type": "github"
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/guzzle",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2021-03-23T11:33:13+00:00"
+            "time": "2021-10-18T09:52:00+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.4.1",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d"
+                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/8e7d04f1f6450fef59366c399cfad4b9383aa30d",
-                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
+                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +294,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -290,9 +311,24 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
             "description": "Guzzle promises library",
@@ -301,35 +337,52 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.4.1"
+                "source": "https://github.com/guzzle/promises/tree/1.5.1"
             },
-            "time": "2021-03-07T09:25:29+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/promises",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-22T20:56:57+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.2",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
+                "reference": "089edd38f5b8abba6cb01567c2a8aaa47cec4c72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
-                "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/089edd38f5b8abba6cb01567c2a8aaa47cec4c72",
+                "reference": "089edd38f5b8abba6cb01567c2a8aaa47cec4c72",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0",
-                "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0",
+                "ralouphie/getallheaders": "^3.0"
             },
             "provide": {
+                "psr/http-factory-implementation": "1.0",
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "ext-zlib": "*",
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
+                "bamarni/composer-bin-plugin": "^1.4.1",
+                "http-interop/http-factory-tests": "^0.9",
+                "phpunit/phpunit": "^8.5.8 || ^9.3.10"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
@@ -337,16 +390,13 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "GuzzleHttp\\Psr7\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -354,13 +404,39 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
                     "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://sagikazarmark.hu"
                 }
             ],
             "description": "PSR-7 message implementation that also provides common utility methods",
@@ -376,9 +452,23 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.2"
+                "source": "https://github.com/guzzle/psr7/tree/2.1.0"
             },
-            "time": "2021-04-26T09:17:50+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-06T17:43:30+00:00"
         },
         {
             "name": "league/container",
@@ -587,16 +677,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.53.1",
+            "version": "2.54.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "f4655858a784988f880c1b8c7feabbf02dfdf045"
+                "reference": "eed83939f1aed3eee517d03a33f5ec587ac529b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f4655858a784988f880c1b8c7feabbf02dfdf045",
-                "reference": "f4655858a784988f880c1b8c7feabbf02dfdf045",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/eed83939f1aed3eee517d03a33f5ec587ac529b5",
+                "reference": "eed83939f1aed3eee517d03a33f5ec587ac529b5",
                 "shasum": ""
             },
             "require": {
@@ -607,6 +697,7 @@
                 "symfony/translation": "^3.4 || ^4.0 || ^5.0"
             },
             "require-dev": {
+                "doctrine/dbal": "^2.0 || ^3.0",
                 "doctrine/orm": "^2.7",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "kylekatarnls/multi-tester": "^2.0",
@@ -677,24 +768,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-06T09:29:23+00:00"
+            "time": "2021-11-01T21:22:20+00:00"
         },
         {
             "name": "psr/container",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "2ae37329ee82f91efadc282cc2d527fd6065a5ef"
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/2ae37329ee82f91efadc282cc2d527fd6065a5ef",
-                "reference": "2ae37329ee82f91efadc282cc2d527fd6065a5ef",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0"
+                "php": ">=7.4.0"
             },
             "type": "library",
             "extra": {
@@ -728,9 +819,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/2.0.1"
+                "source": "https://github.com/php-fig/container/tree/2.0.2"
             },
-            "time": "2021-03-24T13:40:57+00:00"
+            "time": "2021-11-05T16:47:00+00:00"
         },
         {
             "name": "psr/http-client",
@@ -783,6 +874,61 @@
                 "source": "https://github.com/php-fig/http-client/tree/master"
             },
             "time": "2020-06-29T06:28:15+00:00"
+        },
+        {
+            "name": "psr/http-factory",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "keywords": [
+                "factory",
+                "http",
+                "message",
+                "psr",
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory/tree/master"
+            },
+            "time": "2019-04-30T12:38:16+00:00"
         },
         {
             "name": "psr/http-message",
@@ -934,16 +1080,16 @@
         },
         {
             "name": "samdark/sitemap",
-            "version": "2.2.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/samdark/sitemap.git",
-                "reference": "dcfef471e79abca9d3c4d83dd6a7861cec1a596a"
+                "reference": "a7ba091766afeb5fad1ea3056b30f26c3a620962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samdark/sitemap/zipball/dcfef471e79abca9d3c4d83dd6a7861cec1a596a",
-                "reference": "dcfef471e79abca9d3c4d83dd6a7861cec1a596a",
+                "url": "https://api.github.com/repos/samdark/sitemap/zipball/a7ba091766afeb5fad1ea3056b30f26c3a620962",
+                "reference": "a7ba091766afeb5fad1ea3056b30f26c3a620962",
                 "shasum": ""
             },
             "require": {
@@ -979,33 +1125,43 @@
                 "issues": "https://github.com/samdark/sitemap/issues",
                 "source": "https://github.com/samdark/sitemap"
             },
-            "time": "2019-03-27T09:31:20+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/samdark",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/samdark",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-10-02T04:04:28+00:00"
         },
         {
             "name": "spatie/schema-org",
-            "version": "3.4.0",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/schema-org.git",
-                "reference": "066463b6f10eb9f7617f879302ed382aa6bdbf54"
+                "reference": "ce9c9ed51b0c0f9cee682e5a8823bddcc1ceae04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/schema-org/zipball/066463b6f10eb9f7617f879302ed382aa6bdbf54",
-                "reference": "066463b6f10eb9f7617f879302ed382aa6bdbf54",
+                "url": "https://api.github.com/repos/spatie/schema-org/zipball/ce9c9ed51b0c0f9cee682e5a8823bddcc1ceae04",
+                "reference": "ce9c9ed51b0c0f9cee682e5a8823bddcc1ceae04",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.3 || ^8.0"
+                "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "graham-campbell/analyzer": "^3.0.4",
-                "illuminate/collections": "^8.16.1",
-                "league/flysystem": "^1.1.3",
+                "graham-campbell/analyzer": "^3.0.5",
+                "illuminate/collections": "^8.62.0",
+                "league/flysystem": "^2.3.0",
                 "phpunit/phpunit": "^9.4.3",
-                "symfony/console": "^3.4.47",
-                "twig/twig": "^1.44.1"
+                "symfony/console": "^5.3.7",
+                "twig/twig": "^3.3.3"
             },
             "type": "library",
             "autoload": {
@@ -1039,7 +1195,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/schema-org/issues",
-                "source": "https://github.com/spatie/schema-org/tree/3.4.0"
+                "source": "https://github.com/spatie/schema-org/tree/3.8.0"
             },
             "funding": [
                 {
@@ -1051,7 +1207,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-10T08:54:54+00:00"
+            "time": "2021-10-20T16:40:49+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -1364,16 +1520,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v5.3.7",
+            "version": "v5.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "4d595a6d15fd3a2c67f6f31d14d15d3b7356d7a6"
+                "reference": "6ef197aea2ac8b9cd63e0da7522b3771714035aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/4d595a6d15fd3a2c67f6f31d14d15d3b7356d7a6",
-                "reference": "4d595a6d15fd3a2c67f6f31d14d15d3b7356d7a6",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/6ef197aea2ac8b9cd63e0da7522b3771714035aa",
+                "reference": "6ef197aea2ac8b9cd63e0da7522b3771714035aa",
                 "shasum": ""
             },
             "require": {
@@ -1439,7 +1595,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v5.3.7"
+                "source": "https://github.com/symfony/translation/tree/v5.3.10"
             },
             "funding": [
                 {
@@ -1455,7 +1611,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-26T08:22:53+00:00"
+            "time": "2021-10-10T06:43:24+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -1537,16 +1693,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.3.7",
+            "version": "v5.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "3ad5af4aed07d0a0201bbcfc42658fe6c5b2fb8f"
+                "reference": "875432adb5f5570fff21036fd22aee244636b7d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/3ad5af4aed07d0a0201bbcfc42658fe6c5b2fb8f",
-                "reference": "3ad5af4aed07d0a0201bbcfc42658fe6c5b2fb8f",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/875432adb5f5570fff21036fd22aee244636b7d1",
+                "reference": "875432adb5f5570fff21036fd22aee244636b7d1",
                 "shasum": ""
             },
             "require": {
@@ -1605,7 +1761,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v5.3.7"
+                "source": "https://github.com/symfony/var-dumper/tree/v5.3.10"
             },
             "funding": [
                 {
@@ -1621,7 +1777,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-04T23:19:25+00:00"
+            "time": "2021-10-26T09:30:15+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -1699,16 +1855,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.2.1.7",
+            "version": "v0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "2c3dc2e454210f9569e3b003edff289b0fcf9cbe"
+                "reference": "99c4aa041218d03a580c5a818742c7be221df90c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/2c3dc2e454210f9569e3b003edff289b0fcf9cbe",
-                "reference": "2c3dc2e454210f9569e3b003edff289b0fcf9cbe",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/99c4aa041218d03a580c5a818742c7be221df90c",
+                "reference": "99c4aa041218d03a580c5a818742c7be221df90c",
                 "shasum": ""
             },
             "require": {
@@ -1754,9 +1910,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-bond/bond/issues",
-                "source": "https://github.com/wp-bond/bond/tree/v0.2.1.7"
+                "source": "https://github.com/wp-bond/bond/tree/v0.2.2"
             },
-            "time": "2021-09-23T18:47:33+00:00"
+            "time": "2021-11-07T14:24:11+00:00"
         }
     ],
     "packages-dev": [],
