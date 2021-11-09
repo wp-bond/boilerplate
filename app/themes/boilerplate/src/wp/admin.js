@@ -1,6 +1,6 @@
 
 // Vars
-import '../style/vars.css'
+import '../styles/vars.css'
 
 // Color Scheme (SCSS)
 import './admin/admin-color-scheme.scss'
@@ -20,7 +20,6 @@ import './admin/fields.css'
 
 // Our custom Archive Columns
 import './admin/archive-columns.css'
-
 
 // Scripts
 // if you need to, you can execute some JS at admin page too
