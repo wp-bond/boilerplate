@@ -7,24 +7,26 @@
     "build-admin": "APP_ENV=production vite build --config vite.config.wp-admin.js",
     "build-editor": "vite build --config vite.config.wp-editor.js",
     "build-watch-editor": "vite build --config vite.config.wp-editor.js --watch",
-    "build-all": "npm run build && npm run build-admin && npm run build-editor",
-    "upgrade": "npx npm-check-updates -u && npm install"
+    "build-all": "pnpm build && pnpm build-admin && pnpm build-editor",
+    "upgrade": "pnpm dlx npm-check-updates -u && pnpm install"
   },
   "dependencies": {
-    "gsap": "^3.7.1",
+    "gsap": "^3.9.1",
     "lodash-es": "^4.17.21",
-    "ohmyfetch": "^0.3.1",
-    "vue": "^3.2.19"
+    "ohmyfetch": "^0.4.14",
+    "vue": "^3.2.26"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.9.0",
-    "@vitejs/plugin-legacy": "^1.5.3",
-    "@vitejs/plugin-vue": "^1.9.2",
-    "@vue/compiler-sfc": "^3.2.19",
-    "eslint": "^7.32.0",
-    "postcss-preset-env": "^6.7.0",
-    "sass": "^1.42.1",
-    "vite": "^2.5.10",
+    "@antfu/eslint-config": "^0.14.2",
+    "@vitejs/plugin-legacy": "^1.6.4",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "@vue/compiler-sfc": "^3.2.26",
+    "eslint": "^8.5.0",
+    "postcss": "^8.4.5",
+    "postcss-preset-env": "^7.1.0",
+    "sass": "^1.45.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.7.7",
     "vite-plugin-live-reload": "^2.1.0"
   }
 }
