@@ -1,14 +1,16 @@
+// https://vitejs.dev/config/#build-polyfillmodulepreload
+// using workaround https://github.com/vitejs/vite/issues/4786
+/* eslint-disable import/first */
+if (import.meta.env.MODE !== 'development') {
+  // @ts-expect-error required by vite
+  import('vite/modulepreload-polyfill')
+}
+
 // Styles
 import './styles'
 
 // Vue
 import { createApp } from 'vue'
-
-// https://vitejs.dev/config/#build-polyfillmodulepreload
-// using workaround https://github.com/vitejs/vite/issues/4786
-if (import.meta.env.MODE !== 'development') {
-  import('vite/modulepreload-polyfill')
-}
 
 // If you are build a SPA with a single <div id="app"></div> entry you would:
 // import App from './App.vue'
