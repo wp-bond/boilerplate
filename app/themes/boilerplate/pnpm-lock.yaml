@@ -10,9 +10,11 @@ specifiers:
   lodash-es: ^4.17.21
   ohmyfetch: ^0.4.14
   postcss: ^8.4.5
+  postcss-html: ^1.3.0
   postcss-preset-env: ^7.2.0
   sass: ^1.46.0
   stylelint: ^14.2.0
+  stylelint-config-recommended-vue: ^1.1.0
   stylelint-config-standard: ^24.0.0
   typescript: ^4.5.4
   vite: ^2.7.10
@@ -32,9 +34,11 @@ devDependencies:
   '@vue/compiler-sfc': 3.2.26
   eslint: 8.6.0
   postcss: 8.4.5
+  postcss-html: 1.3.0
   postcss-preset-env: 7.2.0_postcss@8.4.5
   sass: 1.46.0
   stylelint: 14.2.0
+  stylelint-config-recommended-vue: 1.1.0_2d1bcf73d0f2e8e613ccd6d821b0344f
   stylelint-config-standard: 24.0.0_stylelint@14.2.0
   typescript: 4.5.4
   vite: 2.7.10_sass@1.46.0
@@ -2546,6 +2550,15 @@ packages:
       postcss: 8.4.5
     dev: true
 
+  /postcss-html/1.3.0:
+    resolution: {integrity: sha512-ewbwd7OGW4dLsErtvZH9HpVMEcXnlhYSzKsr7MepGlOT8imHTIZ/+pdfEruLS+hTYapLTQAWDnoQcJpsYU4uRw==}
+    engines: {node: ^12 || >=14}
+    dependencies:
+      htmlparser2: 7.2.0
+      postcss: 8.4.5
+      postcss-safe-parser: 6.0.0_postcss@8.4.5
+    dev: true
+
   /postcss-image-set-function/4.0.4_postcss@8.4.5:
     resolution: {integrity: sha512-BlEo9gSTj66lXjRNByvkMK9dEdEGFXRfGjKRi9fo8s0/P3oEk74cAoonl/utiM50E2OPVb/XSu+lWvdW4KtE/Q==}
     engines: {node: ^12 || ^14 || >=16}
@@ -3054,6 +3067,30 @@ packages:
 
   /style-search/0.1.0:
     resolution: {integrity: sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=}
+    dev: true
+
+  /stylelint-config-html/1.0.0_2d1bcf73d0f2e8e613ccd6d821b0344f:
+    resolution: {integrity: sha512-rKQUUWDpaYC7ybsS6tLxddjn6DxhjSIXybElSmcTyVQj3ExhmU3q+l41ktrlwHRyY0M5SkTkZiwngvYPYmsgSQ==}
+    engines: {node: ^12 || >=14}
+    peerDependencies:
+      postcss-html: ^1.0.0
+      stylelint: '>=14.0.0'
+    dependencies:
+      postcss-html: 1.3.0
+      stylelint: 14.2.0
+    dev: true
+
+  /stylelint-config-recommended-vue/1.1.0_2d1bcf73d0f2e8e613ccd6d821b0344f:
+    resolution: {integrity: sha512-6O9gHdZ5nmnpq+qJv19pLEcZTZ/BV7ZzBmtl0J/kx92tGwe4CRqoO//SswibLWQP/1VwOaTrjJxN497pNfw7VA==}
+    engines: {node: ^12 || >=14}
+    peerDependencies:
+      postcss-html: ^1.0.0
+      stylelint: '>=14.0.0'
+    dependencies:
+      postcss-html: 1.3.0
+      stylelint: 14.2.0
+      stylelint-config-html: 1.0.0_2d1bcf73d0f2e8e613ccd6d821b0344f
+      stylelint-config-recommended: 6.0.0_stylelint@14.2.0
     dev: true
 
   /stylelint-config-recommended/6.0.0_stylelint@14.2.0:
