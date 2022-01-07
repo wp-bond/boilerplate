@@ -26,7 +26,9 @@ export default defineConfig({
     legacy({
       targets: ['defaults', 'not IE 11'],
     }),
-    liveReload(`${__dirname}/(app|config|support|views)/**/*.php`),
+    liveReload('(app|config|support|views)/**/*.php', {
+      root: __dirname,
+    }),
   ],
 
   // config
@@ -48,7 +50,7 @@ export default defineConfig({
 
     rollupOptions: {
       // our entry
-      input: '/main.js',
+      input: 'main.js',
     },
   },
 
