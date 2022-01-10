@@ -12,7 +12,7 @@ specifiers:
   postcss: ^8.4.5
   postcss-html: ^1.3.0
   postcss-preset-env: ^7.2.0
-  sass: ^1.46.0
+  sass: ^1.47.0
   stylelint: ^14.2.0
   stylelint-config-recommended-vue: ^1.1.0
   stylelint-config-standard: ^24.0.0
@@ -36,12 +36,12 @@ devDependencies:
   postcss: 8.4.5
   postcss-html: 1.3.0
   postcss-preset-env: 7.2.0_postcss@8.4.5
-  sass: 1.46.0
+  sass: 1.47.0
   stylelint: 14.2.0
   stylelint-config-recommended-vue: 1.1.0_2d1bcf73d0f2e8e613ccd6d821b0344f
   stylelint-config-standard: 24.0.0_stylelint@14.2.0
   typescript: 4.5.4
-  vite: 2.7.10_sass@1.46.0
+  vite: 2.7.10_sass@1.47.0
   vite-plugin-live-reload: 2.1.0
 
 packages:
@@ -376,7 +376,7 @@ packages:
       magic-string: 0.25.7
       regenerator-runtime: 0.13.9
       systemjs: 6.11.0
-      vite: 2.7.10_sass@1.46.0
+      vite: 2.7.10_sass@1.47.0
     dev: true
 
   /@vitejs/plugin-vue/2.0.1_vite@2.7.10+vue@3.2.26:
@@ -386,7 +386,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.7.10_sass@1.46.0
+      vite: 2.7.10_sass@1.47.0
       vue: 3.2.26
     dev: true
 
@@ -2901,8 +2901,8 @@ packages:
       regexp-tree: 0.1.24
     dev: true
 
-  /sass/1.46.0:
-    resolution: {integrity: sha512-Z4BYTgioAOlMmo4LU3Ky2txR8KR0GRPLXxO38kklaYxgo7qMTgy+mpNN4eKsrXDTFlwS5vdruvazG4cihxHRVQ==}
+  /sass/1.47.0:
+    resolution: {integrity: sha512-GtXwvwgD7/6MLUZPnlA5/8cdRgC9SzT5kAnnJMRmEZQFRE3J56Foswig4NyyyQGsnmNvg6EUM/FP0Pe9Y2zywQ==}
     engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:
@@ -3315,7 +3315,7 @@ packages:
       chokidar: 3.5.2
     dev: true
 
-  /vite/2.7.10_sass@1.46.0:
+  /vite/2.7.10_sass@1.47.0:
     resolution: {integrity: sha512-KEY96ntXUid1/xJihJbgmLZx7QSC2D4Tui0FdS0Old5OokYzFclcofhtxtjDdGOk/fFpPbHv9yw88+rB93Tb8w==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -3335,7 +3335,7 @@ packages:
       postcss: 8.4.5
       resolve: 1.20.0
       rollup: 2.62.0
-      sass: 1.46.0
+      sass: 1.47.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
