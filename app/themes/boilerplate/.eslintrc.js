@@ -6,7 +6,7 @@ module.exports = {
   // update with my preferences
   rules: {
     'curly': ['error', 'all'],
-    'brace-style': ['error', '1tbs'],
+    'brace-style': ['error', 'stroustrup'],
     'no-restricted-syntax': [
       'error',
       'DebuggerStatement',
