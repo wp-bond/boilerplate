@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f5a53b38ecdbb872c8cec2c75415461",
+    "content-hash": "ca0e6ca741c982e1a8abbd62b167bf43",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.2",
+            "version": "3.209.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "77c14dd84704d2db6c5c4d6a8c1226337e4e6783"
+                "reference": "1c351046d8fd46961f4d020d38624d46065134cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/77c14dd84704d2db6c5c4d6a8c1226337e4e6783",
-                "reference": "77c14dd84704d2db6c5c4d6a8c1226337e4e6783",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1c351046d8fd46961f4d020d38624d46065134cf",
+                "reference": "1c351046d8fd46961f4d020d38624d46065134cf",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.3"
             },
-            "time": "2022-01-10T19:14:32+00:00"
+            "time": "2022-01-11T19:13:42+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1801,16 +1801,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.3",
+            "version": "v0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "840e0221d02268f50f3f1d9e0cd5e88a3b3cbee3"
+                "reference": "5f7d5c650b264921e126ce4183472a32ddb45d0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/840e0221d02268f50f3f1d9e0cd5e88a3b3cbee3",
-                "reference": "840e0221d02268f50f3f1d9e0cd5e88a3b3cbee3",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/5f7d5c650b264921e126ce4183472a32ddb45d0c",
+                "reference": "5f7d5c650b264921e126ce4183472a32ddb45d0c",
                 "shasum": ""
             },
             "require": {
@@ -1856,9 +1856,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-bond/bond/issues",
-                "source": "https://github.com/wp-bond/bond/tree/v0.3"
+                "source": "https://github.com/wp-bond/bond/tree/v0.4"
             },
-            "time": "2022-01-11T12:29:47+00:00"
+            "time": "2022-01-11T23:01:36+00:00"
         }
     ],
     "packages-dev": [],
