@@ -1,6 +1,5 @@
 .DS_Store
 /wp.php
-/html/sitemap.xml
 
 # Our assets symlink
 html/assets
