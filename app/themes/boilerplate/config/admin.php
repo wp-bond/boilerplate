@@ -4,7 +4,10 @@ return [
     'add_login_css' => true,
     'add_admin_css' => true,
     'add_editor_css' => true,
+
+    'add_color_scheme' => true,
     'disable_admin_color_picker' => true,
+
     'remove_update_nag' => true,
 
     'footer_credits' => '<small>'

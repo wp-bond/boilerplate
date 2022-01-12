@@ -1801,16 +1801,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.4",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "5f7d5c650b264921e126ce4183472a32ddb45d0c"
+                "reference": "51e3a1052e999509c97977d56caf156d7d021e4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/5f7d5c650b264921e126ce4183472a32ddb45d0c",
-                "reference": "5f7d5c650b264921e126ce4183472a32ddb45d0c",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/51e3a1052e999509c97977d56caf156d7d021e4e",
+                "reference": "51e3a1052e999509c97977d56caf156d7d021e4e",
                 "shasum": ""
             },
             "require": {
@@ -1856,9 +1856,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-bond/bond/issues",
-                "source": "https://github.com/wp-bond/bond/tree/v0.4"
+                "source": "https://github.com/wp-bond/bond/tree/v0.4.1"
             },
-            "time": "2022-01-11T23:01:36+00:00"
+            "time": "2022-01-12T13:40:59+00:00"
         }
     ],
     "packages-dev": [],

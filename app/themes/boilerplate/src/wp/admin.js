@@ -2,9 +2,6 @@
 // Vars
 import '../styles/vars.css'
 
-// Color Scheme (SCSS)
-import './admin/admin-color-scheme.scss'
-
 // Our custom dashboard
 import './admin/dashboard.css'
 
