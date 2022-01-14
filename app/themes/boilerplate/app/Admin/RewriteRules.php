@@ -15,7 +15,6 @@ class RewriteRules
 
         Rewrite::reset();
 
-        Rewrite::rss();
         Rewrite::search();
 
         Rewrite::postType(NEWS);

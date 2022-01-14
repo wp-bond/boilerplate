@@ -49,15 +49,6 @@ class MainQuery
             \add_filter('posts_where', [static::class, 'excludeProtected']);
         }
 
-
-        // feed
-        if ($query->is_feed) {
-            $query->set('post_type', Feed::$post_types);
-            $query->set('posts_per_page', 100);
-            return;
-        }
-
-
         // helper
         $meta_query_is_enabled = [
             'relation' => 'AND',
