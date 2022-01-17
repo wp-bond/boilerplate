@@ -1,8 +1,8 @@
 <?php
 // print out all schemas sent to View
 
-if ($this->schemas) {
-    foreach ($this->schemas as $schema) {
+if (view()->schemas) {
+    foreach (view()->schemas as $schema) {
         echo $schema;
     }
 }

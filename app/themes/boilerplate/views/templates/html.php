@@ -8,18 +8,18 @@
     <?php
 
     // Preload fonts
-    $this->template('html/preload');
+    $this->partial('html/preload');
 
     // Styles and Scripts
-    $this->template('html/vite');
+    $this->partial('html/vite');
 
     // WP Head
     wp_head();
 
     // Styles, etc
-    $this->template('html/schema-org');
-    $this->template('html/google-analytics');
-    $this->template('html/polyfill');
+    $this->partial('html/schema-org');
+    $this->partial('html/google-analytics');
+    $this->partial('html/polyfill');
 
     ?>
 </head>
@@ -47,7 +47,7 @@
     wp_footer();
 
     // Vite Legacy
-    $this->template('html/vite-legacy');
+    $this->partial('html/vite-legacy');
 
     ?>
 </body>
