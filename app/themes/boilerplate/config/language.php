@@ -1,19 +1,17 @@
 <?php
+// IMPORTANT: the keys from the 'codes' param are the actual language codes,
+// so if you are using AWS or Google Translate you must choose one they support:
 
-// Tip for language code values:
-// if using translation check if it's available, and which code to use:
-// https://cloud.google.com/translate/docs/languages
+// AWS Translate
 // https://docs.aws.amazon.com/translate/latest/dg/what-is.html#language-pairs
 
-// Tip for locale values:
-// check if your system has available locale
-// system('locale -a');exit;
+// Google Translate
+// https://cloud.google.com/translate/docs/languages
 
 return [
 
+    // IMPORTANT: the first language will be the default one
     'codes' => [
-        // TODO, maybe move these keys into a language_code or code param, reads better
-        // 'codes' would go into 'languages' ?
         'en' => [
             'short_code' => 'en',
             'locale' => 'en_US',
