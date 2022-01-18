@@ -1,7 +1,5 @@
 <?php
 
-// do not disable thumbnail and medium sizes, they are required for WP Admin upload UI (feel free to change the sizes, just don't disable)
-
 // Constants to prevent typos and IDE auto fill
 const THUMBNAIL = 'thumbnail';
 const MEDIUM = 'medium';
@@ -10,6 +8,9 @@ const LARGE = 'large';
 const FULL = 'full';
 
 $sizes = [
+    // IMPORTANT: do not disable thumbnail and medium sizes,
+    // they are required for WP Admin upload UI
+    // (feel free to change the sizes, just don't disable)
 
     //
     THUMBNAIL => [392, 0],

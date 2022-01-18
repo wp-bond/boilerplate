@@ -2,20 +2,23 @@
 
 return [
     'enabled' => true,
+    'image_size' => 'large',
 
-    'facebook' => [
-        'app_id' => '',
-        'pages' => '',
-        'admins' => '',
-        'url' => 'https://www.facebook.com/pagename',
-    ],
+    // TODO waiting for Bond upgrade
 
-    'instagram' => [
-        'url' => 'https://www.instagram.com/pagename',
-    ],
+    // 'facebook' => [
+    //     'app_id' => '',
+    //     'pages' => '',
+    //     'admins' => '',
+    //     'url' => 'https://www.facebook.com/pagename',
+    // ],
 
-    'twitter' => [
-        'user' => 'username',
-        'url' => 'https://www.twitter.com/username',
-    ],
+    // 'instagram' => [
+    //     'url' => 'https://www.instagram.com/pagename',
+    // ],
+
+    // 'twitter' => [
+    //     'user' => 'username',
+    //     'url' => 'https://www.twitter.com/username',
+    // ],
 ];

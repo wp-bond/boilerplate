@@ -9,19 +9,23 @@ return [
     // disable stylesheed if wanted
     'stylesheet' => false,
 
-    // only add these post types
-    // set to false to disable all post types
+    // specify post types to add to sitemap
+    // set to empty array to disable all post types
+    // leave unset to allow all public post types
     'post_types' => [
         PAGE,
         NEWS,
     ],
 
-    // only add these taxonomies
-    // set to false to disable all taxonomies
-    'taxonomies' => false,
+    // specify taxonomies to add to sitemap
+    // set to empty array to disable all taxonomies
+    // leave unset to allow all public taxonomies
+    'taxonomies' => [],
 
-    // set to false to disable all users
-    'users' => false,
+    // TODO specify users to add to sitemap (wait for Bond upgrade)
+    // set to empty array to disable all users
+    // leave unset to allow all public users
+    'users' => [],
 
     // TODO extra links
 
