@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffafe4b2c22240d1be2a71bba0d7589a",
+    "content-hash": "05fe328054dc17b04273348c0d07a519",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1801,16 +1801,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.5.1",
+            "version": "v0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "f4f34d7897f6e1427d65f0d8462d56aafaa9848e"
+                "reference": "d8764e9cb1eabaee312349adb543d1d68c2567c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/f4f34d7897f6e1427d65f0d8462d56aafaa9848e",
-                "reference": "f4f34d7897f6e1427d65f0d8462d56aafaa9848e",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/d8764e9cb1eabaee312349adb543d1d68c2567c6",
+                "reference": "d8764e9cb1eabaee312349adb543d1d68c2567c6",
                 "shasum": ""
             },
             "require": {
@@ -1856,9 +1856,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-bond/bond/issues",
-                "source": "https://github.com/wp-bond/bond/tree/v0.5.1"
+                "source": "https://github.com/wp-bond/bond/tree/v0.6"
             },
-            "time": "2022-01-17T14:16:47+00:00"
+            "time": "2022-01-18T13:19:23+00:00"
         }
     ],
     "packages-dev": [],
