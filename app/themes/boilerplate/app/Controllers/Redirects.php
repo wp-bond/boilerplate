@@ -6,6 +6,8 @@ use Bond\Utils\Cast;
 
 class Redirects
 {
+    // TODO migrate to Bond, either as Redirect service with more options in that regard
+    // or as MainQuery service, along with other controls
 
     public static function boot()
     {

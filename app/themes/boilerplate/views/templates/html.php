@@ -46,6 +46,9 @@
     // WP footer
     wp_footer();
 
+    // JS state
+    echo $this->state?->jsTag('__STATE__');
+
     // Vite Legacy
     $this->partial('html/vite-legacy');
 

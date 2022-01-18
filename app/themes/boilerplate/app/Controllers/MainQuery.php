@@ -3,34 +3,17 @@
 namespace App\Controllers;
 
 use Bond\Settings\Language;
-use Bond\Utils\Query;
 
 class MainQuery
 {
     public static function boot()
     {
-        add_filter('pre_get_posts', [static::class, 'mainQuery']);
-
-        // Temp hack till I undestand the changes on WP 5.5
-        add_filter('pre_handle_404', [static::class, 'unset404']);
-    }
-
-    public static function unset404()
-    {
-        global $wp_query, $bond_unset_404;
-
-        if ($bond_unset_404) {
-            $wp_query->is_404 = false;
-            $wp_query->is_page = true;
-            $wp_query->is_singular = true;
-            return true;
-        }
-        // dd($wp_query);
+        \add_filter('pre_get_posts', [static::class, 'mainQuery']);
     }
 
     public static function mainQuery($query)
     {
-        if (is_admin() || !$query->is_main_query()) {
+        if (\is_admin() || !$query->is_main_query()) {
             return;
         }
 
@@ -79,6 +62,7 @@ class MainQuery
             $query->set('update_post_term_cache', false);
 
             // clear tax query
+            // TODO review
             // self::clearTaxQuery($query);
 
 
@@ -88,7 +72,6 @@ class MainQuery
             }
             return;
         }
-
 
 
         // archives
@@ -106,77 +89,9 @@ class MainQuery
                     break;
             }
         }
-
-
-        // singles
-        // use only for posts that have i18n slugs
-        if ($query->is_single) {
-
-            if (!Language::isDefault()) {
-                // get post by meta, to find its slug
-
-                $found = Query::wpPostBySlug(
-                    $query->get('name'),
-                    $post_type,
-                    null,
-                    [
-                        'post_status' => is_user_logged_in() ? 'any' : 'publish',
-                    ]
-                );
-
-                if ($found) {
-                    // set the actual slug
-                    $query->set($post_type, $found->post_name);
-                } else {
-                    // let it go for now, may match on post slug
-                    // disabled because exhibitions with no title
-                    // $query->is_404 = true;
-                }
-            }
-
-            return;
-        }
-
-        // use only for posts that has i18n slugs
-        if ($query->is_page) {
-
-            if (!Language::isDefault()) {
-
-                $full_path = $query->get('page');
-                // print_r($full_path);
-
-                if ($full_path) {
-
-                    // get page by meta, to find its slug
-
-                    $found = Query::wpPostBySlug(
-                        $full_path,
-                        PAGE,
-                        null,
-                        [
-                            'post_status' => is_user_logged_in() ? 'any' : 'publish',
-                        ]
-                    );
-
-                    if ($found) {
-                        global $bond_unset_404;
-                        $bond_unset_404 = true;
-
-                        // reparse query
-                        $query->parse_query([
-                            'page_id' => $found->ID,
-                        ]);
-                    } else {
-                        $query->is_404 = true;
-                    }
-                }
-            }
-            return;
-        }
     }
 
-
-
+    // TODO review this
     // public static function clearTaxQuery(&$query)
     // {
     //     foreach (MultilanguageTerms::$taxonomies as $tax) {
