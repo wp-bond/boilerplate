@@ -1,17 +1,21 @@
 <?php
 
 return [
+
+    // used at view/partials/html/google-analytics.php
     'google_analytics' => [
-        'id' => 'G-xxxx',
+        'id' => '', // G-xxxx or UA-xxxx
     ],
 
-    'google_maps' => [
-        'key' => 'key for google maps API',
-    ],
+    // used automatically by Bond to setup ACF Google Maps field, if needed
+    // 'google_maps' => [
+    //     'key' => c('GOOGLE_MAPS_PUBLIC_KEY'),
+    // ],
 
-    'ses' => [
-        'key' => c('AWS_ACCESS_KEY_ID'),
-        'secret' => c('AWS_SECRET_ACCESS_KEY'),
-        'region' => 'us-east-1',
-    ],
+    // example on how to store credentials
+    // 'ses' => [
+    //     'key' => c('AWS_ACCESS_KEY_ID'),
+    //     'secret' => c('AWS_SECRET_ACCESS_KEY'),
+    //     'region' => 'us-east-1',
+    // ],
 ];

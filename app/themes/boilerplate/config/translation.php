@@ -19,9 +19,9 @@ return [
 
     // API credentials
     'credentials' => [
-        'google' => [
-            'key' => c('GOOGLE_TRANSLATE_KEY'),
-        ],
+        // 'google' => [
+        //     'key' => c('GOOGLE_TRANSLATE_KEY'),
+        // ],
         'aws' => [
             'key' => c('AWS_TRANSLATE_KEY'),
             'secret' => c('AWS_TRANSLATE_SECRET'),

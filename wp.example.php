@@ -17,9 +17,20 @@ const WP_MEMORY_LIMIT = '512M';
 const WP_MAX_MEMORY_LIMIT = '1280M';
 
 // Services
-const AWS_ACCESS_KEY_ID = '';
-const AWS_SECRET_ACCESS_KEY = '';
-const GOOGLE_TRANSLATE_KEY = '';
+
+// Google Translate
+// const GOOGLE_TRANSLATE_KEY = '';
+
+// AWS Translate
+// const AWS_TRANSLATE_KEY = '';
+// const AWS_TRANSLATE_SECRET = '';
+
+// AWS (SES, etc)
+// const AWS_ACCESS_KEY_ID = '';
+// const AWS_SECRET_ACCESS_KEY = '';
+
+// Google Maps
+// const GOOGLE_MAPS_PUBLIC_KEY = '';
 
 // Database
 const DB_NAME = 'bond';
@@ -42,11 +53,6 @@ define('NONCE_SALT',       'copy & past new keys from the link above');
 
 
 // Optional PHP settings
-
-// LibVips warnings
-// if (!getenv('VIPS_WARNING')) {
-//     putenv('VIPS_WARNING=0');
-// }
 
 // Error reporting - development
 error_reporting(E_ALL | E_STRICT);
