@@ -2,20 +2,20 @@
 /wp.php
 
 # Our assets symlink
-html/assets
-html/@fs
+public/assets
+public/@fs
 
 # WP
-/html/wp/*
-!/html/wp/wp-config.php
+/public/wp/*
+!/public/wp/wp-config.php
 
 # Plugins
-/html/app/plugins/*
-!/html/app/plugins/.gitkeep
+/public/app/plugins/*
+!/public/app/plugins/.gitkeep
 
 # Uploads
-/html/app/uploads/*
-!/html/app/uploads/.gitkeep
+/public/app/uploads/*
+!/public/app/uploads/.gitkeep
 
 # Vendor
-/app/themes/boilerplate/vendor/*
+/themes/boilerplate/vendor/*

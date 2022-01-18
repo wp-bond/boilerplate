@@ -6,7 +6,7 @@
 
 // IMPORTANT image urls in CSS works fine
 // BUT you need to create a symlink on dev server to map this folder during dev
-// ln -s {path_to_project}/app/themes/{your_theme}/src/assets {path_to_project}/html/assets
+// ln -s {path_to_project}/themes/{your_theme}/src/assets {path_to_project}/public/assets
 // on production everything will work just fine
 
 import path from 'path'
@@ -16,7 +16,7 @@ import legacy from '@vitejs/plugin-legacy'
 import liveReload from 'vite-plugin-live-reload'
 
 export const themeId = path.basename(__dirname)
-export const themePath = path.resolve(__dirname, '../../../html/app/themes', themeId)
+export const themePath = path.resolve(__dirname, '../../public/app/themes', themeId)
 export const themeDir = `/app/themes/${themeId}`
 
 // https://vitejs.dev/config/
