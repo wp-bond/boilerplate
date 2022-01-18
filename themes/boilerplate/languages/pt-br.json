@@ -40,7 +40,11 @@
             "Link (EN)": "Link (PT)",
             "Title (PT)": "T\u00edtulo (PT)",
             "Slug (PT)": "Lesma (PT)",
-            "Link (PT)": "Link (PT)"
+            "Link (PT)": "Link (PT)",
+            "In the fields below fill a maximum of 170 characters, relative to 2 lines of text on the Google search results page.": "Nos campos abaixo, preencha um m\u00e1ximo de 170 caracteres, relativos a 2 linhas de texto na p\u00e1gina de resultados de pesquisa do Google.",
+            "Description for the Home page": "Descri\u00e7\u00e3o para a p\u00e1gina inicial",
+            "Description for the News page": "Descri\u00e7\u00e3o para a p\u00e1gina de not\u00edcias",
+            "Description for the Search page": "Descri\u00e7\u00e3o para a p\u00e1gina de pesquisa"
         },
         "register": {
             "Category": "Categoria",
