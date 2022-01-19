@@ -4,6 +4,8 @@ namespace App\Api;
 
 class Routes
 {
+    // TODO upgrade Settings/Api to a Service
+    // move all these options there, including the routes setup
 
     public static function boot()
     {

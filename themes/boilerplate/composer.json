@@ -16,6 +16,6 @@
     "aws/aws-sdk-php": "^3.185",
     "spatie/schema-org": "^3.4",
     "symfony/var-dumper": "^5.3",
-    "wp-bond/bond": "^0.6.1"
+    "wp-bond/bond": "^0.6.2"
   }
 }

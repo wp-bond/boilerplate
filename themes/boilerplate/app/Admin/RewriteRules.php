@@ -6,6 +6,8 @@ use Bond\Settings\Rewrite;
 
 class RewriteRules
 {
+    // TODO maybe upgrade to a Service and have app.search_path move to the rewrite.php config file
+
     public static function boot()
     {
         // Rewrite::tag('page_control', true);

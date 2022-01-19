@@ -1,10 +1,9 @@
 <?php
 
 use Bond\Settings\Language;
-use Bond\Settings\Wp;
 
 return [
-    'enabled' => Wp::isFrontEnd(),
+    'enabled' => app()->isFrontEnd(),
 
     'use_theme' => true,
     // Tells this view to work as the theme's main view.

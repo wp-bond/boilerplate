@@ -1,10 +1,18 @@
 <?php
 
+// Bond\Services\Sitemap
+
+// Uses the native WP Sitemap feature, providing more control
+// and multilanguage support.
+
 return [
 
-    // enable our sitemap handle
-    // set to false to disable WP sitemaps entirely
+    // enable our sitemap handler
     'enabled' => true,
+
+    // disables WP sitemap entirely
+    // also disables our service too as it's based on the native WP sitemap
+    // 'disable_wp_sitemap' => true,
 
     // disable stylesheed if wanted
     'stylesheet' => false,

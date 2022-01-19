@@ -1,9 +1,8 @@
 <?php
 
 return [
-    // if needed disable the cache here
-    // note that on WP CLI it will always be disabled
-    'enabled' => true,
+
+    'enabled' => !app()->isCli(),
 
     // default ttl (in seconds)
     'ttl' => app()->isDevelopment() ? 0 : -1,
