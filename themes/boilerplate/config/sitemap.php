@@ -6,6 +6,7 @@
 // and multilanguage support.
 
 return [
+    // TODO idea, change the rewrite rule from wp-sitemap.xml to only sitemap.xml
 
     // enable our sitemap handler
     'enabled' => true,
