@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.7",
+            "version": "3.209.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "22bbcc0b25578d4c496756d9f46fcd4c27cffd5d"
+                "reference": "45082e9fac26bdbc5db504639373374084f616d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/22bbcc0b25578d4c496756d9f46fcd4c27cffd5d",
-                "reference": "22bbcc0b25578d4c496756d9f46fcd4c27cffd5d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/45082e9fac26bdbc5db504639373374084f616d3",
+                "reference": "45082e9fac26bdbc5db504639373374084f616d3",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.7"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.10"
             },
-            "time": "2022-01-18T19:16:05+00:00"
+            "time": "2022-01-21T19:18:51+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1801,16 +1801,16 @@
         },
         {
             "name": "wp-bond/bond",
-            "version": "v0.6.2",
+            "version": "v0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-bond/bond.git",
-                "reference": "e36f34831ed85ef4f6bc8766c6a07eddfb356050"
+                "reference": "f59a9930fb5d90cc11b3e81855a8de0d412eb5d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-bond/bond/zipball/e36f34831ed85ef4f6bc8766c6a07eddfb356050",
-                "reference": "e36f34831ed85ef4f6bc8766c6a07eddfb356050",
+                "url": "https://api.github.com/repos/wp-bond/bond/zipball/f59a9930fb5d90cc11b3e81855a8de0d412eb5d0",
+                "reference": "f59a9930fb5d90cc11b3e81855a8de0d412eb5d0",
                 "shasum": ""
             },
             "require": {
@@ -1856,9 +1856,9 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-bond/bond/issues",
-                "source": "https://github.com/wp-bond/bond/tree/v0.6.2"
+                "source": "https://github.com/wp-bond/bond/tree/v0.6.3"
             },
-            "time": "2022-01-19T12:51:56+00:00"
+            "time": "2022-01-19T13:20:11+00:00"
         }
     ],
     "packages-dev": [],
