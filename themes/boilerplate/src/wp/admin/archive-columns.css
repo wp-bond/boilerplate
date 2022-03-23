@@ -1,8 +1,6 @@
 /* Archive Columns: customize set their width */
-.column-image {
-  width: 120px;
-}
 
+/* TODO remove all in favor of Bond settings */
 .archive-img {
   max-height: 90px;
   max-width: 100px;

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'reset_body_classes' => true,
+    // 'reset_body_classes' => true,
     'cleanup_head' => true,
 
     'unwrap_paragraphs' => true,

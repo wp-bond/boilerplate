@@ -11,6 +11,9 @@ return [
     // - add app()->viewsPath() as a lookup folder
     // - enable auto_set_order
     // - enable do_actions
+    // - enable set_body_classes
+    // you can disable some of then if needed, like:
+    // 'set_body_classes' => false,
 
     // here just add any data you want into the View initially
     'data' => [

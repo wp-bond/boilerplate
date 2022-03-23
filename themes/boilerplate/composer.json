@@ -13,9 +13,9 @@
     "sort-packages": true
   },
   "require": {
-    "aws/aws-sdk-php": "^3.185",
-    "spatie/schema-org": "^3.4",
-    "symfony/var-dumper": "^5.3",
-    "wp-bond/bond": "^0.6.3"
+    "aws/aws-sdk-php": "^3.215",
+    "spatie/schema-org": "^3.10",
+    "symfony/var-dumper": "^6.0",
+    "wp-bond/bond": "^0.6.7"
   }
 }

@@ -6,11 +6,9 @@ module.exports = {
   // update with my preferences
   rules: {
     'curly': ['error', 'all'],
-    'brace-style': ['error', 'stroustrup'],
-    'no-restricted-syntax': [
-      'error',
-      'DebuggerStatement',
-      'WithStatement',
-    ],
+    'vue/max-attributes-per-line': ['error', {
+      singleline: 1,
+      multiline: 1,
+    }],
   },
 }
