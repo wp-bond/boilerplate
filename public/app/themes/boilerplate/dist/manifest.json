@@ -1,38 +1,27 @@
 {
-  "main-legacy.js": {
-    "file": "assets/main-legacy.69b7475c.js",
-    "src": "main-legacy.js",
-    "isEntry": true,
-    "imports": [
-      "_vendor-legacy.b9dc4d30.js"
-    ],
-    "assets": [
-      "assets/logo.03d6d6da.png"
-    ]
+  "assets/logo.png": {
+    "file": "assets/logo-03d6d6da.png",
+    "src": "assets/logo.png"
   },
-  "_vendor-legacy.b9dc4d30.js": {
-    "file": "assets/vendor-legacy.b9dc4d30.js"
-  },
-  "../vite/legacy-polyfills": {
-    "file": "assets/polyfills-legacy.33dc7344.js",
-    "src": "../vite/legacy-polyfills",
-    "isEntry": true
+  "main.css": {
+    "file": "assets/main-4dcf7bec.css",
+    "src": "main.css"
   },
   "main.js": {
-    "file": "assets/main.134b5389.js",
+    "file": "assets/main-dd2bd581.js",
     "src": "main.js",
     "isEntry": true,
     "imports": [
-      "_vendor.bc7fa058.js"
+      "_vendor-e8575544.js"
     ],
     "css": [
-      "assets/main.246b810d.css"
+      "assets/main-4dcf7bec.css"
     ],
     "assets": [
-      "assets/logo.03d6d6da.png"
+      "assets/logo-03d6d6da.png"
     ]
   },
-  "_vendor.bc7fa058.js": {
-    "file": "assets/vendor.bc7fa058.js"
+  "_vendor-e8575544.js": {
+    "file": "assets/vendor-e8575544.js"
   }
 }

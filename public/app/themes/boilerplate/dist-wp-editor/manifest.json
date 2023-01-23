@@ -1,10 +1,14 @@
 {
+  "wp/editor.css": {
+    "file": "assets/editor-4dcf7bec.css",
+    "src": "wp/editor.css"
+  },
   "wp/editor.js": {
-    "file": "assets/editor.b94b39d1.js",
+    "file": "assets/editor-1599d90e.js",
     "src": "wp/editor.js",
     "isEntry": true,
     "css": [
-      "assets/editor.f69d05dd.css"
+      "assets/editor-4dcf7bec.css"
     ]
   }
 }
