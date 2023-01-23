@@ -6,13 +6,13 @@
 
 // IMPORTANT image urls in CSS works fine
 // BUT you need to create a symlink on dev server to map this folder during dev
+// run in terminal:
 // ln -s {path_to_project}/themes/{your_theme}/src/assets {path_to_project}/public/assets
 // on production everything will work just fine
 
 import path from 'path'
-import { defineConfig } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import legacy from '@vitejs/plugin-legacy'
 import liveReload from 'vite-plugin-live-reload'
 
 export const themeId = path.basename(__dirname)
@@ -23,12 +23,10 @@ export const themeDir = `/app/themes/${themeId}`
 export default defineConfig({
   plugins: [
     vue(),
-    legacy({
-      targets: ['defaults', 'not IE 11'],
-    }),
     liveReload('(app|config|support|views)/**/*.php', {
       root: __dirname,
     }),
+    splitVendorChunkPlugin(),
   ],
 
   // config
@@ -45,12 +43,9 @@ export default defineConfig({
     // emit manifest so PHP can find the hashed files
     manifest: true,
 
-    // esbuild target
-    target: 'es2018',
-
     rollupOptions: {
       // our entry
-      input: 'main.js',
+      input: path.resolve(__dirname, 'src/main.js'),
     },
   },
 

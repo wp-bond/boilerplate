@@ -8,10 +8,15 @@ use Bond\Support\Fluent;
 
 class Options
 {
-    public static function all(): Fluent
+    public static function all(): ?Fluent
     {
         return cache()->remember('options', function () {
-            return (new Fluent(\get_fields('options')));
+            if (!app()->hasAcf()) {
+                return null;
+            }
+            return (new Fluent())
+                ->add(\get_fields('options'))
+                ->camelKeys();
         });
         // this cache is automatically cleared when ACF options are updated
     }
@@ -40,6 +45,7 @@ class Options
                 'options' => 'seo',
             ])
             ->title('Search Engine Optimization');
+
 
         $group->groupField('seo', '')
             ->fields(function (GroupField $group) {

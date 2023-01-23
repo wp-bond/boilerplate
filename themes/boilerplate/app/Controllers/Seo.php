@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Fields\Options;
 use Bond\Utils\Link;
 use Bond\Settings\Language;
 use Spatie\SchemaOrg\Organization;
@@ -41,6 +42,22 @@ class Seo
         });
     }
 
+
+    public static function frontPage()
+    {
+        $schemas = [];
+        $schemas[] = self::organization();
+        $schemas[] = self::website();
+
+        // dd($schemas[0]->toArray());
+
+        view()->add(compact('schemas'));
+
+        $options = Options::all();
+        meta()->description = $options?->seo?->description;
+    }
+
+
     public static function archive()
     {
         global $wp_query;
@@ -53,17 +70,16 @@ class Seo
             $key = $type[0] ?? null;
         }
 
-        $desc = \get_field($key . '_description' . Language::fieldsSuffix(), 'options');
-        if ($desc) {
-            meta()->description = $desc;
-        }
+        $options = Options::all();
+        meta()->description = $options?->seo?->{$key . 'Description'};
     }
 
 
     public static function singular()
     {
         // Description
-        meta()->description = view()->get('content') ?? self::findModulesFirstContent(view()->get('modules'));
+        meta()->description = view()->get('content')
+            ?? self::findModulesFirstContent(view()->get('modules'));
 
         // Images
         meta()->addImages(view()->get('image'));
@@ -71,17 +87,6 @@ class Seo
         meta()->addImages(self::findModulesImages(view()->get('modules')));
     }
 
-
-    public static function frontPage()
-    {
-        $schemas = [];
-        $schemas[] = self::organization();
-        $schemas[] = self::website();
-
-        // dd($schemas[0]->toArray());
-
-        view()->add(compact('schemas'));
-    }
 
 
     public static function organizationId()
@@ -95,11 +100,13 @@ class Seo
         return cache()->remember(
             'seo/schema-organization',
             function () {
+                $options = Options::all();
+
                 return (new Organization())
                     ->identifier(app()->url() . '#organization')
                     ->url(app()->url())
                     ->name(app()->name())
-                    ->description(get_field('description' . Language::defaultFieldsSuffix(), 'options'))
+                    ->description($options?->seo?->description)
                     ->logo(app()->url() . '/apple-touch-icon.png');
                 // ->sameAs([
                 //     config('meta.facebook.url'),
