@@ -1,14 +1,13 @@
 <?php
 
-if (
-    !app()->isProduction()
-    || !config('services.google_analytics.id')
-) {
+$id = ''; // G-xxxx or UA-xxxx
+
+if (!app()->isProduction() || !$id) {
     return;
 }
 
 ?>
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?= config('services.google_analytics.id') ?>"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= $id ?>"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -16,5 +15,5 @@ if (
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', '<?= config('services.google_analytics.id') ?>');
+    gtag('config', '<?= $id ?>');
 </script>

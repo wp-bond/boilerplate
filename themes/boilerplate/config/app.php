@@ -7,14 +7,25 @@
 // chmod 440 wp.php (allowing read for user and group)
 // chmod 400 wp.php (allowing read for user only)
 
-return [
-    'id' => 'boilerplate',
-    'name' => t('My App'),
 
-    // https://www.php.net/manual/en/timezones.php
-    'timezone' => 'America/Sao_Paulo',
 
-    'search_path' => 'search',
+app()->id('boilerplate');
+app()->name(t('My App'));
 
-    'developer_email' => 'my@email.com',
-];
+// TODO change to public vars??
+// app()->id = 'boilerplate';
+
+// https://www.php.net/manual/en/timezones.php
+app()->timezone('America/Sao_Paulo');
+
+
+
+
+// TODO will try to move to Bond core where appropriate
+// ACF - add google maps key to GoogleMapField
+if (app()->hasAcf() && $key = c('GOOGLE_MAPS_PUBLIC_KEY')) {
+    \add_filter('acf/fields/google_map/api', function ($api) use ($key) {
+        $api['key'] = $key;
+        return $api;
+    });
+}

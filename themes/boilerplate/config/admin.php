@@ -1,22 +1,31 @@
 <?php
 
-return [
-    'add_login_css' => true,
-    'add_admin_css' => true,
-    'add_editor_css' => true,
+use Bond\Settings\Admin;
 
-    'add_color_scheme' => true,
-    'disable_admin_color_picker' => true,
 
-    'remove_update_nag' => true,
+// css
+Admin::addLoginCss();
+Admin::addAdminCss();
+Admin::addEditorCss();
 
-    'footer_credits' => '<small>'
-        . t('developed by')
-        . ' <a href="https://mysite.com" target="_blank">me</a>'
-        . '</small>',
-    'remove_wp_version' => true,
+// color scheme
+Admin::addColorScheme();
+Admin::disableAdminColorPicker();
 
-    'hide_posts' => true,
-    'replace_dashboard' => true,
-    'remove_administration_menus' => app()->isProduction() || !\current_user_can('manage_options'),
-];
+// footer
+Admin::setFooterCredits('');
+Admin::removeWpVersion();
+
+// hide default Posts post type
+Admin::hidePosts();
+
+// replace the dashboard html with our template
+Admin::replaceDashboard();
+
+// hide admin menus from the non-admin users
+if (app()->isProduction() || !\current_user_can('manage_options')) {
+    Admin::removeAdministrationMenus();
+}
+
+// remove the update nag
+Admin::removeUpdateNag();

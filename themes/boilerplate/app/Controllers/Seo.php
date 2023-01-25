@@ -109,8 +109,7 @@ class Seo
                     ->description($options?->seo?->description)
                     ->logo(app()->url() . '/apple-touch-icon.png');
                 // ->sameAs([
-                //     config('meta.facebook.url'),
-                //     config('meta.instagram.url')
+                //     meta()->instagram->url
                 // ])
                 // ->location(self::locations());
             }

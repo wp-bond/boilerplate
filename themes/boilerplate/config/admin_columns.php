@@ -1,7 +1,6 @@
 <?php
 
-return [
-    // enables our admin column handler
-    // it's cool to leave enabled
-    'enabled' => true,
-];
+// enables our admin column handler
+if (app()->isAdmin()) {
+    app()->adminColumns()->enable();
+}

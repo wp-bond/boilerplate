@@ -11,7 +11,7 @@
     $this->partial('html/preload');
 
     // Styles and Scripts
-    $this->partial('html/vite');
+    echo vite()->port(3303);
 
     // WP Head
     wp_head();
@@ -49,8 +49,8 @@
     // JS state
     echo $this->state->jsTag('__STATE__');
 
-    // Vite Legacy
-    $this->partial('html/vite-legacy');
+    // Vite Legacy, if using
+    // echo vite()->legacy();
 
     ?>
 </body>

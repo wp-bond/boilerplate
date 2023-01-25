@@ -5,47 +5,55 @@
 // Uses the native WP Sitemap feature, providing more control
 // and multilanguage support.
 
-return [
-    // TODO idea, change the rewrite rule from wp-sitemap.xml to only sitemap.xml
+// TODO idea, change the rewrite rule from wp-sitemap.xml to only sitemap.xml
 
-    // enable our sitemap handler
-    'enabled' => true,
 
-    // disables WP sitemap entirely
-    // also disables our service too as it's based on the native WP sitemap
-    // 'disable_wp_sitemap' => true,
+// enable our sitemap handler
+app()->sitemap()->enable();
 
-    // disable stylesheed if wanted
-    'stylesheet' => false,
+// disables WP sitemap entirely
+// also disables our service too as it's based on the native WP sitemap
+// app()->sitemap()->disableWpSitemap();
 
-    // specify post types to add to sitemap
-    // set to empty array to disable all post types
-    // leave unset to allow all public post types
-    'post_types' => [
-        PAGE,
-        NEWS,
-    ],
 
-    // specify taxonomies to add to sitemap
-    // set to empty array to disable all taxonomies
-    // leave unset to allow all public taxonomies
-    'taxonomies' => [],
+// disable stylesheed if wanted
+// app()->sitemap()->disableStylesheet();
 
-    // TODO specify users to add to sitemap (wait for Bond upgrade)
-    // set to empty array to disable all users
-    // leave unset to allow all public users
-    'users' => [],
+// specify post types to add to sitemap
+// leave unset to allow all public post types
+app()->sitemap()->postTypes([
+    PAGE,
+    NEWS,
+]);
 
-    // TODO extra links
+// disable all post types from sitemap
+// app()->sitemap()->disablePosts();
 
-    // list of post types to exclude from archive links
-    'skip_archives' => [],
 
-    // list of post types to exclude from singles links
-    'skip_singles' => [],
+// specify taxonomies to add to sitemap
+// set to empty array to disable all taxonomies
+// leave unset to allow all public taxonomies
+// app()->sitemap()->taxonomies([]);
 
-    // list of post names to exclude from pages links
-    'skip_pages' => [
-        'home',
-    ],
-];
+// disable all taxonomies from sitemap
+app()->sitemap()->disableTaxonomies();
+
+// TODO specify users to add to sitemap (wait for Bond upgrade)
+// leave unset to allow all public users
+// app()->sitemap()->users([]);
+
+// disable all users from sitemap
+app()->sitemap()->disableUsers();
+
+// TODO extra links
+
+// list of post types to exclude from archive links
+// app()->sitemap()->skipArchives([]);
+
+// list of post types to exclude from singles links
+// app()->sitemap()->skipSingles([]);
+
+// list of post names to exclude from pages links
+app()->sitemap()->skipPages([
+    'home'
+]);

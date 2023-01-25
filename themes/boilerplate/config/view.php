@@ -2,49 +2,41 @@
 
 use Bond\Settings\Language;
 
-return [
-    'enabled' => app()->isFrontEnd(),
 
-    'use_theme' => true,
-    // Tells this view to work as the theme's main view.
-    // This is a shortcut to do exactly the same as (if they are not set below):
-    // - add app()->viewsPath() as a lookup folder
-    // - enable auto_set_order
-    // - enable do_actions
-    // - enable set_body_classes
-    // you can disable some of then if needed, like:
-    // 'set_body_classes' => false,
+// we don't need the template handler if not on front end
+if (!app()->isFrontEnd()) {
+    return;
+}
 
-    // here just add any data you want into the View initially
-    'data' => [
-        // we added this 'state' as we need to make available to JS later
-        // check views/templates/html.php
-        'state' => [
-            'app' => [
-                'isProduction' => app()->isProduction(),
-                'isMobile' => app()->isMobile(),
-                'isTablet' => app()->isTablet(),
-                'isDesktop' => app()->isDesktop(),
-            ],
-            'language' => [
-                'code' => Language::code(),
-                'shortCode' => Language::shortCode(),
-            ],
+// enable our view template handler
+view()->enable();
+
+// set the templates lookup dir
+// can add more if needed
+view()->addLookupFolder(app()->viewsPath());
+
+// auto sets the lookup order based on the global WP_Query
+view()->autoSetOrder();
+
+// replace WP body_class based on the view order, language and device
+view()->setBodyClasses();
+
+
+// add custom data
+// here just add any data you want into the View initially
+view()->add([
+    // we added this 'state' as we need to make available to JS later
+    // check views/templates/html.php
+    'state' => [
+        'app' => [
+            'isProduction' => app()->isProduction(),
+            'isMobile' => app()->isMobile(),
+            'isTablet' => app()->isTablet(),
+            'isDesktop' => app()->isDesktop(),
+        ],
+        'language' => [
+            'code' => Language::code(),
+            'shortCode' => Language::shortCode(),
         ],
     ],
-
-    // add view folders
-    // 'lookup_folders' => [
-    //     app()->viewsPath(),
-    // ],
-
-    // change the template folders if needed for emergencies
-    // 'templates_dir' => 'templates',
-    // 'partials_dir' => 'partials',
-
-    // auto set the lookup order based on the global WP_Query
-    // 'auto_set_order' => true,
-
-    // enables 'Bond' action hooks
-    // 'do_actions' => true,
-];
+]);

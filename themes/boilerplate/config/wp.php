@@ -1,9 +1,23 @@
 <?php
 
-return [
-    'force_https' => app()->isProduction() || app()->isStaging(),
+// TODO will remove the Wp class and move these settings to App
 
-    'disable_front_page_redirect' => true,
+use Bond\Settings\Language;
+use Bond\Settings\Wp;
 
-    'disable_user_registration' => true,
-];
+// Settings
+Wp::updateSettings();
+
+
+// protect Wp if not using
+Wp::disableUserRegistration();
+
+// Protects WP redirect on front pages
+if (Language::isMultilanguage()) {
+    Wp::disableFrontPageRedirect();
+}
+
+// force https on production/staging
+if (app()->isProduction() || app()->isStaging()) {
+    Wp::forceHttps();
+}

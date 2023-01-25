@@ -1,5 +1,13 @@
 <?php
 
+use Bond\Settings\Admin;
+use Bond\Settings\Wp;
+use Bond\Utils\Image;
+
+// sanitize all filenames on upload
+// very good idea to always leave on and avoid OS issues with special characters
+Wp::sanitizeFilenames();
+
 // Constants to prevent typos and IDE auto fill
 const THUMBNAIL = 'thumbnail';
 const MEDIUM = 'medium';
@@ -62,15 +70,21 @@ foreach (array_slice($sizes, 0) as $name => $values) {
 }
 
 
-return [
-    'quality' => 90, // default is 82
-    'sizes' => $sizes,
-    'disable_limit' => true,
+Wp::setImageQuality(90); // WP default is 82
 
-    'editor_sizes' => [
-        'thumbnail' => t('Thumbnail'), // required for media upload ui
-        // 'medium' => t('Medium'),
-        // 'medium_large' => t('Medium Large'),
-        'full' => t('Original'),
-    ],
-];
+Wp::disableImageLimit();
+
+
+// TODO will migrate to a unified method
+Wp::addImageSizes($sizes);
+Image::setSizes($sizes);
+
+
+
+// TODO maybe an "editor" named class that handles the toolbar too
+Admin::setEditorImageSizes([
+    'thumbnail' => t('Thumbnail'), // required for media upload ui
+    // 'medium' => t('Medium'),
+    // 'medium_large' => t('Medium Large'),
+    'full' => t('Original'),
+]);

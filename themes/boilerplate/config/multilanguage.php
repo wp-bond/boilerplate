@@ -1,22 +1,12 @@
 <?php
 
-// TODO IDEA, call directly the services here?
-// maybe essencially we could kill the config container?
-// app()->multilanguage()->config(
-//     enabled: true,
-//     post_types: [PAGE, NEWS],
-//     taxonomies: [],
-// );
+app()->multilanguage()->enable();
 
-// OR transform in JSON considering an Admin UI to change all settings?
+app()->multilanguage()->postTypes([
+    NEWS,
+    PAGE,
+]);
 
-return [
-    'enabled' => true,
 
-    'post_types' => [
-        NEWS,
-        PAGE,
-    ],
-
-    'taxonomies' => [],
-];
+// app()->multilanguage()->taxonomies([
+// ]);

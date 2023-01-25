@@ -1,24 +1,9 @@
 <?php
 
-return [
-    'enabled' => true,
-    'image_size' => 'large',
+// enable the meta data storage and HTML meta tag printer
+meta()->enable();
 
-    // TODO waiting for Bond upgrade
+// we can store metadata freely, Meta class extends Fluent
+// use meta()->add() or set directly
 
-    // 'facebook' => [
-    //     'app_id' => '',
-    //     'pages' => '',
-    //     'admins' => '',
-    //     'url' => 'https://www.facebook.com/pagename',
-    // ],
-
-    // 'instagram' => [
-    //     'url' => 'https://www.instagram.com/pagename',
-    // ],
-
-    // 'twitter' => [
-    //     'user' => 'username',
-    //     'url' => 'https://www.twitter.com/username',
-    // ],
-];
+// meta()->instagram->url = 'https://www.instagram.com/pagename';

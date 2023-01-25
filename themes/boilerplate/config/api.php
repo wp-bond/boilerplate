@@ -1,12 +1,16 @@
 <?php
 
-return [
-    'prefix' => 'api',
-    // 'only_logged_in' => true,
+use Bond\Settings\Api;
 
-    // disable some defaults
-    'disable_header' => true,
-    'disable_default_routes' => true,
-    'disable_root_route' => true,
-    'disable_oembed' => true,
-];
+// TODO enable method?
+
+// Api::disable();
+
+Api::changePrefix('api');
+
+Api::disableHeader();
+Api::disableDefaultRoutes();
+Api::disableRootRoute();
+Api::disableOembed();
+
+// Api::onlyLoggedIn();

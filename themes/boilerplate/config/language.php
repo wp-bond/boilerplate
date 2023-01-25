@@ -8,33 +8,33 @@
 // Google Translate
 // https://cloud.google.com/translate/docs/languages
 
-return [
+use Bond\Settings\Language;
 
-    // IMPORTANT: the first language will be the default one
-    'codes' => [
-        'en' => [
-            'short_code' => 'en',
-            'locale' => 'en_US',
-            'name' => 'English',
-            'short_name' => 'EN',
-            'fields_suffix' => 'en',
-            'fields_label' => '(EN)',
-        ],
-        'pt-br' => [
-            'short_code' => 'pt',
-            'locale' => 'pt_BR',
-            'name' => 'Português',
-            'short_name' => 'PT',
-            'fields_suffix' => 'pt',
-            'fields_label' => '(PT)',
-        ],
-        // 'fr' => [
-        //     'short_code' => 'fr',
-        //     'locale' => 'fr_CA',
-        //     'name' => 'Français',
-        //     'short_name' => 'FR',
-        //     'fields_suffix' => 'fr',
-        //     'fields_label' => '(FR)',
-        // ],
+Language::add(
+    code: 'en',
+    values: [
+        'short_code' => 'en',
+        'locale' => 'en_US',
+        'name' => 'English',
+        'short_name' => 'EN',
+        'fields_suffix' => 'en',
+        'fields_label' => '(EN)',
     ]
-];
+);
+// Note the first language will be the default one, otherwise use setDefaultCode()
+
+Language::add(
+    code: 'pt-br',
+    values: [
+        'short_code' => 'pt',
+        'locale' => 'pt_BR',
+        'name' => 'Português',
+        'short_name' => 'PT',
+        'fields_suffix' => 'pt',
+        'fields_label' => '(PT)',
+    ]
+);
+
+
+// set current language
+Language::setCurrentFromRequest();

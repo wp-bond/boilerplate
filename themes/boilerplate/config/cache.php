@@ -1,17 +1,27 @@
 <?php
 
-return [
+// ignore cache if on CLI
+if (app()->isCli()) {
+    return;
+}
 
-    'enabled' => !app()->isCli(),
+// change the cache handler (default is FileCache)
+// class must implement Bond\Services\Cache\AbstractCache
+// app()->addShared('cache', \Bond\Services\Cache\FileCache::class);
 
-    // default ttl (in seconds)
-    'ttl' => app()->isDevelopment() ? 0 : -1,
-    // -1 means forever, 0 means never
-    // we can safely use forever cache as Bond clears itself on Post/Tax/etc updates
+// change the file cache local path (default is .cache)
+// cache()->path(app()->basePath() . '/.cache');
 
-    // cache handler
-    // 'class' => Bond\Services\Cache\FileCache::class, (default)
 
-    // path for file cache
-    // 'path' => app()->basePath() . '/.cache', (default)
-];
+// default TTL (in seconds)
+cache()->ttl(app()->isDevelopment() ? 0 : -1);
+// -1 means forever, 0 means never
+// we can safely use forever cache as Bond clears itself on Post/Tax/etc updates
+
+
+// enable
+cache()->enable();
+
+// cache()->config([
+
+// ])
