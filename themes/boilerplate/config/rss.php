@@ -44,6 +44,6 @@ app()->rss()->addFeed('main', [
     // if you use the public_url, provide for each language code too
     // 'public_url' => [
     //     'en' => 'https://...',
-    //     'pt-br' => 'https://...',
+    //     'pt' => 'https://...',
     // ],
 ]);

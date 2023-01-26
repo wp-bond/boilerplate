@@ -4,6 +4,9 @@
 // default is 'wp' which will use WP l10n functions __() and _x()
 app()->translation()->service('aws');
 
+// for AWS: composer require aws/aws-sdk-php
+// for Google: composer require google/cloud-translate
+
 
 // set the language which the source code texts are written in
 // you can change freely, but choose wisely when you start the project
@@ -11,9 +14,10 @@ app()->translation()->service('aws');
 app()->translation()->writtenLanguage('en');
 // IMPORTANT: you must fill a language code your service has support for:
 // AWS Translate
-// https://docs.aws.amazon.com/translate/latest/dg/what-is.html#language-pairs
+// https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html
 // Google Translate
 // https://cloud.google.com/translate/docs/languages
+
 
 // API credentials
 app()->translation()->credentials([
@@ -26,6 +30,7 @@ app()->translation()->credentials([
         'region' => 'us-east-1',
     ],
 ]);
+
 
 // Notes:
 // - text is translated in runtime and stored in JSON at languages directory;

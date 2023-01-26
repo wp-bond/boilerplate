@@ -17,7 +17,7 @@ class Article extends BasePost
 
             case 'api':
                 $values->title = $this->title();
-                $values->date = $this->dateLong();
+                $values->date = $this->date()->isoFormat('DD/MM/Y');
                 break;
 
             default:

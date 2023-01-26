@@ -3,8 +3,7 @@
 // so if you are using AWS or Google Translate you must choose one they support:
 
 // AWS Translate
-// https://docs.aws.amazon.com/translate/latest/dg/what-is.html#language-pairs
-
+// https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html
 // Google Translate
 // https://cloud.google.com/translate/docs/languages
 
@@ -24,7 +23,7 @@ Language::add(
 // Note the first language will be the default one, otherwise use setDefaultCode()
 
 Language::add(
-    code: 'pt-br',
+    code: 'pt',
     values: [
         'short_code' => 'pt',
         'locale' => 'pt_BR',
