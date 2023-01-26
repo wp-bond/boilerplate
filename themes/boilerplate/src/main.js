@@ -2,7 +2,7 @@
 import 'vite/modulepreload-polyfill'
 
 // Styles
-import './styles'
+import './styles/main.css'
 
 // Vue
 import { createApp } from 'vue'

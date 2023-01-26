@@ -13,6 +13,7 @@
       @media (min-width: 600px) {
         width: calc(50% - 20px);
       }
+
       break-inside: avoid;
       box-sizing: border-box;
       margin-right: 20px;
@@ -21,23 +22,26 @@
       background-color: #fff;
     }
   }
+
   & .title {
     font-size: 18px;
     font-weight: 700;
     margin: 0;
-    padding: 5px 0 2px 0;
+    padding: 5px 0 2px;
   }
 
   & ul {
     margin: 0;
-    padding: 10px 0 0 0;
+    padding: 10px 0 0;
   }
+
   & li {
     margin: 0;
     padding: 2px 0 0 16px;
     text-indent: -16px;
     text-align: left;
-    &:before {
+
+    &::before {
       content: "\2014 \0020";
     }
   }

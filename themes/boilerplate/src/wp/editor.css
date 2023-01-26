@@ -1,3 +1,5 @@
+@import url("../styles/vars.css");
+
 /*
 Styles loaded into the WordPress editor
 Great to adjust the styles to match your project.
@@ -8,5 +10,6 @@ Note that web fonts must be self-hosted to work.
 /* Body is the WP Editor body  */
 body {
   /* max-width: 640px; */
+
   /* padding: 0 16px 16px 16px; */
 }

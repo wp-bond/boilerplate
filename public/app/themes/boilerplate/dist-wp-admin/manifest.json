@@ -1,14 +1,14 @@
 {
   "wp/admin.css": {
-    "file": "assets/admin-bfc02e81.css",
+    "file": "assets/admin-524e2ce6.css",
     "src": "wp/admin.css"
   },
   "wp/admin.js": {
-    "file": "assets/admin-f84fb516.js",
+    "file": "assets/admin-df79b847.js",
     "src": "wp/admin.js",
     "isEntry": true,
     "css": [
-      "assets/admin-bfc02e81.css"
+      "assets/admin-524e2ce6.css"
     ]
   }
 }

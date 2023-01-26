@@ -1,0 +1,14 @@
+/* example to test postcss features (nesting, custom properties, custom media) */
+.home {
+  & p {
+    color: blue;
+  }
+
+  @media (--md) {
+    background-color: #ddd;
+
+    & p {
+      color: gray;
+    }
+  }
+}

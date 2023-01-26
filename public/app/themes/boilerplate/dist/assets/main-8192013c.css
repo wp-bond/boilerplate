@@ -1,0 +1,1 @@
+:root{--sans: "MySans", sans-serif;--serif: "MySerif", serif}.home p{color:#00f}@media (min-width: 768px){.home{background-color:#ddd}.home p{color:gray}}

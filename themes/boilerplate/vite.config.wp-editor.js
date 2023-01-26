@@ -1,8 +1,9 @@
-import { default as config, themePath, themeDir } from './vite.config.js'
+import path from 'path'
+import config, { themeDir, themePath } from './vite.config.js'
 
-config.build.rollupOptions.input = '/wp/editor.js'
-config.build.outDir = `${themePath}/dist-wp-editor`
 config.base = `${themeDir}/dist-wp-editor/`
+config.build.outDir = `${themePath}/dist-wp-editor`
+config.build.rollupOptions.input = path.resolve(__dirname, 'src/wp/editor.js')
 
 // not needed, we just want the css
 delete config.plugins

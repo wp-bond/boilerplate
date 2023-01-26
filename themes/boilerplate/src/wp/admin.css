@@ -1,0 +1,17 @@
+@import url("../styles/vars.css");
+
+/* Our custom dashboard */
+@import url("./admin/dashboard.css");
+
+/* Login screen, change logo */
+@import url("./admin/login.css");
+
+/* Clean up on attachment screens
+WARNING hides some fields as we provide alternatives for multilanguage */
+@import url("./admin/attachments.css");
+
+/* Some ACF adjustments */
+@import url("./admin/fields.css");
+
+/* Our custom Archive Columns */
+@import url("./admin/archive-columns.css");
