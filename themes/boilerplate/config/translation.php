@@ -2,7 +2,7 @@
 
 // sets which translation service to use, supported are: google/aws/wp
 // default is 'wp' which will use WP l10n functions __() and _x()
-app()->translation()->service('aws');
+app()->translation()->service('google');
 
 // for AWS: composer require aws/aws-sdk-php
 // for Google: composer require google/cloud-translate
@@ -21,14 +21,14 @@ app()->translation()->writtenLanguage('en');
 
 // API credentials
 app()->translation()->credentials([
-    // 'google' => [
-    //     'key' => c('GOOGLE_TRANSLATE_KEY'),
-    // ],
-    'aws' => [
-        'key' => c('AWS_TRANSLATE_KEY'),
-        'secret' => c('AWS_TRANSLATE_SECRET'),
-        'region' => 'us-east-1',
+    'google' => [
+        'key' => c('GOOGLE_TRANSLATE_KEY'),
     ],
+    // 'aws' => [
+    //     'key' => c('AWS_TRANSLATE_KEY'),
+    //     'secret' => c('AWS_TRANSLATE_SECRET'),
+    //     'region' => 'us-east-1',
+    // ],
 ]);
 
 
