@@ -1,0 +1,18 @@
+{
+  "_vendor-D2gG82at.js": {
+    "file": "assets/vendor-D2gG82at.js",
+    "name": "vendor"
+  },
+  "main.js": {
+    "file": "assets/main-iY96tD5Z.js",
+    "name": "main",
+    "src": "main.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-D2gG82at.js"
+    ],
+    "css": [
+      "assets/main-SLRYwiJC.css"
+    ]
+  }
+}

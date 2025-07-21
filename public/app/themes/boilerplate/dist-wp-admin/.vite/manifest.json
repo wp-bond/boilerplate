@@ -1,0 +1,11 @@
+{
+  "wp/admin.js": {
+    "file": "assets/admin-DXqR5hCi.js",
+    "name": "admin",
+    "src": "wp/admin.js",
+    "isEntry": true,
+    "css": [
+      "assets/admin-Uq0xR-dy.css"
+    ]
+  }
+}

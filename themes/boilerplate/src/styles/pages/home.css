@@ -5,7 +5,7 @@
   }
 
   @media (--md) {
-    background-color: #ddd;
+    background-color: blue;
 
     & p {
       color: gray;

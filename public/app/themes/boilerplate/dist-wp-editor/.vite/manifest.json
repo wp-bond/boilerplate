@@ -1,0 +1,11 @@
+{
+  "wp/editor.js": {
+    "file": "assets/editor-B_1H0x8-.js",
+    "name": "editor",
+    "src": "wp/editor.js",
+    "isEntry": true,
+    "css": [
+      "assets/editor-Bs_vM153.css"
+    ]
+  }
+}
