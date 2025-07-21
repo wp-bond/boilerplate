@@ -1,8 +1,14 @@
-const postcssPresetEnv = require('postcss-preset-env')
+import postcssGlobalData from '@csstools/postcss-global-data'
+import postcssPresetEnv from 'postcss-preset-env'
 
-module.exports = {
+export default {
 
   plugins: [
+    postcssGlobalData({
+      files: [
+        './src/styles/vars.css',
+      ],
+    }),
     postcssPresetEnv({
       stage: 1,
     }),

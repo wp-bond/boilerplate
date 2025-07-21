@@ -1,0 +1,68 @@
+{
+    "Always in JPG or PNG (never in TIFF, BMP or any other format).": "Sempre em JPG ou PNG (nunca em TIFF, BMP ou qualquer outro formato).",
+    "Always use RGB images. Browsers do not represent CMYK colors correctly and they are not automatically converted.": "Sempre use imagens RGB. Os navegadores n\u00e3o representam as cores CMYK corretamente e n\u00e3o s\u00e3o convertidos automaticamente.",
+    "General Guidelines": "Diretrizes gerais",
+    "Google Translate": "Google Tradutor",
+    "Image Guidelines": "Diretrizes de imagem",
+    "is integrated directly within this administration panel.": "est\u00e1 integrado diretamente nesse painel de administra\u00e7\u00e3o.",
+    "My App": "Meu aplicativo",
+    "News": "Not\u00edcias",
+    "Original": "Original",
+    "Page under construction": "P\u00e1gina em constru\u00e7\u00e3o",
+    "PNG only for vector images with few colors or if you need transparency. When in doubt, always use JPG.": "PNG somente para imagens vetoriais com poucas cores ou se voc\u00ea precisar de transpar\u00eancia. Em caso de d\u00favida, use sempre JPG.",
+    "Preferably use the original images or in high quality, above 3600px in width or height. The server is the one who creates all the variations in size, so it is important to have available the images in good quality.": "De prefer\u00eancia, use as imagens originais ou em alta qualidade, acima de 3600px de largura ou altura. O servidor \u00e9 quem cria todas as varia\u00e7\u00f5es de tamanho, por isso \u00e9 importante ter as imagens dispon\u00edveis em boa qualidade.",
+    "Remove any white borders on images.": "Remova todas as bordas brancas nas imagens.",
+    "Search": "Pesquisar",
+    "Texts Translation": "Tradu\u00e7\u00e3o de textos",
+    "Thumbnail": "Miniatura",
+    "Whenever you update a page that is missing a translation, the website will send the text available in other languages for Google to translate for you.": "Sempre que voc\u00ea atualizar uma p\u00e1gina sem tradu\u00e7\u00e3o, o site enviar\u00e1 o texto dispon\u00edvel em outros idiomas para que o Google traduza para voc\u00ea.",
+    "_x": {
+        "admin-columns": {
+            "Category": "Categoria",
+            "Date": "Data",
+            "Links": "Links",
+            "Title": "T\u00edtulo"
+        },
+        "fields": {
+            "+ Add Module": "+ Adicionar m\u00f3dulo",
+            "Category": "Categoria",
+            "Content": "Conte\u00fado",
+            "Feature": "Caracter\u00edstica",
+            "General Control": "Controle geral",
+            "Link": "Link",
+            "Select from the website's content.": "Selecione a partir do conte\u00fado do site.",
+            "Slug": "Lesma",
+            "Title": "T\u00edtulo",
+            "Title \/ Link": "T\u00edtulo\/Link"
+        },
+        "register": {
+            "Add article": "Adicionar artigo",
+            "Add new article": "Adicionar novo artigo",
+            "Add new category": "Adicionar nova categoria",
+            "Add or remove category": "Adicionar ou remover categoria",
+            "All category": "Todas as categorias",
+            "Article": "objeto",
+            "Category": "Categoria",
+            "Choose from the most used category": "Escolha entre a categoria mais usada",
+            "Edit article": "Editar artigo",
+            "Edit category": "Editar categoria",
+            "New article": "Novo artigo",
+            "New category": "Nova categoria",
+            "News": "Not\u00edcias",
+            "No article found": "Nenhum artigo encontrado",
+            "No article found in trash": "Nenhum artigo encontrado na lixeira",
+            "No category found": "Nenhuma categoria encontrada",
+            "No category found in trash": "Nenhuma categoria encontrada na lixeira",
+            "Parent category": "Categoria principal",
+            "Search article": "Artigo de pesquisa",
+            "Search category": "Categoria de pesquisa",
+            "Update category": "Atualizar categoria",
+            "View article": "Ver artigo",
+            "View category": "Exibir categoria"
+        },
+        "url": {
+            "news": "not\u00edcias",
+            "search": "procurar"
+        }
+    }
+}

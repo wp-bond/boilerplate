@@ -11,7 +11,7 @@
 // on production everything will work just fine
 
 import path from 'path'
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
 
@@ -26,7 +26,6 @@ export default defineConfig({
     liveReload('(app|config|support|views)/**/*.php', {
       root: __dirname,
     }),
-    splitVendorChunkPlugin(),
   ],
 
   // config
@@ -46,6 +45,19 @@ export default defineConfig({
     rollupOptions: {
       // our entry
       input: path.resolve(__dirname, 'src/main.js'),
+       output: {
+        manualChunks(id) {
+          // all third-party code will be in vendor chunk
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+          // example on how to create another chunk
+          // if (id.includes('src/'components')) {
+          //   return 'components'
+          // }
+          // console.log(id)
+        },
+      },
     },
   },
 

@@ -1,5 +1,5 @@
 /* example to test postcss features (nesting, custom properties, custom media) */
-.home {
+.front-page {
   & p {
     color: blue;
   }
