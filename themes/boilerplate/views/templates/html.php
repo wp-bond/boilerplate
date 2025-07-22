@@ -19,7 +19,6 @@
     // Styles, etc
     $this->partial('html/schema-org');
     $this->partial('html/google-analytics');
-    $this->partial('html/polyfill');
 
     ?>
 </head>
